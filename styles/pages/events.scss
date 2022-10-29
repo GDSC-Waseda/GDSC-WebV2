@@ -1,0 +1,60 @@
+.events {
+  &__body {
+    text-align: center;
+
+    &__button {
+      padding: 15px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    &__body {
+      padding: 10px;
+
+      &__upcoming,
+      &__past {
+        padding: 20px 30px;
+
+        & span {
+          font-weight: 700;
+          font-size: 34px;
+        }
+      }
+
+      &__header {
+        text-align: left;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &__body {
+      margin-top: 10px;
+      &__upcoming,
+      &__past {
+        padding: 10px 20px;
+
+        & span {
+          font-weight: 700;
+          font-size: 17px;
+        }
+      }
+
+      &__header {
+        text-align: left;
+      }
+    }
+  }
+}
+
+.media-card {
+  display: inline-block;
+  text-align: left;
+
+  @media screen and (min-width: 768px) {
+    margin-right: 45px;
+    margin-top: 30px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-top: 30px;
+  }
+}
