@@ -23,7 +23,8 @@ const EventsPage: NextPage = () => {
     },
     {
       size: 'm',
-      title: '#1 Python for Babies',
+      title: 'Cybersecurity on Wheels: Safeguarding the Future of Automotive Technology',
+      image: 'gdsc-cyber-security-seminar.png',
       open: true,
       canOpen: false
     },

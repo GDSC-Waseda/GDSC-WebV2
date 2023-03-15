@@ -15,8 +15,8 @@
       }
 
       &.m {
-        min-height: 180px;
-        min-width: 335px;
+        height: 180px;
+        width: 335px;
       }
       &.l {
         min-height: 30vh;
@@ -46,6 +46,7 @@
   }
 
   &__image {
+    border-radius: 20px 20px 0px 0px;
   }
 
   &__collapse {
@@ -64,6 +65,8 @@
   &__title {
     padding: 5px;
     font-weight: bold;
+    max-width: 300px; 
+    overflow-wrap: normal;
   }
 
   &__other {
