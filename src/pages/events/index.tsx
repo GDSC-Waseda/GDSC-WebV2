@@ -14,17 +14,11 @@ const EventsPage: NextPage = () => {
     content: '“Alone  we can do so little; together we can do so much.”'
   }
 
-  const eventsCard: MediaCardProps[] = [
+  const eventsCard_UpComing: MediaCardProps[] = [
     {
       size: 'm',
-      title: '#1 Python for Babies',
-      open: true,
-      canOpen: false
-    },
-    {
-      size: 'm',
-      title: 'Cybersecurity on Wheels: Safeguarding the Future of Automotive Technology',
-      image: 'gdsc-cyber-security-seminar.png',
+      title: 'Android Dev. Part 1',
+      image: 'event-android-dev-p1.png',
       open: true,
       canOpen: false
     },
@@ -33,10 +27,28 @@ const EventsPage: NextPage = () => {
       title: '#1 Python for Babies',
       open: true,
       canOpen: false
+    }
+  ]
+
+  const eventsCard_Past: MediaCardProps[] = [
+    {
+      size: 'm',
+      title: 'Cybersecurity on Wheels',
+      image: 'event-cyber-security.png',
+      open: true,
+      canOpen: false
     },
     {
       size: 'm',
-      title: '#1 Python for Babies',
+      title: 'GDSC Solution Challenge',
+      image: 'event-solutions-challenge.png',
+      open: true,
+      canOpen: false
+    },
+    {
+      size: 'm',
+      title: 'Speaker Session / Tech Talk',
+      image: 'event-waseda-time.png',
       open: true,
       canOpen: false
     }
@@ -60,7 +72,7 @@ const EventsPage: NextPage = () => {
             <span>Upcoming</span>
           </div>
           <div className="events__body__container">
-            {eventsCard.map((eventCard, index) => {
+            {eventsCard_UpComing.map((eventCard, index) => {
               return (
                 <MediaCard props={eventCard} key={index}>
                   <div className="media-card__tags">
@@ -85,7 +97,7 @@ const EventsPage: NextPage = () => {
           <div className="events__body__header">
             <span>Past</span>
           </div>
-          {eventsCard.map((eventCard, index) => {
+          {eventsCard_Past.map((eventCard, index) => {
             return (
               <MediaCard props={eventCard} key={index}>
                 <div className="media-card__tags">
