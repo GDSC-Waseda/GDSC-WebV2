@@ -1,33 +1,33 @@
-import type { NextPage } from 'next'
-import Link from 'next/link'
-import { Button, Col, Container, Row } from 'react-bootstrap'
+import type { NextPage } from "next";
+import Link from "next/link";
+import { Button, Col, Container, Row } from "react-bootstrap";
 
-import Stack from '@mui/material/Stack'
-import Typography from '@mui/material/Typography'
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
 
-import { ImageCard } from 'components/Cards/index'
-import CommonMeta from 'components/CommonMeta'
-import { ImageIcon } from 'components/ImageIcon'
-import { imageIconData } from 'constants/index'
-import { ImageCardProps } from '~/types'
+import { ImageCard } from "components/Cards/index";
+import CommonMeta from "components/CommonMeta";
+import { ImageIcon } from "components/ImageIcon";
+import { imageIconData } from "constants/index";
+import { ImageCardProps } from "~/types";
 
 const Home: NextPage = () => {
   const topCard: ImageCardProps = {
-    title: '',
-    image: 'gdsc-top.png',
-    imagePosition: 'right'
-  }
+    title: "",
+    image: "gdsc-top.png",
+    imagePosition: "right",
+  };
 
   const secondCard: ImageCardProps = {
-    title: '',
-    image: 'group-highfive.png',
-    imagePosition: 'left'
-  }
+    title: "",
+    image: "group-highfive.png",
+    imagePosition: "left",
+  };
 
   const about_contents = [
-    'Google Developer Student Clubs are university-based community groups supported by Google Developers intending href empower student developers and strengthen their leadership skills',
-    'Here at GDSC Waseda, by collaborating with Google, we will organize many exciting events such as speaker sessions, hackathons, introductory hands-on workshops, study sessions, and so on'
-  ]
+    "Google Developer Student Clubs are university-based community groups supported by Google Developers intending href empower student developers and strengthen their leadership skills",
+    "Here at GDSC Waseda, by collaborating with Google, we will organize many exciting events such as speaker sessions, hackathons, introductory hands-on workshops, study sessions, and so on",
+  ];
   return (
     <>
       <CommonMeta pageTitle="Home" />
@@ -36,7 +36,10 @@ const Home: NextPage = () => {
           <ImageCard props={topCard}>
             <div className="home-page__top__title">Change the World</div>
             <div className="home-page__top__button">
-              <a href = 'https://gdsc.community.dev/waseda-university/' target='_blank'>
+              <a
+                href="https://gdsc.community.dev/waseda-university/"
+                target="_blank"
+              >
                 <Button variant="outline-dark" className="button">
                   <small>Join Us</small>
                 </Button>
@@ -85,7 +88,7 @@ const Home: NextPage = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

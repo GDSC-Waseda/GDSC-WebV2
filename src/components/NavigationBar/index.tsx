@@ -1,10 +1,10 @@
-import 'bootstrap/dist/css/bootstrap.min.css'
+import "bootstrap/dist/css/bootstrap.min.css";
 
-import Image from 'next/image'
-import Link from 'next/link'
-import { Container, Nav, Button, Navbar } from 'react-bootstrap'
+import Image from "next/image";
+import Link from "next/link";
+import { Container, Nav, Button, Navbar } from "react-bootstrap";
 
-import logo from 'assets/svg/logo.svg'
+import logo from "assets/svg/logo.svg";
 
 export const NavigationBar = (): JSX.Element => {
   return (
@@ -35,8 +35,11 @@ export const NavigationBar = (): JSX.Element => {
                 <Link href="/events">Events</Link>
               </Nav.Item>
               <Nav.Item className="navItem">
-                <a href='https://gdsc.community.dev/waseda-university/' target='_blank'>
-                  <Button variant="outline-dark"  className="butto">
+                <a
+                  href="https://gdsc.community.dev/waseda-university/"
+                  target="_blank"
+                >
+                  <Button variant="outline-dark" className="butto">
                     <small>Join Us</small>
                   </Button>
                 </a>
@@ -46,7 +49,7 @@ export const NavigationBar = (): JSX.Element => {
         </Container>
       </Navbar>
     </div>
-  )
-}
+  );
+};
 
-export default NavigationBar
+export default NavigationBar;
