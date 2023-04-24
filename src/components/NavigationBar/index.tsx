@@ -35,9 +35,11 @@ export const NavigationBar = (): JSX.Element => {
                 <Link href="/events">Events</Link>
               </Nav.Item>
               <Nav.Item className="navItem">
-                <Button variant="outline-dark" disabled className="button">
-                  <Link href="/forms">Join Us</Link>
-                </Button>
+                <a href='https://gdsc.community.dev/waseda-university/' target='_blank'>
+                  <Button variant="outline-dark"  className="butto">
+                    <small>Join Us</small>
+                  </Button>
+                </a>
               </Nav.Item>
             </Nav>
           </Navbar.Collapse>

@@ -36,9 +36,11 @@ const Home: NextPage = () => {
           <ImageCard props={topCard}>
             <div className="home-page__top__title">Change the World</div>
             <div className="home-page__top__button">
-              <Button variant="outline-dark" disabled className="button">
-                <Link href="/forms">Join Us</Link>
-              </Button>
+              <a href = 'https://gdsc.community.dev/waseda-university/' target='_blank'>
+                <Button variant="outline-dark" className="button">
+                  <small>Join Us</small>
+                </Button>
+              </a>
             </div>
           </ImageCard>
         </div>
