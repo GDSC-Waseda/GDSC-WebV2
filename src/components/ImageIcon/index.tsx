@@ -1,23 +1,23 @@
-import Image from 'next/image'
+import Image from "next/image";
 
-import { ImageIconProps } from '~/types/index'
+import { ImageIconProps } from "~/types/index";
 
 export const ImageIcon: React.FC<{
-  children?: React.ReactNode
-  props: ImageIconProps
+  children?: React.ReactNode;
+  props: ImageIconProps;
 }> = ({ children, props }) => {
-  const image = props.image !== undefined ? props.image : undefined
+  const image = props.image !== undefined ? props.image : undefined;
 
   const imageSize = () => {
     switch (props.size) {
-      case 's':
-        return 10
-      case 'm':
-        return 10
-      case 'l':
-        return 100
+      case "s":
+        return 10;
+      case "m":
+        return 10;
+      case "l":
+        return 100;
     }
-  }
+  };
   return (
     <div className={`image-icon ${props.size}`}>
       <div className={`image-icon__image-container ${props.size}`}>
@@ -40,7 +40,7 @@ export const ImageIcon: React.FC<{
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ImageIcon
+export default ImageIcon;

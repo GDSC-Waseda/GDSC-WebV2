@@ -4,21 +4,21 @@ import Document, {
   Html,
   Main,
   NextScript,
-  DocumentInitialProps
-} from 'next/document'
-import Script from 'next/script'
+  DocumentInitialProps,
+} from "next/document";
+import Script from "next/script";
 
-import { googleTagManagerId } from '~/api/gtm'
+import { googleTagManagerId } from "~/api/gtm";
 
 export default class CustomDocument extends Document {
   static async getInitialProps(
     ctx: DocumentContext
   ): Promise<DocumentInitialProps> {
-    const initialProps = await Document.getInitialProps(ctx)
+    const initialProps = await Document.getInitialProps(ctx);
 
     return {
-      ...initialProps
-    }
+      ...initialProps,
+    };
   }
 
   render(): JSX.Element {
@@ -47,13 +47,13 @@ export default class CustomDocument extends Document {
                 height="0"
                 width="0"
                 style="display:none;visibility:hidden"
-              />`
+              />`,
             }}
           />
           <Main />
           <NextScript />
         </body>
       </Html>
-    )
+    );
   }
 }

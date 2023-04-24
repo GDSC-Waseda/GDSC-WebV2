@@ -1,11 +1,11 @@
-import Script from 'next/script'
-import React from 'react'
+import Script from "next/script";
+import React from "react";
 
-export type GoogleTagManagerId = `GTM-${string}`
+export type GoogleTagManagerId = `GTM-${string}`;
 
 type Props = {
-  googleTagManagerId: GoogleTagManagerId
-}
+  googleTagManagerId: GoogleTagManagerId;
+};
 
 const GoogleTagManager: React.FC<Props> = ({ googleTagManagerId }) => (
   <Script
@@ -18,9 +18,9 @@ const GoogleTagManager: React.FC<Props> = ({ googleTagManagerId }) => (
       j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','${googleTagManagerId}');
-      `
+      `,
     }}
   />
-)
+);
 
-export default GoogleTagManager
+export default GoogleTagManager;

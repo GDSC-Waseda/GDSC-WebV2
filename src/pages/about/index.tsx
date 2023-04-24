@@ -1,51 +1,51 @@
-import type { NextPage } from 'next'
-import Link from 'next/link'
-import { useEffect } from 'react'
-import TagManager from 'react-gtm-module'
+import type { NextPage } from "next";
+import Link from "next/link";
+import { useEffect } from "react";
+import TagManager from "react-gtm-module";
 
-import Stack from '@mui/material/Stack'
-import Button from 'react-bootstrap/Button'
+import Stack from "@mui/material/Stack";
+import Button from "react-bootstrap/Button";
 
-import { ImageCard, HeaderCard } from 'components/Cards/index'
-import { Carousel } from 'components/Carousel'
-import CommonMeta from 'components/CommonMeta'
-import { HeaderCardProps, ImageCardProps, CarouselCardProps } from '~/types'
+import { ImageCard, HeaderCard } from "components/Cards/index";
+import { Carousel } from "components/Carousel";
+import CommonMeta from "components/CommonMeta";
+import { HeaderCardProps, ImageCardProps, CarouselCardProps } from "~/types";
 
 export const AboutPage: NextPage = () => {
   const card: HeaderCardProps = {
-    headTitle: '',
-    title: 'About Us',
-    content: "Waseda University's chapter of the Google Developer Student Club"
-  }
+    headTitle: "",
+    title: "About Us",
+    content: "Waseda University's chapter of the Google Developer Student Club",
+  };
 
   const imageCard: ImageCardProps = {
-    title: 'Google Developer Student Clubs',
+    title: "Google Developer Student Clubs",
     content:
-      'Google Developer Student Clubs are university-based community groups supported by Google Developers intending href empower student developers and strengthen their leadership skills\nHere at GDSC Waseda, by collaborating with Google, we will organize many exciting events such as speaker sessions, hackathons, introductory hands-on workshops, study sessions, and so on',
-    image: 'group-highfive.png',
-    imagePosition: 'left'
-  }
+      "Google Developer Student Clubs are university-based community groups supported by Google Developers intending href empower student developers and strengthen their leadership skills\nHere at GDSC Waseda, by collaborating with Google, we will organize many exciting events such as speaker sessions, hackathons, introductory hands-on workshops, study sessions, and so on",
+    image: "group-highfive.png",
+    imagePosition: "left",
+  };
 
   const carouselCards: Array<CarouselCardProps> = [
     {
-      image: 'workshop.png',
-      subtitle: 'Hands-on Workshop',
-      title: 'JUN 22, 2022',
-      old: true
+      image: "workshop.png",
+      subtitle: "Hands-on Workshop",
+      title: "JUN 22, 2022",
+      old: true,
     },
     {
-      image: 'demoday.png',
-      subtitle: 'Demo Day',
-      title: 'JUL 17, 2022',
-      old: false
+      image: "demoday.png",
+      subtitle: "Demo Day",
+      title: "JUL 17, 2022",
+      old: false,
     },
     {
-      image: 'tech-talk-1.png',
-      subtitle: 'Speaker Session / Tech Talk',
-      title: 'APR 21, 2022',
-      old: true
-    }
-  ]
+      image: "tech-talk-1.png",
+      subtitle: "Speaker Session / Tech Talk",
+      title: "APR 21, 2022",
+      old: true,
+    },
+  ];
   /*
   useEffect(() => {
     TagManager.initialize({ gtmId: 'GTM-AboutPage' })
@@ -90,7 +90,7 @@ export const AboutPage: NextPage = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default AboutPage
+export default AboutPage;

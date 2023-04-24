@@ -1,7 +1,7 @@
-import Head from 'next/head'
+import Head from "next/head";
 
-import * as env from 'config'
-import { MetaData } from '~/types'
+import * as env from "config";
+import { MetaData } from "~/types";
 
 export default function CommonMeta({
   pageTitle,
@@ -9,29 +9,29 @@ export default function CommonMeta({
   pageKeywords,
   pagePath,
   pageImgWidth,
-  pageImgHeight
+  pageImgHeight,
 }: MetaData) {
-  const defaultTitle = 'Google Developers Student Clubs Waseda'
+  const defaultTitle = "Google Developers Student Clubs Waseda";
   const defaultDescription =
-    'GDSC Waseda is a student society supported by Google Developers based in Waseda Univ., Tokyo'
-  const defaultUrl = env.PUBLIC_URL
-  const defaultKeywords = 'GDSC Waseda'
-  const siteName = 'GDSC Waseda Official Website'
+    "GDSC Waseda is a student society supported by Google Developers based in Waseda Univ., Tokyo";
+  const defaultUrl = env.PUBLIC_URL;
+  const defaultKeywords = "GDSC Waseda";
+  const siteName = "GDSC Waseda Official Website";
 
-  const title = pageTitle ? `${pageTitle} | ${defaultTitle}` : defaultTitle
+  const title = pageTitle ? `${pageTitle} | ${defaultTitle}` : defaultTitle;
   const description = pageDescription
     ? `${pageDescription} | ${defaultDescription}`
-    : defaultDescription
-  const url = pagePath ? `${defaultUrl}/${pagePath}` : defaultUrl
+    : defaultDescription;
+  const url = pagePath ? `${defaultUrl}/${pagePath}` : defaultUrl;
 
   const image = pagePath
     ? `https://${defaultUrl}/pages/${pagePath}.png`
-    : `https://${defaultUrl}/logo.svg`
-  const keywords = pageKeywords ? pageKeywords : defaultKeywords
-  const imgWidth = pageImgWidth ? pageImgWidth : 1280
-  const imgHeight = pageImgHeight ? pageImgHeight : 640
+    : `https://${defaultUrl}/logo.svg`;
+  const keywords = pageKeywords ? pageKeywords : defaultKeywords;
+  const imgWidth = pageImgWidth ? pageImgWidth : 1280;
+  const imgHeight = pageImgHeight ? pageImgHeight : 640;
 
-  console.log(url)
+  console.log(url);
   return (
     <Head>
       <title>{title}</title>
@@ -49,5 +49,5 @@ export default function CommonMeta({
       <link rel="apple-touch-icon" href="logo.svg" />
       <link rel="icon" href="logo.svg" />
     </Head>
-  )
+  );
 }

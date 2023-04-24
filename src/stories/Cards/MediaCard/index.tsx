@@ -1,18 +1,18 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
-import { ArrowDropDown, ArrowDropUp } from '@mui/icons-material'
-import Collapse from '@mui/material/Collapse'
+import { ArrowDropDown, ArrowDropUp } from "@mui/icons-material";
+import Collapse from "@mui/material/Collapse";
 
-import './MediaCard.css'
-import { MediaCardProps } from '~/types/index'
+import "./MediaCard.css";
+import { MediaCardProps } from "~/types/index";
 
 export const MediaCard: React.FC<{
-  children?: React.ReactNode
-  props: MediaCardProps
+  children?: React.ReactNode;
+  props: MediaCardProps;
 }> = ({ children, props }) => {
-  const [open, setOpen] = useState(props.open)
+  const [open, setOpen] = useState(props.open);
 
-  const handleOnClick = () => setOpen(!open)
+  const handleOnClick = () => setOpen(!open);
 
   return (
     <div className={`media-card ${props.size}`}>
@@ -51,7 +51,7 @@ export const MediaCard: React.FC<{
         </Collapse>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default MediaCard
+export default MediaCard;

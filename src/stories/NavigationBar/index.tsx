@@ -1,10 +1,10 @@
-import 'bootstrap/dist/css/bootstrap.min.css'
-import './NavigationBar.css'
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./NavigationBar.css";
 
-import Link from 'next/link'
-import { Container, Nav, Button, Navbar } from 'react-bootstrap'
+import Link from "next/link";
+import { Container, Nav, Button, Navbar } from "react-bootstrap";
 
-import logo from 'assets/svg/logo.svg'
+import logo from "assets/svg/logo.svg";
 
 export const NavigationBar = (): JSX.Element => {
   return (
@@ -42,7 +42,7 @@ export const NavigationBar = (): JSX.Element => {
         </Container>
       </Navbar>
     </div>
-  )
-}
+  );
+};
 
-export default NavigationBar
+export default NavigationBar;

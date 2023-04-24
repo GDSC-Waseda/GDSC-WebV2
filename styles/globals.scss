@@ -1,21 +1,21 @@
-@import './pages/error.scss';
-@import './pages/aboutpage.scss';
-@import './pages/home.scss';
-@import './pages/events.scss';
+@import "./pages/error.scss";
+@import "./pages/aboutpage.scss";
+@import "./pages/home.scss";
+@import "./pages/events.scss";
 
-@import './components/header.scss';
-@import './components/footer.scss';
-@import './components/HeaderCard.scss';
-@import './components/ImageCard.scss';
-@import './components/MediaCard.scss';
-@import './components/CarouselCard.scss';
-@import './components/Carousel.scss';
-@import './components/ImageIcon.scss';
+@import "./components/header.scss";
+@import "./components/footer.scss";
+@import "./components/HeaderCard.scss";
+@import "./components/ImageCard.scss";
+@import "./components/MediaCard.scss";
+@import "./components/CarouselCard.scss";
+@import "./components/Carousel.scss";
+@import "./components/ImageIcon.scss";
 
 body {
   padding: 0px;
   margin: 0px;
-  font-family: 'Rubik', 'Outfit', sans-serif;
+  font-family: "Rubik", "Outfit", sans-serif;
 }
 
 button.about-page__button.btn.btn-outline-dark:hover a {

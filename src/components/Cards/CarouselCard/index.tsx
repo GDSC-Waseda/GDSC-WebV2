@@ -1,11 +1,11 @@
-import Image from 'next/image'
+import Image from "next/image";
 
-import { CarouselCardProps } from '~/types'
+import { CarouselCardProps } from "~/types";
 
 export const CarouselCard: React.FC<{ props: CarouselCardProps }> = ({
-  props
+  props,
 }) => {
-  const isOld = props.old ? 'old' : ''
+  const isOld = props.old ? "old" : "";
   return (
     <div className={`carousel-card ${isOld}`}>
       <Image
@@ -20,7 +20,7 @@ export const CarouselCard: React.FC<{ props: CarouselCardProps }> = ({
         <div className="carousel-card__title">{props.subtitle}</div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default CarouselCard
+export default CarouselCard;

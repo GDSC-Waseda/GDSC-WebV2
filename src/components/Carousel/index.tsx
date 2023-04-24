@@ -1,13 +1,13 @@
-import { useRef } from 'react'
+import { useRef } from "react";
 
-import { CarouselCard } from 'components/Cards'
-import { CarouselCardProps } from '~/types'
+import { CarouselCard } from "components/Cards";
+import { CarouselCardProps } from "~/types";
 
 export const Carousel: React.FC<{ props: Array<CarouselCardProps> }> = ({
-  props
+  props,
 }) => {
-  const ref = useRef<HTMLDivElement>(null)
-  const center = ref.current && ref.current.offsetWidth > 1000 ? '' : 'center'
+  const ref = useRef<HTMLDivElement>(null);
+  const center = ref.current && ref.current.offsetWidth > 1000 ? "" : "center";
 
   return (
     <div className={`carousel ${center}`}>
@@ -17,7 +17,7 @@ export const Carousel: React.FC<{ props: Array<CarouselCardProps> }> = ({
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Carousel
+export default Carousel;

@@ -1,7 +1,7 @@
-import type { NextPage } from 'next'
+import type { NextPage } from "next";
 
-import CommonMeta from 'components/CommonMeta'
-import { ErrorPage } from 'pages/404'
+import CommonMeta from "components/CommonMeta";
+import { ErrorPage } from "pages/404";
 
 const Teams: NextPage = () => {
   return (
@@ -9,7 +9,7 @@ const Teams: NextPage = () => {
       <CommonMeta pageTitle="Teams" pagePath="teams" />
       <ErrorPage text="dev" />
     </>
-  )
-}
+  );
+};
 
-export default Teams
+export default Teams;

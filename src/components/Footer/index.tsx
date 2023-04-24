@@ -1,10 +1,10 @@
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from "next/image";
+import Link from "next/link";
 
-import Google from 'assets/svg/google.svg'
-import Instagram from 'assets/svg/instagram.svg'
-import LinkedIn from 'assets/svg/linked-in.svg'
-import logo from 'assets/svg/logo.svg'
+import Google from "assets/svg/google.svg";
+import Instagram from "assets/svg/instagram.svg";
+import LinkedIn from "assets/svg/linked-in.svg";
+import logo from "assets/svg/logo.svg";
 
 export const Footer = (): JSX.Element => {
   return (
@@ -52,7 +52,7 @@ export const Footer = (): JSX.Element => {
       </div>
       <div className="footer__reserved">All Rights Reserved by GDSC Waseda</div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

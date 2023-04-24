@@ -1,18 +1,18 @@
-import type { AppProps } from 'next/app'
-import { useRouter } from 'next/router'
+import type { AppProps } from "next/app";
+import { useRouter } from "next/router";
 
-import { Footer } from 'components/Footer'
-import { NavigationBar } from 'components/NavigationBar'
-import { googleTagManagerId } from '~/api/gtm'
+import { Footer } from "components/Footer";
+import { NavigationBar } from "components/NavigationBar";
+import { googleTagManagerId } from "~/api/gtm";
 
-import 'styles/globals.scss'
+import "styles/globals.scss";
 
 /*import GoogleTagManager, {
   GoogleTagManagerId
 } from 'components/GoogleAnalytics'*/
 
 export default function MyApp({ Component, pageProps }: AppProps) {
-  const router = useRouter()
+  const router = useRouter();
 
   return (
     <>
@@ -23,5 +23,5 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       <Component {...pageProps} />
       <Footer />
     </>
-  )
+  );
 }

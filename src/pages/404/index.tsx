@@ -1,22 +1,22 @@
-import type { NextPage } from 'next'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
+import type { NextPage } from "next";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
-import Button from 'react-bootstrap/Button'
+import Button from "react-bootstrap/Button";
 
 export const ErrorPage: NextPage<{ text?: string }> = ({ text }) => {
-  const router = useRouter()
+  const router = useRouter();
 
   const message = (text: string) => {
     switch (text) {
-      case 'dev':
-        return 'This page is under development'
+      case "dev":
+        return "This page is under development";
       default:
-        return "This page doesn't exist"
+        return "This page doesn't exist";
     }
-  }
+  };
 
-  console.log(router.pathname)
+  console.log(router.pathname);
 
   return (
     <div className="error">
@@ -30,7 +30,7 @@ export const ErrorPage: NextPage<{ text?: string }> = ({ text }) => {
         </Button>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ErrorPage
+export default ErrorPage;

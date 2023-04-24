@@ -1,60 +1,60 @@
-import type { NextPage } from 'next'
-import Link from 'next/link'
-import { useState } from 'react'
-import { Button } from 'react-bootstrap'
+import type { NextPage } from "next";
+import Link from "next/link";
+import { useState } from "react";
+import { Button } from "react-bootstrap";
 
-import { HeaderCard, MediaCard } from 'components/Cards/index'
-import CommonMeta from 'components/CommonMeta'
-import { HeaderCardProps, MediaCardProps } from '~/types'
+import { HeaderCard, MediaCard } from "components/Cards/index";
+import CommonMeta from "components/CommonMeta";
+import { HeaderCardProps, MediaCardProps } from "~/types";
 
 const EventsPage: NextPage = () => {
   const card: HeaderCardProps = {
-    headTitle: '',
-    title: 'Events',
-    content: '“Alone  we can do so little; together we can do so much.”'
-  }
+    headTitle: "",
+    title: "Events",
+    content: "“Alone  we can do so little; together we can do so much.”",
+  };
 
   const eventsCard_UpComing: MediaCardProps[] = [
     {
-      size: 'm',
-      title: 'Android Dev. Part 1',
-      image: 'event-android-dev-p1.png',
+      size: "m",
+      title: "Android Dev. Part 1",
+      image: "event-android-dev-p1.png",
       open: true,
-      canOpen: false
+      canOpen: false,
     },
     {
-      size: 'm',
-      title: '#1 Python for Babies',
+      size: "m",
+      title: "#1 Python for Babies",
       open: true,
-      canOpen: false
-    }
-  ]
+      canOpen: false,
+    },
+  ];
 
   const eventsCard_Past: MediaCardProps[] = [
     {
-      size: 'm',
-      title: 'Cybersecurity on Wheels',
-      image: 'event-cyber-security.png',
+      size: "m",
+      title: "Cybersecurity on Wheels",
+      image: "event-cyber-security.png",
       open: true,
-      canOpen: false
+      canOpen: false,
     },
     {
-      size: 'm',
-      title: 'GDSC Solution Challenge',
-      image: 'event-solutions-challenge.png',
+      size: "m",
+      title: "GDSC Solution Challenge",
+      image: "event-solutions-challenge.png",
       open: true,
-      canOpen: false
+      canOpen: false,
     },
     {
-      size: 'm',
-      title: 'Speaker Session / Tech Talk',
-      image: 'event-waseda-time.png',
+      size: "m",
+      title: "Speaker Session / Tech Talk",
+      image: "event-waseda-time.png",
       open: true,
-      canOpen: false
-    }
-  ]
+      canOpen: false,
+    },
+  ];
 
-  const [showCard, setShowCard] = useState(3)
+  const [showCard, setShowCard] = useState(3);
 
   return (
     <>
@@ -84,7 +84,7 @@ const EventsPage: NextPage = () => {
                     Sample Details of the Events.
                   </div>
                 </MediaCard>
-              )
+              );
             })}
             <div className="events__body__button">
               <Button variant="outline-dark" disabled className="button">
@@ -109,12 +109,12 @@ const EventsPage: NextPage = () => {
                   Sample Details of the Events.
                 </div>
               </MediaCard>
-            )
+            );
           })}
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default EventsPage
+export default EventsPage;

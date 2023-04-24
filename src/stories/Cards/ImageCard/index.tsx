@@ -1,14 +1,14 @@
-import Box from '@mui/material/Box'
-import Container from '@mui/material/Container'
-import Grid from '@mui/material/Grid'
-import Typography from '@mui/material/Typography'
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid";
+import Typography from "@mui/material/Typography";
 
-import './ImageCard.css'
-import { ImageCardProps } from '~/types/index'
+import "./ImageCard.css";
+import { ImageCardProps } from "~/types/index";
 
 export const ImageCard: React.FC<{
-  children?: React.ReactNode
-  props: ImageCardProps
+  children?: React.ReactNode;
+  props: ImageCardProps;
 }> = ({ children, props }) => {
   const imageProps = (
     <img
@@ -16,7 +16,7 @@ export const ImageCard: React.FC<{
       src={require(`assets/img/${props.image}`)}
       alt="image-card"
     />
-  )
+  );
 
   const textProps = (
     <Box padding={2} sx={{ maxWidth: 430, border: 0 }}>
@@ -25,7 +25,7 @@ export const ImageCard: React.FC<{
           {props.title}
         </Typography>
         {props.content !== undefined &&
-          props.content.split('\n').map((text, key) => (
+          props.content.split("\n").map((text, key) => (
             <Typography
               gutterBottom
               color="text.secondary"
@@ -40,10 +40,10 @@ export const ImageCard: React.FC<{
         )}
       </Container>
     </Box>
-  )
+  );
 
-  const propsRight = props.imagePosition === 'left' ? textProps : imageProps
-  const propsLeft = props.imagePosition === 'left' ? imageProps : textProps
+  const propsRight = props.imagePosition === "left" ? textProps : imageProps;
+  const propsLeft = props.imagePosition === "left" ? imageProps : textProps;
 
   return (
     <Box padding={3} className="image-card">
@@ -61,7 +61,7 @@ export const ImageCard: React.FC<{
         </Grid>
       </Grid>
     </Box>
-  )
-}
+  );
+};
 
-export default ImageCard
+export default ImageCard;
