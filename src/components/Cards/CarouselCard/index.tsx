@@ -1,13 +1,15 @@
 import Image from "next/image";
-
 import { CarouselCardProps } from "~/types";
 
-export const CarouselCard: React.FC<{ props: CarouselCardProps }> = ({
-  props,
-}) => {
+export const CarouselCard: React.FC<{
+  props: CarouselCardProps;
+  isActive: boolean;
+}> = ({ props, isActive }) => {
   const isOld = props.old ? "old" : "";
+  const activeClass = isActive ? "active" : "";
+
   return (
-    <div className={`carousel-card ${isOld}`}>
+    <div className={`carousel-card ${isOld} ${activeClass}`}>
       <Image
         src={`/events/${props.image}`}
         width="200px"

@@ -1,13 +1,13 @@
 import type { NextPage } from "next";
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import TagManager from "react-gtm-module";
 
 import Stack from "@mui/material/Stack";
 import Button from "react-bootstrap/Button";
 
 import { ImageCard, HeaderCard } from "components/Cards/index";
-import { Carousel } from "components/Carousel";
+import Carousel from "components/Carousel";
 import CommonMeta from "components/CommonMeta";
 import { HeaderCardProps, ImageCardProps, CarouselCardProps } from "~/types";
 
@@ -38,6 +38,48 @@ export const AboutPage: NextPage = () => {
       subtitle: "Demo Day",
       title: "JUL 17, 2022",
       old: false,
+    },
+    {
+      image: "tech-talk-1.png",
+      subtitle: "Speaker Session / Tech Talk",
+      title: "APR 21, 2022",
+      old: true,
+    },
+    {
+      image: "tech-talk-1.png",
+      subtitle: "Speaker Session / Tech Talk",
+      title: "APR 21, 2022",
+      old: true,
+    },
+    {
+      image: "tech-talk-1.png",
+      subtitle: "Speaker Session / Tech Talk",
+      title: "APR 21, 2022",
+      old: true,
+    },
+    {
+      image: "tech-talk-1.png",
+      subtitle: "Speaker Session / Tech Talk",
+      title: "APR 21, 2022",
+      old: true,
+    },
+    {
+      image: "tech-talk-1.png",
+      subtitle: "Speaker Session / Tech Talk",
+      title: "APR 21, 2022",
+      old: true,
+    },
+    {
+      image: "tech-talk-1.png",
+      subtitle: "Speaker Session / Tech Talk",
+      title: "APR 21, 2022",
+      old: true,
+    },
+    {
+      image: "tech-talk-1.png",
+      subtitle: "Speaker Session / Tech Talk",
+      title: "APR 21, 2022",
+      old: true,
     },
     {
       image: "tech-talk-1.png",
@@ -85,6 +127,7 @@ export const AboutPage: NextPage = () => {
             Innovation never ends. Join us as we explore topics from all fields.
           </div>
         </div>
+
         <div className="about-page__events__carousel">
           <Carousel props={carouselCards} />
         </div>

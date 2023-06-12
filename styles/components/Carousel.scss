@@ -8,9 +8,28 @@
     display: flex;
     overflow-x: scroll;
     padding: 10px 20px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   &.center {
     justify-content: center;
+  }
+
+  &__card {
+    /* Styles for all cards */
+    transition: transform 0.3s, opacity 0.6s;
+    transform: scale(0.7);
+    opacity: 0.8;
+  }
+
+  &__card.active {
+    /* Styles for the active card */
+    transform: scale(1.1);
+    opacity: 1;
   }
 }
