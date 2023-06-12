@@ -75,18 +75,6 @@ export const AboutPage: NextPage = () => {
       title: "APR 21, 2022",
       old: true,
     },
-    {
-      image: "tech-talk-1.png",
-      subtitle: "Speaker Session / Tech Talk",
-      title: "APR 21, 2022",
-      old: true,
-    },
-    {
-      image: "tech-talk-1.png",
-      subtitle: "Speaker Session / Tech Talk",
-      title: "APR 21, 2022",
-      old: true,
-    },
   ];
   /*
   useEffect(() => {
