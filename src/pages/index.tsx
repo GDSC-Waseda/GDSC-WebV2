@@ -26,7 +26,7 @@ const Home: NextPage = () => {
 
   const about_contents = [
     "Google Developer Student Clubs are university-based community groups supported by Google Developers intending href empower student developers and strengthen their leadership skills",
-    "Here at GDSC Waseda, by collaborating with Google, we will organize many exciting events such as speaker sessions, hackathons, introductory hands-on workshops, study sessions, and so on",
+    "Here at GDSC Waseda, by collaborating with Google, we will organize many exciting events such as speaker sessions, hackathons, introductory hands-on workshops, study sessions, and so on.",
   ];
   return (
     <>
