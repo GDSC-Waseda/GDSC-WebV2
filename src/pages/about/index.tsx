@@ -2,7 +2,8 @@ import type { NextPage } from "next";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import TagManager from "react-gtm-module";
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Stack from "@mui/material/Stack";
 import Button from "react-bootstrap/Button";
 
@@ -46,10 +47,10 @@ export const AboutPage: NextPage = () => {
       old: true,
     },
     {
-      image: "tech-talk-1.png",
-      subtitle: "Speaker Session / Tech Talk",
-      title: "APR 21, 2022",
-      old: true,
+      image: "demoday.png",
+      subtitle: "Demo Day",
+      title: "JUL 17, 2022",
+      old: false,
     },
     {
       image: "tech-talk-1.png",
@@ -64,9 +65,9 @@ export const AboutPage: NextPage = () => {
       old: true,
     },
     {
-      image: "tech-talk-1.png",
-      subtitle: "Speaker Session / Tech Talk",
-      title: "APR 21, 2022",
+      image: "workshop.png",
+      subtitle: "Hands-on Workshop",
+      title: "JUN 22, 2022",
       old: true,
     },
     {

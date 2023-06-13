@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { CarouselCardProps } from "~/types";
 import { CarouselCard } from "components/Cards";
 
@@ -7,57 +7,39 @@ interface CarouselProps {
 }
 
 const Carousel: React.FC<CarouselProps> = ({ props }) => {
-  const ref = useRef<HTMLDivElement>(null);
-  const [activeIndex, setActiveIndex] = useState<number>(0);
-  const center = ref.current && ref.current.offsetWidth > 1000 ? "" : "center";
+  const [centerIndex, setCenterIndex] = useState(1); // Starting from index 1 as it's the center of the first 3 cards.
 
-  const handleClick = (index: number) => {
-    if (ref.current) {
-      const cardWidth = ref.current.offsetWidth;
-      const containerWidth = ref.current.scrollWidth;
-      const maxScrollLeft = containerWidth - ref.current.clientWidth;
-
-      let scrollAmount;
-      if (index < activeIndex) {
-        scrollAmount = Math.max(0, ref.current.scrollLeft - cardWidth);
-      } else if (index > activeIndex) {
-        scrollAmount = Math.min(
-          maxScrollLeft,
-          ref.current.scrollLeft + cardWidth
-        );
-      } else {
-        scrollAmount = ref.current.scrollLeft;
-      }
-
-      setActiveIndex(index);
-      ref.current.scrollTo({
-        left: scrollAmount,
-        behavior: "smooth",
-      });
+  const handleCardClick = (direction: string) => {
+    if (direction === "left") {
+      setCenterIndex((oldCenterIndex) =>
+        oldCenterIndex === 0 ? props.length - 1 : oldCenterIndex - 1
+      );
+    } else if (direction === "right") {
+      setCenterIndex((oldCenterIndex) =>
+        oldCenterIndex === props.length - 1 ? 0 : oldCenterIndex + 1
+      );
     }
   };
 
-  const renderCarouselCards = () => {
-    return props.map((card, index) => {
-      const cardClassName = `carousel__card ${
-        index === activeIndex ? "active" : ""
-      }`;
-      return (
-        <div
-          key={index}
-          className={cardClassName}
-          onClick={() => handleClick(index)}
-        >
-          <CarouselCard props={card} isActive={index === activeIndex} />
-        </div>
-      );
-    });
-  };
+  // Calculate indices for the cards to the left, center and right of the carousel.
+  const leftIndex = centerIndex - 1 < 0 ? props.length - 1 : centerIndex - 1;
+  const rightIndex = centerIndex + 1 > props.length - 1 ? 0 : centerIndex + 1;
 
   return (
-    <div className={`carousel ${center}`}>
-      <div className="carousel__container" ref={ref}>
-        {renderCarouselCards()}
+    <div className="carousel">
+      <div className="carousel__container">
+        <div className="carousel__card" onClick={() => handleCardClick("left")}>
+          <CarouselCard props={props[leftIndex]} isActive={false} />
+        </div>
+        <div className="carousel__card active">
+          <CarouselCard props={props[centerIndex]} isActive={true} />
+        </div>
+        <div
+          className="carousel__card"
+          onClick={() => handleCardClick("right")}
+        >
+          <CarouselCard props={props[rightIndex]} isActive={false} />
+        </div>
       </div>
     </div>
   );
