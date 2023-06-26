@@ -7,7 +7,7 @@ interface CarouselProps {
 }
 
 const Carousel: React.FC<CarouselProps> = ({ props }) => {
-  const [centerIndex, setCenterIndex] = useState(1); // Starting from index 1 as it's the center of the first 3 cards.
+  const [centerIndex, setCenterIndex] = useState(1);
 
   const handleCardClick = (direction: string) => {
     if (direction === "left") {
@@ -31,7 +31,10 @@ const Carousel: React.FC<CarouselProps> = ({ props }) => {
         <div className="carousel__card" onClick={() => handleCardClick("left")}>
           <CarouselCard props={props[leftIndex]} isActive={false} />
         </div>
-        <div className="carousel__card active">
+        <div
+          className="carousel__card active"
+          onClick={() => handleCardClick("right")}
+        >
           <CarouselCard props={props[centerIndex]} isActive={true} />
         </div>
         <div

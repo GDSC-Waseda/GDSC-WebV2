@@ -1,36 +1,23 @@
 import React from "react";
-
-interface Team {
-  name: string;
-  leader: {
-    name: string;
-    role: string;
-    description: string;
-    photo: string;
-    open: boolean;
-  };
-}
+import Link from "next/link";
+import { Card, Image } from "react-bootstrap";
 
 interface TeamCardProps {
-  team: Team;
+  name: string;
+  imgUrl: string;
+  pageLink: string;
 }
 
-const TeamCard: React.FC<TeamCardProps> = ({ team }) => {
-  const imagePath = team.leader.photo;
-
+const TeamCard: React.FC<TeamCardProps> = ({ name, imgUrl, pageLink }) => {
   return (
-    <div className="team-card">
-      <div className="team-card__image-container">
-        {team.leader.photo && (
-          <img className="team-card__image" src={imagePath} alt={team.name} />
-        )}
-      </div>
-      <div className="team-card__content">
-        <h3 className="team-card__title">{team.leader.name}</h3>
-        <p className="team-card__role">{team.leader.role}</p>
-        <p className="team-card__description">{team.leader.description}</p>
-      </div>
-    </div>
+    <Link href={pageLink}>
+      <Card style={{ width: "18rem" }}>
+        <Card.Img variant="top" src={imgUrl} />
+        <Card.Body>
+          <Card.Title>{name}</Card.Title>
+        </Card.Body>
+      </Card>
+    </Link>
   );
 };
 
