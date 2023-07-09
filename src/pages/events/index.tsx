@@ -7,6 +7,8 @@ import { HeaderCard, MediaCard } from "components/Cards/index";
 import CommonMeta from "components/CommonMeta";
 import { HeaderCardProps, MediaCardProps } from "~/types";
 
+// testing prettier
+
 const EventsPage: NextPage = () => {
   const card: HeaderCardProps = {
     headTitle: "",
