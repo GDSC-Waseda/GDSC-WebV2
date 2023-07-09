@@ -111,7 +111,6 @@ const EventsPage: NextPage = () => {
       open: true,
       canOpen: false,
     },
-
   ];
 
   const [showCard, setShowCard] = useState(3);
@@ -176,7 +175,6 @@ const EventsPage: NextPage = () => {
               <Link href="/forms">More Events</Link>
             </Button>
           </div>
-          
         </div>
       </div>
     </>
