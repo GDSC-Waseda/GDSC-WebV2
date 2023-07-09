@@ -1,20 +1,48 @@
-import { useRef } from "react";
-
-import { CarouselCard } from "components/Cards";
+import React, { useState } from "react";
 import { CarouselCardProps } from "~/types";
+import { CarouselCard } from "components/Cards";
 
-export const Carousel: React.FC<{ props: Array<CarouselCardProps> }> = ({
-  props,
-}) => {
-  const ref = useRef<HTMLDivElement>(null);
-  const center = ref.current && ref.current.offsetWidth > 1000 ? "" : "center";
+interface CarouselProps {
+  props: Array<CarouselCardProps>;
+}
+
+const Carousel: React.FC<CarouselProps> = ({ props }) => {
+  const [centerIndex, setCenterIndex] = useState(1);
+
+  const handleCardClick = (direction: string) => {
+    if (direction === "left") {
+      setCenterIndex((oldCenterIndex) =>
+        oldCenterIndex === 0 ? props.length - 1 : oldCenterIndex - 1
+      );
+    } else if (direction === "right") {
+      setCenterIndex((oldCenterIndex) =>
+        oldCenterIndex === props.length - 1 ? 0 : oldCenterIndex + 1
+      );
+    }
+  };
+
+  // Calculate indices for the cards to the left, center and right of the carousel.
+  const leftIndex = centerIndex - 1 < 0 ? props.length - 1 : centerIndex - 1;
+  const rightIndex = centerIndex + 1 > props.length - 1 ? 0 : centerIndex + 1;
 
   return (
-    <div className={`carousel ${center}`}>
-      <div className="carousel__container" ref={ref}>
-        {props.map((card, index) => (
-          <CarouselCard key={index} props={card} />
-        ))}
+    <div className="carousel">
+      <div className="carousel__container">
+        <div className="carousel__card" onClick={() => handleCardClick("left")}>
+          <CarouselCard props={props[leftIndex]} isActive={false} />
+        </div>
+        <div
+          className="carousel__card active"
+          onClick={() => handleCardClick("right")}
+        >
+          <CarouselCard props={props[centerIndex]} isActive={true} />
+        </div>
+        <div
+          className="carousel__card"
+          onClick={() => handleCardClick("right")}
+        >
+          <CarouselCard props={props[rightIndex]} isActive={false} />
+        </div>
       </div>
     </div>
   );

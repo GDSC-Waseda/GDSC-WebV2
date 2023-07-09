@@ -1,16 +1,26 @@
 .carousel {
-  position: relative;
-  text-align: center;
   display: flex;
-  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 
   &__container {
     display: flex;
-    overflow-x: scroll;
-    padding: 10px 20px;
+    gap: 20px;
+    transition: transform 2s ease-in-out;
+    width: 600px;
+    justify-content: space-between;
+    margin: 0 auto;
   }
 
-  &.center {
-    justify-content: center;
+  &__card {
+    transition: opacity 0.6s ease-in-out, transform 2s ease-in-out;
+    width: 200px;
+    opacity: 0.6;
+    transform: scale(0.7);
+  }
+
+  &__card.active {
+    opacity: 1;
+    transform: scale(1);
   }
 }
