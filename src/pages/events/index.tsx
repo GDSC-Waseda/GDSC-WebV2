@@ -138,7 +138,9 @@ const EventsPage: NextPage = () => {
                         <div className="media-card__tag">Python</div>
                         <div className="media-card__tag">Beginner</div>
                       </div>
-                      <div className="media-card__date">2021/11/26 Fri 18:30~</div>
+                      <div className="media-card__date">
+                        2021/11/26 Fri 18:30~
+                      </div>
                       <div className="media-card__details">
                         Sample Details of the Events.
                       </div>
@@ -167,7 +169,9 @@ const EventsPage: NextPage = () => {
                       <div className="media-card__tag">Python</div>
                       <div className="media-card__tag">Beginner</div>
                     </div>
-                    <div className="media-card__date">2021/11/26 Fri 18:30~</div>
+                    <div className="media-card__date">
+                      2021/11/26 Fri 18:30~
+                    </div>
                     <div className="media-card__details">
                       Sample Details of the Events.
                     </div>

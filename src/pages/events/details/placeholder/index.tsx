@@ -3,11 +3,11 @@ import React from "react";
 
 const PlaceholderPage: NextPage = () => {
   const article = {
-    title: 'Example Article',
-    author: 'John Doe',
-    date: 'July 10, 2023',
+    title: "Example Article",
+    author: "John Doe",
+    date: "July 10, 2023",
     content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   };
 
   return (
