@@ -113,6 +113,7 @@ const EventsPage: NextPage = () => {
               </MediaCard>
             );
           })}
+          
         </div>
       </div>
     </>
