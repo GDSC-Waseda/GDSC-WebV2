@@ -19,20 +19,56 @@ const EventsPage: NextPage = () => {
   const eventsCard_UpComing: MediaCardProps[] = [
     {
       size: "m",
-      title: "Android Dev. Part 1",
+      title: "Lunch Time Workshop",
       image: "event-android-dev-p1.png",
       open: true,
       canOpen: false,
     },
     {
       size: "m",
-      title: "#1 Python for Babies",
+      title: "Mini Solutions Challenge",
+      image: "event-solutions-challenge.png",
       open: true,
       canOpen: false,
     },
   ];
 
   const eventsCard_Past: MediaCardProps[] = [
+    {
+      size: "m",
+      title: "Web3 Speaker Session",
+      image: "event-web3.png",
+      open: true,
+      canOpen: false,
+    },
+    {
+      size: "m",
+      title: "Flutter Study Jams",
+      image: "event-flutter.png",
+      open: true,
+      canOpen: false,
+    },
+    {
+      size: "m",
+      title: "Networking Session",
+      image: "event-networking.png",
+      open: true,
+      canOpen: false,
+    },
+    {
+      size: "m",
+      title: "WTM International",
+      image: "event-international-womans-day.png",
+      open: true,
+      canOpen: false,
+    },
+    {
+      size: "m",
+      title: "Android Dev. Part 1",
+      image: "event-android-dev-p1.png",
+      open: true,
+      canOpen: false,
+    },
     {
       size: "m",
       title: "Cybersecurity on Wheels",
@@ -49,11 +85,33 @@ const EventsPage: NextPage = () => {
     },
     {
       size: "m",
+      title: "Graphic Design 101",
+      image: "event-photoShop.png",
+      open: true,
+      canOpen: false,
+    },
+    {
+      size: "m",
       title: "Speaker Session / Tech Talk",
       image: "event-waseda-time.png",
       open: true,
       canOpen: false,
     },
+    {
+      size: "m",
+      title: "ML Study Jams 1",
+      image: "event-ML-study-jams.png",
+      open: true,
+      canOpen: false,
+    },
+    {
+      size: "m",
+      title: "Info Session",
+      image: "event-info-session.png",
+      open: true,
+      canOpen: false,
+    },
+
   ];
 
   const [showCard, setShowCard] = useState(3);
@@ -113,6 +171,11 @@ const EventsPage: NextPage = () => {
               </MediaCard>
             );
           })}
+          <div className="events__body__button">
+            <Button variant="outline-dark" disabled className="button">
+              <Link href="/forms">More Events</Link>
+            </Button>
+          </div>
           
         </div>
       </div>
