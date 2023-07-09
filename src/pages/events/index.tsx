@@ -7,8 +7,6 @@ import { HeaderCard, MediaCard } from "components/Cards/index";
 import CommonMeta from "components/CommonMeta";
 import { HeaderCardProps, MediaCardProps } from "~/types";
 
-// testing prettier
-
 const EventsPage: NextPage = () => {
   const card: HeaderCardProps = {
     headTitle: "",
@@ -133,16 +131,20 @@ const EventsPage: NextPage = () => {
           <div className="events__body__container">
             {eventsCard_UpComing.map((eventCard, index) => {
               return (
-                <MediaCard props={eventCard} key={index}>
-                  <div className="media-card__tags">
-                    <div className="media-card__tag">Python</div>
-                    <div className="media-card__tag">Beginner</div>
-                  </div>
-                  <div className="media-card__date">2021/11/26 Fri 18:30~</div>
-                  <div className="media-card__details">
-                    Sample Details of the Events.
-                  </div>
-                </MediaCard>
+                <Link href="/events/details/placeholder" key={index}>
+                  <a>
+                    <MediaCard props={eventCard}>
+                      <div className="media-card__tags">
+                        <div className="media-card__tag">Python</div>
+                        <div className="media-card__tag">Beginner</div>
+                      </div>
+                      <div className="media-card__date">2021/11/26 Fri 18:30~</div>
+                      <div className="media-card__details">
+                        Sample Details of the Events.
+                      </div>
+                    </MediaCard>
+                  </a>
+                </Link>
               );
             })}
             <div className="events__body__button">
@@ -158,16 +160,20 @@ const EventsPage: NextPage = () => {
           </div>
           {eventsCard_Past.map((eventCard, index) => {
             return (
-              <MediaCard props={eventCard} key={index}>
-                <div className="media-card__tags">
-                  <div className="media-card__tag">Python</div>
-                  <div className="media-card__tag">Beginner</div>
-                </div>
-                <div className="media-card__date">2021/11/26 Fri 18:30~</div>
-                <div className="media-card__details">
-                  Sample Details of the Events.
-                </div>
-              </MediaCard>
+              <Link href="/events/details/placeholder" key={index}>
+                <a>
+                  <MediaCard props={eventCard}>
+                    <div className="media-card__tags">
+                      <div className="media-card__tag">Python</div>
+                      <div className="media-card__tag">Beginner</div>
+                    </div>
+                    <div className="media-card__date">2021/11/26 Fri 18:30~</div>
+                    <div className="media-card__details">
+                      Sample Details of the Events.
+                    </div>
+                  </MediaCard>
+                </a>
+              </Link>
             );
           })}
           <div className="events__body__button">
