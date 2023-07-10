@@ -131,7 +131,7 @@ const EventsPage: NextPage = () => {
           <div className="events__body__container">
             {eventsCard_UpComing.map((eventCard, index) => {
               return (
-                <Link href="/events/details/placeholder" key={index}>
+                <Link href="/events/details/placeholder" key={index} className="a">
                   <a>
                     <MediaCard props={eventCard}>
                       <div className="media-card__tags">
@@ -149,11 +149,6 @@ const EventsPage: NextPage = () => {
                 </Link>
               );
             })}
-            <div className="events__body__button">
-              <Button variant="outline-dark" disabled className="button">
-                <Link href="/forms">More Events</Link>
-              </Button>
-            </div>
           </div>
         </div>
         <div className="events__body__past">
@@ -182,7 +177,7 @@ const EventsPage: NextPage = () => {
           })}
           <div className="events__body__button">
             <Button variant="outline-dark" disabled className="button">
-              <Link href="/forms">More Events</Link>
+              <Link href="/forms">Show Less</Link>
             </Button>
           </div>
         </div>
