@@ -131,7 +131,11 @@ const EventsPage: NextPage = () => {
           <div className="events__body__container">
             {eventsCard_UpComing.map((eventCard, index) => {
               return (
-                <Link href="/events/details/placeholder" key={index} className="a">
+                <Link
+                  href="/events/details/placeholder"
+                  key={index}
+                  className="a"
+                >
                   <a>
                     <MediaCard props={eventCard}>
                       <div className="media-card__tags">
