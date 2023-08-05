@@ -6,7 +6,7 @@ const MediaCardRender: React.FC<{
   children?: React.ReactNode;
   image: string;
   size: "s" | "m" | "l";
-  tag: string;
+  tags: string[];
   date: string;
   description: string;
   open: boolean;
@@ -56,6 +56,8 @@ export default {
   argTypes: {
     size: { options: ["s", "m", "l"], control: { type: "radio" } },
     title: { control: "text" },
+    tags: { control: "array" },
+    date: { control: "text" },
     description: { control: "text" },
     open: { control: "boolean" },
     canOpen: { control: "boolean" },

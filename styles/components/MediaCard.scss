@@ -102,8 +102,8 @@
   }
 
   &__tags {
-    display: inline-flex;
-    margin-bottom: 15px;
+    display: flex;
+    margin-bottom: 5px;
   }
 
   &__tag {
@@ -112,6 +112,7 @@
     border: 0.5px solid;
     border-radius: 50px;
     font-weight: lighter;
+    display: flex;
   }
   &__date {
     margin-bottom: 10px;
