@@ -43,6 +43,11 @@ export const MediaCard: React.FC<{
               </div>
             )}
             <div className="media-card__title">{props.title}</div>
+            <div className="media-card__tags">
+              <div className="media-card__tag">{props.tag}</div>
+            </div>
+            <div className="media-card__date">{props.date}</div>
+            <div className="media-card__details">{props.description}</div>
           </>
         )}
         {props.canOpen ? (

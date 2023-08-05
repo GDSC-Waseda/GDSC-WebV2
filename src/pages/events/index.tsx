@@ -19,6 +19,9 @@ const EventsPage: NextPage = () => {
       size: "m",
       title: "Lunch Time Workshop",
       image: "event-android-dev-p1.png",
+      tag: "Insert some tag",
+      date: "Insert some date",
+      description: "Insert some description",
       open: true,
       canOpen: false,
     },
@@ -26,6 +29,9 @@ const EventsPage: NextPage = () => {
       size: "m",
       title: "Mini Solutions Challenge",
       image: "event-solutions-challenge.png",
+      tag: "Insert some tag",
+      date: "Insert some date",
+      description: "Insert some description",
       open: true,
       canOpen: false,
     },
@@ -36,6 +42,9 @@ const EventsPage: NextPage = () => {
       size: "m",
       title: "Web3 Speaker Session",
       image: "event-web3.png",
+      tag: "Insert some tag",
+      date: "Insert some date",
+      description: "Insert some description",
       open: true,
       canOpen: false,
     },
@@ -43,6 +52,9 @@ const EventsPage: NextPage = () => {
       size: "m",
       title: "Flutter Study Jams",
       image: "event-flutter.png",
+      tag: "Insert some tag",
+      date: "Insert some date",
+      description: "Insert some description",
       open: true,
       canOpen: false,
     },
@@ -50,6 +62,9 @@ const EventsPage: NextPage = () => {
       size: "m",
       title: "Networking Session",
       image: "event-networking.png",
+      tag: "Insert some tag",
+      date: "Insert some date",
+      description: "Insert some description",
       open: true,
       canOpen: false,
     },
@@ -57,6 +72,9 @@ const EventsPage: NextPage = () => {
       size: "m",
       title: "WTM International",
       image: "event-international-womans-day.png",
+      tag: "Insert some tag",
+      date: "Insert some date",
+      description: "Insert some description",
       open: true,
       canOpen: false,
     },
@@ -64,6 +82,9 @@ const EventsPage: NextPage = () => {
       size: "m",
       title: "Android Dev. Part 1",
       image: "event-android-dev-p1.png",
+      tag: "Insert some tag",
+      date: "Insert some date",
+      description: "Insert some description",
       open: true,
       canOpen: false,
     },
@@ -71,6 +92,9 @@ const EventsPage: NextPage = () => {
       size: "m",
       title: "Cybersecurity on Wheels",
       image: "event-cyber-security.png",
+      tag: "Insert some tag",
+      date: "Insert some date",
+      description: "Insert some description",
       open: true,
       canOpen: false,
     },
@@ -78,6 +102,9 @@ const EventsPage: NextPage = () => {
       size: "m",
       title: "GDSC Solution Challenge",
       image: "event-solutions-challenge.png",
+      tag: "Insert some tag",
+      date: "Insert some date",
+      description: "Insert some description",
       open: true,
       canOpen: false,
     },
@@ -85,6 +112,9 @@ const EventsPage: NextPage = () => {
       size: "m",
       title: "Graphic Design 101",
       image: "event-photoShop.png",
+      tag: "Insert some tag",
+      date: "Insert some date",
+      description: "Insert some description",
       open: true,
       canOpen: false,
     },
@@ -92,6 +122,9 @@ const EventsPage: NextPage = () => {
       size: "m",
       title: "Speaker Session / Tech Talk",
       image: "event-waseda-time.png",
+      tag: "Insert some tag",
+      date: "Insert some date",
+      description: "Insert some description",
       open: true,
       canOpen: false,
     },
@@ -99,6 +132,9 @@ const EventsPage: NextPage = () => {
       size: "m",
       title: "ML Study Jams 1",
       image: "event-ML-study-jams.png",
+      tag: "Insert some tag",
+      date: "Insert some date",
+      description: "Insert some description",
       open: true,
       canOpen: false,
     },
@@ -106,6 +142,9 @@ const EventsPage: NextPage = () => {
       size: "m",
       title: "Info Session",
       image: "event-info-session.png",
+      tag: "Insert some tag",
+      date: "Insert some date",
+      description: "Insert some description",
       open: true,
       canOpen: false,
     },
@@ -137,18 +176,7 @@ const EventsPage: NextPage = () => {
                   className="a"
                 >
                   <a>
-                    <MediaCard props={eventCard}>
-                      <div className="media-card__tags">
-                        <div className="media-card__tag">Python</div>
-                        <div className="media-card__tag">Beginner</div>
-                      </div>
-                      <div className="media-card__date">
-                        2021/11/26 Fri 18:30~
-                      </div>
-                      <div className="media-card__details">
-                        Sample Details of the Events.
-                      </div>
-                    </MediaCard>
+                    <MediaCard props={eventCard} />
                   </a>
                 </Link>
               );
@@ -163,18 +191,7 @@ const EventsPage: NextPage = () => {
             return (
               <Link href="/events/details/placeholder" key={index}>
                 <a>
-                  <MediaCard props={eventCard}>
-                    <div className="media-card__tags">
-                      <div className="media-card__tag">Python</div>
-                      <div className="media-card__tag">Beginner</div>
-                    </div>
-                    <div className="media-card__date">
-                      2021/11/26 Fri 18:30~
-                    </div>
-                    <div className="media-card__details">
-                      Sample Details of the Events.
-                    </div>
-                  </MediaCard>
+                  <MediaCard props={eventCard} />
                 </a>
               </Link>
             );

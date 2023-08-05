@@ -24,18 +24,21 @@ export const TeamsPage: NextPage = () => {
     {
       size: "l",
       title: "Media Card 1",
+      description: "Test",
       canOpen: true,
       open: true,
     },
     {
       size: "l",
       title: "Media Card 2",
+      description: "Test",
       canOpen: false,
       open: false,
     },
     {
       size: "l",
       title: "Media Card 2",
+      description: "Test",
       canOpen: false,
       open: false,
     },
