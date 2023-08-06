@@ -14,9 +14,7 @@ const EventsPage: NextPage = () => {
     content: "“Alone  we can do so little; together we can do so much.”",
   };
 
-  const eventsCard_UpComing: MediaCardProps[] = [
-    
-  ];
+  const eventsCard_UpComing: MediaCardProps[] = [];
 
   const eventsCard_Past: MediaCardProps[] = [
     {
@@ -200,7 +198,9 @@ const EventsPage: NextPage = () => {
           </div>
           {eventsCard_UpComing.length === 0 ? (
             <div className="no-events">
-              <p>There are currently no upcoming events. We'll be back with more.</p>
+              <p>
+                There are currently no upcoming events. We'll be back with more.
+              </p>
             </div>
           ) : (
             <div className="events__body__container">

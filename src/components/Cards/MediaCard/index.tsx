@@ -56,18 +56,18 @@ export const MediaCard: React.FC<{
             <div className="media-card__details">{props.description}</div>
           </>
         )}
-        {props.canOpen ? (
-          <Collapse in={props.canOpen && open} timeout="auto" unmountOnExit>
-            <div className={`media-card__other`}>
-              {children !== undefined && children}
-            </div>
-          </Collapse>
-        ) : (
-          null
+        {
+          props.canOpen ? (
+            <Collapse in={props.canOpen && open} timeout="auto" unmountOnExit>
+              <div className={`media-card__other`}>
+                {children !== undefined && children}
+              </div>
+            </Collapse>
+          ) : null
           // <div className={`media-card__other`}>
           //   {children !== undefined && children}
           // </div>
-        )}
+        }
       </div>
     </div>
   );
