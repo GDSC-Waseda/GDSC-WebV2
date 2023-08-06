@@ -16,7 +16,7 @@ const EventsPage: NextPage = () => {
 
   const eventsCard_UpComing: MediaCardProps[] = [];
 
-  const eventCard_Past_Preview : MediaCardProps[] = [
+  const eventCard_Past_Preview: MediaCardProps[] = [
     {
       size: "m",
       title: "Mini Solution Challenge",
@@ -77,7 +77,7 @@ const EventsPage: NextPage = () => {
       open: true,
       canOpen: false,
     },
-  ]
+  ];
 
   const eventsCard_Past: MediaCardProps[] = [
     {
