@@ -15,76 +15,107 @@ const EventsPage: NextPage = () => {
   };
 
   const eventsCard_UpComing: MediaCardProps[] = [
-    {
-      size: "m",
-      title: "Lunch Time Workshop",
-      image: "event-android-dev-p1.png",
-      tags: ["Tag 1", "Tag 2"],
-      date: "Insert some date",
-      description: "Insert some description",
-      open: true,
-      canOpen: false,
-    },
-    {
-      size: "m",
-      title: "Mini Solutions Challenge",
-      image: "event-solutions-challenge.png",
-      tags: ["Tag 1", "Tag 2"],
-      date: "Insert some date",
-      description: "Insert some description",
-      open: true,
-      canOpen: false,
-    },
+    
   ];
 
   const eventsCard_Past: MediaCardProps[] = [
     {
       size: "m",
+      title: "Mini Solution Challenge",
+      image: "event-solutionchallenge.png",
+      tags: ["Solution Challenge", "Demo Day"],
+      date: "July 14, 2023 @Google Japan",
+      description: "2023 Mini-Solution Challenge by GDSC Waseda",
+      open: true,
+      canOpen: false,
+    },
+    {
+      size: "m",
+      title: "Lunchtime Workshop",
+      image: "event-hashmarks-background.png",
+      tags: ["Workshop", "Study Group"],
+      date: "July 11, 2023",
+      description: "Lunchtime workshop planning session 2023-2024",
+      open: true,
+      canOpen: false,
+    },
+    {
+      size: "m",
       title: "Web3 Speaker Session",
-      image: "event-web3.png",
-      tags: ["Tag 1", "Tag 2"],
-      date: "Insert some date",
-      description: "Insert some description",
+      image: "event-hashmarks-background.png",
+      tags: ["Speaker Session", "Tech Talk"],
+      date: "June 15, 2023",
+      description: "Embracing the Future: Exploring Web3 and NFTs",
       open: true,
       canOpen: false,
     },
     {
       size: "m",
-      title: "Flutter Study Jams",
+      title: "Flutter Study Jam 4",
       image: "event-flutter.png",
-      tags: ["Tag 1", "Tag 2"],
-      date: "Insert some date",
-      description: "Insert some description",
+      tags: ["Workshop", "Study Group"],
+      date: "June 8, 2023",
+      description: "Flutter Study Jam 4: material design",
       open: true,
       canOpen: false,
     },
     {
       size: "m",
-      title: "Networking Session",
-      image: "event-networking.png",
-      tags: ["Tag 1", "Tag 2"],
-      date: "Insert some date",
-      description: "Insert some description",
+      title: "Flutter Study Jam 3",
+      image: "event-flutter.png",
+      tags: ["Workshop", "Study Group"],
+      date: "June 1, 2023",
+      description: "Introduction to Flutter Study Jam 3: offline edition",
       open: true,
       canOpen: false,
     },
     {
       size: "m",
-      title: "WTM International",
+      title: "Flutter Study Jam 2",
+      image: "event-flutter.png",
+      tags: ["Workshop", "Study Group"],
+      date: "May 25, 2023",
+      description: "Introduction to Flutter Study Jam 2",
+      open: true,
+      canOpen: false,
+    },
+    {
+      size: "m",
+      title: "Flutter Study Jam 1",
+      image: "event-flutter.png",
+      tags: ["Workshop", "Study Group"],
+      date: "May 18, 2023",
+      description: "Introduction to Flutter Study Jam 1",
+      open: true,
+      canOpen: false,
+    },
+    {
+      size: "m",
+      title: "Networking Event",
+      image: "event-hashmarks.png",
+      tags: ["Speaker Session", "Tech Talk"],
+      date: "May 6, 2023",
+      description: "GDSC Waseda Networking Event (Members Only)",
+      open: true,
+      canOpen: false,
+    },
+    {
+      size: "m",
+      title: "International Women's Day Event",
       image: "event-international-womans-day.png",
-      tags: ["Tag 1", "Tag 2"],
-      date: "Insert some date",
-      description: "Insert some description",
+      tags: ["Speaker Session", "Tech Talk"],
+      date: "April 28, 2023",
+      description: "WTM International Women's Day 2023",
       open: true,
       canOpen: false,
     },
     {
       size: "m",
-      title: "Android Dev. Part 1",
-      image: "event-android-dev-p1.png",
-      tags: ["Tag 1", "Tag 2"],
-      date: "Insert some date",
-      description: "Insert some description",
+      title: "Andriod Dev. Kotlin Workshop",
+      image: "event-hashmarks-background.png",
+      tags: ["Workshop", "Study Group"],
+      date: "April 15, 2023",
+      description: "Android Dev. Part 1",
       open: true,
       canOpen: false,
     },
@@ -92,19 +123,19 @@ const EventsPage: NextPage = () => {
       size: "m",
       title: "Cybersecurity on Wheels",
       image: "event-cyber-security.png",
-      tags: ["Tag 1", "Tag 2"],
-      date: "Insert some date",
-      description: "Insert some description",
+      tags: ["Speaker Session", "Tech Talk"],
+      date: "March 8, 2023",
+      description: "Safeguarding the Future of Automotive Technology",
       open: true,
       canOpen: false,
     },
     {
       size: "m",
       title: "GDSC Solution Challenge",
-      image: "event-solutions-challenge.png",
-      tags: ["Tag 1", "Tag 2"],
-      date: "Insert some date",
-      description: "Insert some description",
+      image: "event-solutionchallenge.png",
+      tags: ["Solution Challenge"],
+      date: "February 7, 2023",
+      description: "GDSC Solution Challenge Info Session",
       open: true,
       canOpen: false,
     },
@@ -112,39 +143,39 @@ const EventsPage: NextPage = () => {
       size: "m",
       title: "Graphic Design 101",
       image: "event-photoShop.png",
-      tags: ["Tag 1", "Tag 2"],
-      date: "Insert some date",
-      description: "Insert some description",
+      tags: ["Workshop", "Study Group"],
+      date: "January 7 2023",
+      description: "An Introduction to Photoshop",
       open: true,
       canOpen: false,
     },
     {
       size: "m",
-      title: "Speaker Session / Tech Talk",
+      title: "Waseda Time Speaker Session",
       image: "event-waseda-time.png",
-      tags: ["Tag 1", "Tag 2"],
-      date: "Insert some date",
-      description: "Insert some description",
+      tags: ["Speaker Session", "Tech Talk"],
+      date: "December 23 2022",
+      description: "Meet The Student Team Behind WasedaTime",
       open: true,
       canOpen: false,
     },
     {
       size: "m",
-      title: "ML Study Jams 1",
+      title: "ML Study Jam 1",
       image: "event-ML-study-jams.png",
-      tags: ["Tag 1", "Tag 2"],
-      date: "Insert some date",
-      description: "Insert some description",
+      tags: ["Workshop", "Study Group"],
+      date: "November 22, 2022",
+      description: "Machine Learning Study Jams Session 1",
       open: true,
       canOpen: false,
     },
     {
       size: "m",
-      title: "Info Session",
+      title: "GDSC Info Session",
       image: "event-info-session.png",
-      tags: ["Tag 1", "Tag 2"],
-      date: "Insert some date",
-      description: "Insert some description",
+      tags: ["GDSC", "Recruitment"],
+      date: "October 14, 2022",
+      description: "All You Need To Know About GDSC Waseda",
       open: true,
       canOpen: false,
     },
@@ -167,21 +198,27 @@ const EventsPage: NextPage = () => {
           <div className="events__body__header">
             <span>Upcoming</span>
           </div>
-          <div className="events__body__container">
-            {eventsCard_UpComing.map((eventCard, index) => {
-              return (
-                <Link
-                  href="/events/details/placeholder"
-                  key={index}
-                  className="a"
-                >
-                  <a>
-                    <MediaCard props={eventCard} />
-                  </a>
-                </Link>
-              );
-            })}
-          </div>
+          {eventsCard_UpComing.length === 0 ? (
+            <div className="no-events">
+              <p>There are currently no upcoming events. We'll be back with more.</p>
+            </div>
+          ) : (
+            <div className="events__body__container">
+              {eventsCard_UpComing.map((eventCard, index) => {
+                return (
+                  <Link
+                    href="/events/details/placeholder"
+                    key={index}
+                    className="a"
+                  >
+                    <a>
+                      <MediaCard props={eventCard} />
+                    </a>
+                  </Link>
+                );
+              })}
+            </div>
+          )}
         </div>
         <div className="events__body__past">
           <div className="events__body__header">

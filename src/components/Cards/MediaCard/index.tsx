@@ -63,9 +63,10 @@ export const MediaCard: React.FC<{
             </div>
           </Collapse>
         ) : (
-          <div className={`media-card__other`}>
-            {children !== undefined && children}
-          </div>
+          null
+          // <div className={`media-card__other`}>
+          //   {children !== undefined && children}
+          // </div>
         )}
       </div>
     </div>

@@ -1,44 +1,50 @@
 .media-card {
+  position: relative;
   margin-bottom: 10px;
   border-radius: 20px;
   box-shadow: 3px 5px 5px #c4c4c4;
+  height: 40vh;
+  width: 40vh;
+  margin: 20px;
 
   &__image-container {
     text-align: center;
     border-bottom: 1px solid;
     border-radius: 20px 20px 0px 0px;
+    height: 50%;
+    width: 100%;
 
-    @media screen and (min-width: 768px) {
-      &.s {
-        min-height: 20vh;
-        min-width: 15vh;
-      }
+    // @media screen and (min-width: 768px) {
+    //   &.s {
+    //     min-height: 20vh;
+    //     min-width: 15vh;
+    //   }
 
-      &.m {
-        height: 180px;
-        width: 335px;
-      }
-      &.l {
-        min-height: 30vh;
-        min-width: 35vh;
-      }
-    }
+    //   &.m {
+    //     min-height: 20vh;
+    //     min-width: 25vh;
+    //   }
+    //   &.l {
+    //     min-height: 30vh;
+    //     min-width: 35vh;
+    //   }
+    // }
 
-    @media screen and (max-width: 768px) {
-      &.s {
-        min-height: 20vh;
-        min-width: 15vh;
-      }
+    // @media screen and (max-width: 768px) {
+    //   &.s {
+    //     min-height: 20vh;
+    //     min-width: 15vh;
+    //   }
 
-      &.m {
-        min-height: 25vh;
-        min-width: 25vh;
-      }
-      &.l {
-        min-height: 30vh;
-        min-width: 35vh;
-      }
-    }
+    //   &.m {
+    //     min-height: 20vh;
+    //     min-width: 25vh;
+    //   }
+    //   &.l {
+    //     min-height: 30vh;
+    //     min-width: 35vh;
+    //   }
+    // }
   }
 
   .none {
@@ -60,13 +66,16 @@
     margin-top: 4px;
     padding: 5px 10px;
     transition: width 600ms ease-out, height 600ms ease-out;
+    overflow: hidden;
   }
 
   &__title {
-    padding: 5px;
+    padding: 15px 5px 0 2%;
     font-weight: bold;
     max-width: 300px;
-    overflow-wrap: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   &__other {
@@ -102,22 +111,31 @@
   }
 
   &__tags {
-    display: flex;
+    font-size: 8px;
+    display: inline-flex;
     margin-bottom: 5px;
+    margin-left: 3px;
   }
 
   &__tag {
-    padding: 5px 10px;
+    padding: 2px 5px;
     margin-right: 5px;
     border: 0.5px solid;
     border-radius: 50px;
     font-weight: lighter;
-    display: flex;
+    color: gray;
   }
   &__date {
-    margin-bottom: 10px;
+    font-size: 11px;
+    margin-left: 2%;
+    margin-bottom: 6px;
   }
   &__details {
+    font-size: 11px;
+    margin-left: 2%;
     margin-bottom: 10px;
+    max-height: 6em;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
