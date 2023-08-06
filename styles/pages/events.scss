@@ -76,3 +76,16 @@
     font-weight: bold;
   }
 }
+
+.button {
+  background-color: transparent;
+  border-color: #343a40;
+  color: #343a40;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #87c5ff;
+  border-color: #87c5ff; 
+  color: white;
+}

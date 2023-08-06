@@ -16,7 +16,7 @@ const EventsPage: NextPage = () => {
 
   const eventsCard_UpComing: MediaCardProps[] = [];
 
-  const eventsCard_Past: MediaCardProps[] = [
+  const eventCard_Past_Preview : MediaCardProps[] = [
     {
       size: "m",
       title: "Mini Solution Challenge",
@@ -77,6 +77,9 @@ const EventsPage: NextPage = () => {
       open: true,
       canOpen: false,
     },
+  ]
+
+  const eventsCard_Past: MediaCardProps[] = [
     {
       size: "m",
       title: "Flutter Study Jam 1",
@@ -181,6 +184,12 @@ const EventsPage: NextPage = () => {
 
   const [showCard, setShowCard] = useState(3);
 
+  const [showAllPastEvents, setShowAllPastEvents] = useState(false);
+
+  const togglePastEvents = () => {
+    setShowAllPastEvents((prevState) => !prevState);
+  };
+
   return (
     <>
       <CommonMeta
@@ -224,18 +233,23 @@ const EventsPage: NextPage = () => {
           <div className="events__body__header">
             <span>Past</span>
           </div>
-          {eventsCard_Past.map((eventCard, index) => {
-            return (
-              <Link href="/events/details/placeholder" key={index}>
-                <a>
-                  <MediaCard props={eventCard} />
-                </a>
-              </Link>
-            );
-          })}
+          {(showAllPastEvents
+            ? [...eventCard_Past_Preview, ...eventsCard_Past]
+            : eventCard_Past_Preview
+          ).map((eventCard, index) => (
+            <Link href="/events/details/placeholder" key={index}>
+              <a>
+                <MediaCard props={eventCard} />
+              </a>
+            </Link>
+          ))}
           <div className="events__body__button">
-            <Button variant="outline-dark" disabled className="button">
-              <Link href="/forms">Show Less</Link>
+            <Button
+              variant="outline-dark"
+              onClick={togglePastEvents}
+              className="button"
+            >
+              {showAllPastEvents ? "Show Less" : "Show More"}
             </Button>
           </div>
         </div>
