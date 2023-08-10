@@ -23,7 +23,13 @@ export const ImageCard: React.FC<{
   const textProps = (
     <Box padding={2} sx={{ maxWidth: 430, border: 0 }}>
       <Container>
-        <Typography gutterBottom variant="h5" component="div" align="center">
+        <Typography
+          gutterBottom
+          variant="h5"
+          component="div"
+          align="center"
+          fontWeight="bold"
+        >
           {props.title}
         </Typography>
         {props.content !== undefined &&

@@ -31,6 +31,12 @@ export interface ImageCardProps {
   imagePosition: "left" | "right";
 }
 
+export interface TeamCardProps {
+  size?: string;
+  image?: string;
+  title?: string;
+}
+
 export interface MediaCardProps {
   size: "s" | "m" | "l";
   title: string;

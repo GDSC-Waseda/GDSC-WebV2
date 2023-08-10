@@ -1,9 +1,7 @@
 import type { NextPage } from "next";
-import TeamCard from "components/Cards/TeamCard/index";
-import { MediaCard } from "components/Cards/MediaCard"; // Import the MediaCard component
-import { ImageCard, HeaderCard } from "components/Cards/index";
+import { HeaderCard, TeamCard, ImageCard } from "components/Cards/index";
 import CommonMeta from "components/CommonMeta";
-import { HeaderCardProps, ImageCardProps, MediaCardProps } from "~/types";
+import { HeaderCardProps, ImageCardProps, TeamCardProps } from "~/types";
 
 export const TeamsPage: NextPage = () => {
   const card: HeaderCardProps = {
@@ -12,32 +10,22 @@ export const TeamsPage: NextPage = () => {
     content: "Waseda University's chapter of the Google Developer Student Club",
   };
 
-  const imageCard: ImageCardProps = {
-    title: "Google Developer Student Clubs",
+  const imageCardProps: ImageCardProps = {
+    title: "Who Are We?",
     content:
-      "Google Developer Student Clubs are university-based community groups supported by Google Developers intending href empower student developers and strengthen their leadership skills\nHere at GDSC Waseda, by collaborating with Google, we will organize many exciting events such as speaker sessions, hackathons, introductory hands-on workshops, study sessions, and so on",
-    image: "group-highfive.png",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    image: "everyone.png",
     imagePosition: "left",
   };
 
-  const mediaCards: MediaCardProps[] = [
+  const teamCards: Array<TeamCardProps> = [
     {
-      size: "l",
-      title: "Media Card 1",
-      canOpen: true,
-      open: true,
+      title: "Team Card 1", // Added title
+      image: "project_lead.jpg",
     },
     {
-      size: "l",
-      title: "Media Card 2",
-      canOpen: false,
-      open: false,
-    },
-    {
-      size: "l",
-      title: "Media Card 2",
-      canOpen: false,
-      open: false,
+      title: "Team Card 2",
+      image: "project_lead.jpg",
     },
   ];
 
@@ -51,14 +39,16 @@ export const TeamsPage: NextPage = () => {
         pageImgHeight={630}
       />
       <HeaderCard props={card} />
+      <ImageCard props={imageCardProps} />
       <h1 className="members-title">Members</h1>
-
-      {/* Add MediaCard components here */}
-      {mediaCards.map((card, index) => (
-        <MediaCard key={index} props={card}>
-          {/* Add content for the MediaCard here */}
-        </MediaCard>
-      ))}
+      <div className="team-cards-container">
+        {teamCards.map((teamCard, index) => (
+          <TeamCard
+            key={index}
+            props={teamCard} // Passing teamCard object as props
+          />
+        ))}
+      </div>
     </div>
   );
 };
