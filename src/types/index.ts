@@ -41,6 +41,9 @@ export interface MediaCardProps {
   size: "s" | "m" | "l";
   title: string;
   image?: string;
+  tags: string[];
+  date: string;
+  description: string;
   open: boolean;
   canOpen: boolean;
 }

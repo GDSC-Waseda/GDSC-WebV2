@@ -82,9 +82,8 @@
 }
 
 .media-card__tags {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: flex;
+  flex-wrap: wrap;
   margin-bottom: 15px;
 }
 
