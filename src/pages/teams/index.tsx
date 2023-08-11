@@ -25,11 +25,6 @@ export const TeamsPage: NextPage = () => {
       image: "finance_lead.jpg",
       link: "test1",
     },
-    {
-      name: "Frontend",
-      image: "finance_lead.jpg",
-      link: "test1",
-    },
   ];
 
   return (
@@ -44,10 +39,12 @@ export const TeamsPage: NextPage = () => {
       <HeaderCard props={card} />
 
       <div className="bold-text">
-        <b>
-          Teams are the foundation to any organization. Explore the different
-          teams that work together to make GDSC Waseda truly special.
-        </b>
+        <a>
+          Teams are the foundation to any organization.
+          <br></br>
+          Explore the different. Teams that work together to make GDSC Waseda
+          truly special.
+        </a>
       </div>
 
       <div className="team-leaders-container">

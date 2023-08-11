@@ -1,3 +1,4 @@
+//TEMPORARY TEAM PAGE
 import type { NextPage } from "next";
 import { HeaderCard, TeamCard, ImageCard } from "components/Cards/index";
 import CommonMeta from "components/CommonMeta";
@@ -6,7 +7,7 @@ import { HeaderCardProps, ImageCardProps, TeamCardProps } from "~/types";
 export const TeamsPage: NextPage = () => {
   const card: HeaderCardProps = {
     headTitle: "",
-    title: "Teams",
+    title: "Project Team",
     content: "Waseda University's chapter of the Google Developer Student Club",
   };
 
@@ -20,17 +21,17 @@ export const TeamsPage: NextPage = () => {
 
   const teamCards: Array<TeamCardProps> = [
     {
-      title: "Project Lead", // Added title
+      title: "Member 1", // Added title
       image: "project_lead.jpg",
       size: "s",
     },
     {
-      title: "Finance Lead",
+      title: "Member 2",
       image: "finance_lead.jpg",
       size: "s",
     },
     {
-      title: "Backend Lead",
+      title: "Member 3",
       image: "backend_lead.png",
       size: "s",
     },
@@ -50,10 +51,7 @@ export const TeamsPage: NextPage = () => {
       <h1 className="members-title">Members</h1>
       <div className="team-cards-container">
         {teamCards.map((teamCard, index) => (
-          <TeamCard
-            key={index}
-            props={teamCard} // Passing teamCard object as props
-          />
+          <TeamCard key={index} props={teamCard} />
         ))}
       </div>
     </div>
