@@ -13,22 +13,22 @@ export const TeamsPage: NextPage = () => {
     {
       name: "Project",
       image: "project_lead.jpg",
-      link: "/team/project",
+      link: "test1",
     },
     {
       name: "Finance",
       image: "finance_lead.jpg",
-      link: "/team/finance",
+      link: "test1",
     },
     {
       name: "Backend",
       image: "finance_lead.jpg",
-      link: "/team/finance",
+      link: "test1",
     },
     {
       name: "Frontend",
       image: "finance_lead.jpg",
-      link: "/team/finance",
+      link: "test1",
     },
   ];
 
