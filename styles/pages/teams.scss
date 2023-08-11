@@ -5,12 +5,13 @@
 }
 
 .team-leader {
-  width: 150px; // Adjust width as needed
+  width: 150px;
   text-align: center;
   margin: 15px;
+  padding-top: 50px;
 
   &-image {
-    width: 100px; // Adjust image size as needed
+    width: 100px;
     border-radius: 50%;
     display: block;
     margin: auto;
@@ -21,7 +22,11 @@
   }
 
   &-link {
-    color: blue;
-    text-decoration: underline;
+    color: rgb(122, 214, 242);
   }
+}
+.bold-text {
+  text-align: center;
+  padding-top: 30px;
+  font-size: 16px;
 }

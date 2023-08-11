@@ -11,12 +11,22 @@ export const TeamsPage: NextPage = () => {
   };
   const teamLeaders: Array<{ name: string; image: string; link: string }> = [
     {
-      name: "Project Lead",
+      name: "Project",
       image: "project_lead.jpg",
       link: "/team/project",
     },
     {
-      name: "Finance Lead",
+      name: "Finance",
+      image: "finance_lead.jpg",
+      link: "/team/finance",
+    },
+    {
+      name: "Backend",
+      image: "finance_lead.jpg",
+      link: "/team/finance",
+    },
+    {
+      name: "Frontend",
       image: "finance_lead.jpg",
       link: "/team/finance",
     },
@@ -32,6 +42,7 @@ export const TeamsPage: NextPage = () => {
         pageImgHeight={630}
       />
       <HeaderCard props={card} />
+
       <div className="bold-text">
         <b>
           Teams are the foundation to any organization. Explore the different
@@ -49,7 +60,7 @@ export const TeamsPage: NextPage = () => {
             />
             <div className="team-leader-name">{teamCard.name}</div>
             <a className="team-leader-link" href={`/teams/${teamCard.link}`}>
-              Learn more
+              Learn more?
             </a>
           </div>
         ))}
