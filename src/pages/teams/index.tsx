@@ -20,12 +20,19 @@ export const TeamsPage: NextPage = () => {
 
   const teamCards: Array<TeamCardProps> = [
     {
-      title: "Team Card 1", // Added title
+      title: "Project Lead", // Added title
       image: "project_lead.jpg",
+      size: "s",
     },
     {
-      title: "Team Card 2",
-      image: "project_lead.jpg",
+      title: "Finance Lead",
+      image: "finance_lead.jpg",
+      size: "s",
+    },
+    {
+      title: "Backend Lead",
+      image: "backend_lead.png",
+      size: "s",
     },
   ];
 

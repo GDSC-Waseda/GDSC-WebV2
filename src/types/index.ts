@@ -32,9 +32,9 @@ export interface ImageCardProps {
 }
 
 export interface TeamCardProps {
-  size?: string;
-  image?: string;
-  title?: string;
+  size: "s" | "m" | "l";
+  image: string;
+  title: string;
 }
 
 export interface MediaCardProps {
