@@ -1,15 +1,27 @@
-.teams-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+.team-leaders-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-
-
-.members-title {
+.team-leader {
+  width: 150px; // Adjust width as needed
   text-align: center;
-  font-family: "Roboto", sans-serif;
-  font-size: 40px;
-  font-weight: 550;
-  padding: 40px;
+  margin: 15px;
+
+  &-image {
+    width: 100px; // Adjust image size as needed
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+  }
+
+  &-name {
+    font-weight: bold;
+  }
+
+  &-link {
+    color: blue;
+    text-decoration: underline;
+  }
 }

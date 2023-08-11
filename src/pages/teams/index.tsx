@@ -6,33 +6,19 @@ import { HeaderCardProps, ImageCardProps, TeamCardProps } from "~/types";
 export const TeamsPage: NextPage = () => {
   const card: HeaderCardProps = {
     headTitle: "",
-    title: "Teams",
+    title: "Our Teams",
     content: "Waseda University's chapter of the Google Developer Student Club",
   };
-
-  const imageCardProps: ImageCardProps = {
-    title: "Who Are We?",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    image: "everyone.png",
-    imagePosition: "left",
-  };
-
-  const teamCards: Array<TeamCardProps> = [
+  const teamLeaders: Array<{ name: string; image: string; link: string }> = [
     {
-      title: "Project Lead", // Added title
+      name: "Project Lead",
       image: "project_lead.jpg",
-      size: "s",
+      link: "/team/project",
     },
     {
-      title: "Finance Lead",
+      name: "Finance Lead",
       image: "finance_lead.jpg",
-      size: "s",
-    },
-    {
-      title: "Backend Lead",
-      image: "backend_lead.png",
-      size: "s",
+      link: "/team/finance",
     },
   ];
 
@@ -46,14 +32,26 @@ export const TeamsPage: NextPage = () => {
         pageImgHeight={630}
       />
       <HeaderCard props={card} />
-      <ImageCard props={imageCardProps} />
-      <h1 className="members-title">Members</h1>
-      <div className="team-cards-container">
-        {teamCards.map((teamCard, index) => (
-          <TeamCard
-            key={index}
-            props={teamCard} // Passing teamCard object as props
-          />
+      <div className="bold-text">
+        <b>
+          Teams are the foundation to any organization. Explore the different
+          teams that work together to make GDSC Waseda truly special.
+        </b>
+      </div>
+
+      <div className="team-leaders-container">
+        {teamLeaders.map((teamCard, index) => (
+          <div key={index} className="team-leader">
+            <img
+              className="team-leader-image"
+              src={`assets/img/${teamCard.image}`}
+              alt="team leader"
+            />
+            <div className="team-leader-name">{teamCard.name}</div>
+            <a className="team-leader-link" href={`/teams/${teamCard.link}`}>
+              Learn more
+            </a>
+          </div>
         ))}
       </div>
     </div>
