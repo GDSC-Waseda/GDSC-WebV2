@@ -1,31 +1,42 @@
+@font-face {
+  font-family: myFont;
+  src: url("/fonts/prodsanB.ttf");
+}
+
 .team-leaders-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  gap: 10px;
 }
 
 .team-leader {
-  width: 150px;
+  width: 250px;
   text-align: center;
-  margin: 15px;
-  padding-top: 50px;
-
-  &-image {
-    width: 100px;
-    border-radius: 50%;
-    display: block;
-    margin: auto;
-  }
-
-  &-name {
-    font-weight: bold;
-  }
-
-  &-link {
-    color: #4285f4;
-    font-size: 13px;
-  }
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center children vertically */
 }
+
+.team-leader-image {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+}
+
+.team-leader-name {
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+.team-leader-link {
+  color: #4285f4;
+  font-size: 13px;
+}
+
 .bold-text {
   text-align: center;
   padding-top: 30px;

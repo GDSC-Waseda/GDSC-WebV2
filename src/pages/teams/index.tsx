@@ -9,20 +9,55 @@ export const TeamsPage: NextPage = () => {
     title: "Our Teams",
     content: "Waseda University's chapter of the Google Developer Student Club",
   };
+  const outlineColors = [
+    "#e94336",
+    "#4283f3",
+    "#00a150",
+    "#fabb08",
+    "#e94336",
+    "#4283f3",
+    "#00a150",
+    "#fabb08",
+  ];
   const teamLeaders: Array<{ name: string; image: string; link: string }> = [
     {
       name: "Project",
-      image: "project_lead.jpg",
-      link: "test1",
+      image: "project_lead.png",
+      link: "project",
     },
     {
       name: "Finance",
-      image: "finance_lead.jpg",
+      image: "finance_lead.png",
+      link: "finance",
+    },
+    {
+      name: "Outreach",
+      image: "s_lead.png",
+      link: "outreach",
+    },
+    {
+      name: "Operations",
+      image: "edu_lead.png",
       link: "test1",
     },
     {
       name: "Backend",
-      image: "finance_lead.jpg",
+      image: "backend_lead.png",
+      link: "test1",
+    },
+    {
+      name: "Frontend",
+      image: "lead.png",
+      link: "test1",
+    },
+    {
+      name: "Education",
+      image: "edu_lead.png",
+      link: "test1",
+    },
+    {
+      name: "Marketing",
+      image: "market_lead.png",
       link: "test1",
     },
   ];
@@ -42,7 +77,7 @@ export const TeamsPage: NextPage = () => {
         <a>
           Teams are the foundation to any organization.
           <br></br>
-          Explore the different. Teams that work together to make GDSC Waseda
+          Explore the different teams that work together to make GDSC Waseda
           truly special.
         </a>
       </div>
@@ -52,7 +87,12 @@ export const TeamsPage: NextPage = () => {
           <div key={index} className="team-leader">
             <img
               className="team-leader-image"
-              src={`assets/img/${teamCard.image}`}
+              src={`/tempImg/${teamCard.image}`}
+              style={{
+                border: `5px solid ${
+                  outlineColors[index % outlineColors.length]
+                }`,
+              }}
               alt="team leader"
             />
             <div className="team-leader-name">{teamCard.name}</div>

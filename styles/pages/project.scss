@@ -1,0 +1,20 @@
+.project-page {
+  // Add general styles for the entire team page
+}
+
+.header-padding {
+  padding-bottom: 75px; // Adjust the value to your liking
+}
+
+.members-title {
+  text-align: center;
+  font-size: 24px;
+  padding: 40px 0;
+}
+
+.team-cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  gap: 10px;
+}

@@ -35,10 +35,7 @@ export const NavigationBar = (): JSX.Element => {
                 <Link href="/events">Events</Link>
               </Nav.Item>
               <Nav.Item className="navItem">
-                <a
-                  href="https://gdsc.community.dev/waseda-university/"
-                  target="_blank"
-                >
+                <a href="https://forms.gle/uewfWU2QZjpHmSqc9" target="_blank">
                   <Button variant="outline-dark" className="butto">
                     <small>Join Us</small>
                   </Button>

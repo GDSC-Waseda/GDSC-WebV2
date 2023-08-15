@@ -1,9 +1,14 @@
+@font-face {
+  font-family: myFont;
+  src: url("/fonts/prodsanReg.ttf");
+}
+
 .headerCard {
   border: 0px;
   border-radius: 0px;
   min-height: 200px;
   padding: 0 40px;
-  background-color: lightgrey;
+  background-color: rgb(228, 222, 222);
   justify-content: center;
 
   @media (min-width: 790px) {
@@ -15,6 +20,7 @@
   &__title {
     text-align: center;
     font-size: max(4vw, 30px);
+    font-family: "myFont", sans-serif;
   }
   &__container {
     width: 100%;
