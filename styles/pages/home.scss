@@ -1,3 +1,7 @@
+@font-face {
+  font-family: myFont;
+  src: url("/fonts/prodsanReg.ttf");
+}
 .home-page {
   @media (min-width: 798px) {
     padding: 0px 50px;
@@ -66,4 +70,14 @@
       color: white;
     }
   }
+}
+
+.home-page__top__title {
+  font-family: "myFont", sans-serif;
+}
+.home-page__about__title {
+  font-family: "myFont", sans-serif;
+}
+.home-page__teams__title {
+  font-family: "myFont", sans-serif;
 }

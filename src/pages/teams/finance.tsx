@@ -7,7 +7,7 @@ import { HeaderCardProps, ImageCardProps, TeamCardProps } from "~/types";
 export const TeamsPage: NextPage = () => {
   const card: HeaderCardProps = {
     headTitle: "",
-    title: "Project Team",
+    title: "Finance Team",
     content: "Waseda University's chapter of the Google Developer Student Club",
   };
 
