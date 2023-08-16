@@ -24,11 +24,13 @@ export const ImageCard: React.FC<{
     <Box padding={2} sx={{ maxWidth: 430, border: 0 }}>
       <Container>
         <Typography
+          style={{ fontFamily: '"myFont", sans-serif' }}
           gutterBottom
-          variant="h5"
+          variant="h4"
           component="div"
           align="center"
-          fontWeight="bold"
+          fontWeight="normal"
+          className="imageCard__title"
         >
           {props.title}
         </Typography>
@@ -37,7 +39,8 @@ export const ImageCard: React.FC<{
             <Typography
               gutterBottom
               color="text.secondary"
-              align="left"
+              align="center"
+              style={{ fontFamily: '"myFont3", sans-serif' }}
               key={key}
             >
               {text}

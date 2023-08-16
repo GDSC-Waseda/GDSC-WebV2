@@ -11,6 +11,7 @@
   }
 
   &__events {
+    font-family: "myFont", sans-serif;
     text-align: center;
     padding: 0px 20px;
     margin-top: 30px;
@@ -21,7 +22,9 @@
   }
 
   &__events__title {
-    font-size: 20px;
+    font-size: 25px;
+    font-family: "myFont", sans-serif;
     font-weight: bold;
+    text-align: center;
   }
 }

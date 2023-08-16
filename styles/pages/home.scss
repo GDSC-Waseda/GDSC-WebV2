@@ -33,6 +33,7 @@
       font-size: 56px;
     }
     &__description {
+      font-family: "myFont", sans-serif;
       font-size: 20px;
       @media (min-width: 798px) {
         width: 140%;
@@ -50,6 +51,7 @@
     }
     &__description {
       font-size: 20px;
+      font-family: "myFont", sans-serif;
     }
     &__icons {
       @media (min-width: 798px) {
@@ -67,7 +69,8 @@
     font-size: 18px;
 
     &:hover {
-      color: white;
+      background-color: #000000;
+      color: rgb(255, 255, 255);
     }
   }
 }

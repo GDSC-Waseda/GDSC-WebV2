@@ -25,7 +25,7 @@ const Home: NextPage = () => {
   };
 
   const about_contents = [
-    "Google Developer Student Clubs are university-based community groups supported by Google Developers intending href empower student developers and strengthen their leadership skills",
+    "Google Developer Student Clubs are university-based community groups supported by Google Developers intending to empower student developers and strengthen their leadership skills",
     "Here at GDSC Waseda, by collaborating with Google, we will organize many exciting events such as speaker sessions, hackathons, introductory hands-on workshops, study sessions, and so on.",
   ];
   return (
@@ -56,11 +56,7 @@ const Home: NextPage = () => {
                 <Link href="/teams">Teams</Link>
               </Button>
               {/* TODO: remove disabled when Event Page is released */}
-              <Button
-                variant="outline-dark"
-                className="about-page__button"
-                disabled
-              >
+              <Button variant="outline-dark" className="about-page__button">
                 <Link href="/events">Events</Link>
               </Button>
             </Stack>

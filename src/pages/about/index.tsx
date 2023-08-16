@@ -98,11 +98,7 @@ export const AboutPage: NextPage = () => {
             <Link href="/teams">Teams</Link>
           </Button>
           {/* TODO: remove disabled when Event Page is released */}
-          <Button
-            variant="outline-dark"
-            className="about-page__button"
-            disabled
-          >
+          <Button variant="outline-dark" className="about-page__button">
             <Link href="/events">Events</Link>
           </Button>
         </Stack>
