@@ -40,7 +40,7 @@ export const ImageCard: React.FC<{
               gutterBottom
               color="text.secondary"
               align="center"
-              style={{ fontFamily: '"myFont3", sans-serif' }}
+              style={{ fontFamily: '"myFont4", sans-serif' }}
               key={key}
             >
               {text}
