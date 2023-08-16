@@ -31,7 +31,7 @@ export const TeamsPage: NextPage = () => {
       size: "s",
     },
     {
-      title: "Member 3",
+      title: "Member 5d",
       image: "backend_lead.png",
       size: "s",
     },
