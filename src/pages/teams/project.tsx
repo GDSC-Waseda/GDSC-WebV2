@@ -20,7 +20,7 @@ export const ProjectTeams: NextPage = () => {
 
   const teamCards: Array<TeamCardProps> = [
     {
-      title: "Member 1", // Added title
+      title: "Member 1",
       image: "project_lead.jpg",
     },
     {
