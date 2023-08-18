@@ -32,7 +32,6 @@ export interface ImageCardProps {
 }
 
 export interface TeamCardProps {
-  size: "s" | "m" | "l";
   image: string;
   title: string;
 }

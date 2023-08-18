@@ -2,6 +2,31 @@
   display: flex;
   justify-content: center;
   overflow: hidden;
+  position: relative;
+
+  &__button {
+    background: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    top: 40%;
+    transform: translateY(-40%);
+
+    &--left {
+      left: 0;
+    }
+
+    &--right {
+      right: 0;
+    }
+
+    &:hover {
+      background: #ffffff;
+    }
+  }
 
   &__container {
     display: flex;

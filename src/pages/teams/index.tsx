@@ -41,12 +41,12 @@ export const TeamsPage: NextPage = () => {
       link: "test1",
     },
     {
-      name: "Backend",
+      name: "Frontend",
       image: "backend_lead.png",
       link: "test1",
     },
     {
-      name: "Frontend",
+      name: "Backend",
       image: "lead.png",
       link: "test1",
     },

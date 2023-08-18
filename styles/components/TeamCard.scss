@@ -2,45 +2,20 @@
   margin-bottom: 10px;
   border-radius: 20px;
   box-shadow: 3px 5px 5px #c4c4c4;
-  overflow: hidden;
-
-  &.s {
-    width: 10%;
-  }
-  &.m {
-    width: 50%;
-  }
-  &.l {
-    width: 70%;
-  }
+  width: 10%;
 
   &__image-container {
     text-align: center;
     border-bottom: 1px solid;
     border-radius: 20px 20px 0 0;
 
-    @media screen and (max-width: 768px) {
-      &.s {
-        min-height: 20vh;
-        min-width: 15vh;
-      }
-      &.m {
-        min-height: 15vh;
-        min-width: 15vh;
-      }
-      &.l {
-        min-height: 30vh;
-        min-width: 35vh;
-      }
-    }
-
     .none {
       background-color: #c4c4c4;
     }
 
     &__image {
-      border-radius: 20px 20px 0 0;
-      max-width: 100%;
+      border-radius: 10px 10px 0 0;
+      max-width: 30%;
       height: auto;
     }
   }
@@ -50,7 +25,6 @@
   }
 
   &__title {
-    // Replaced __name with __title
     font-weight: bold;
     margin-bottom: 5px;
     margin-left: 5px;
@@ -61,15 +35,17 @@
     font-size: 14px;
   }
 }
+
 .team-cards-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-}
+  justify-content: center;
+  max-width: 50%;
+  margin: 0 auto;
+  gap: 20px;
 
-.team-card {
-  flex-basis: calc(
-    33.333% - 10px
-  ); /* Three in a row with a little space between */
-  max-width: calc(33.333% - 10px); /* Prevent stretching beyond one-third */
+  .team-card {
+    flex-basis: 20%; // Adjust this to control the size of the individual cards
+    max-width: 20%;
+  }
 }

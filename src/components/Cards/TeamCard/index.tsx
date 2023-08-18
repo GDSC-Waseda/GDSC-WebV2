@@ -4,31 +4,27 @@ import { TeamCardProps } from "~/types/index";
 
 export const TeamCard: React.FC<{
   children?: React.ReactNode;
-  props: TeamCardProps; // Using TeamCardProps
+  props: TeamCardProps;
 }> = ({ children, props }) => {
   return (
-    <div className={`team-card ${props.size}`}>
-      {" "}
-      {/* Changed class name */}
+    <div className="team-card">
       {props.image !== undefined ? (
-        <div className={`team-card__image-container ${props.size}`}>
+        <div className="team-card__image-container">
           <Image
-            className={`team-card__image ${props.size}`}
+            className="team-card__image"
             src={require(`assets/img/${props.image}`)}
             alt="team-card"
             layout="intrinsic"
           />
         </div>
       ) : (
-        <div className={`team-card__image-container ${props.size} none`} />
+        <div className="team-card__image-container none" />
       )}
       <div className="team-card__detail-container">
-        {" "}
-        {/* Changed class name */}
         {props.title !== undefined && (
           <div className="team-card__title">{props.title}</div>
         )}
-        <div className={`team-card__other`}>
+        <div className="team-card__other">
           {children !== undefined && children}
         </div>
       </div>

@@ -21,12 +21,18 @@ const Carousel: React.FC<CarouselProps> = ({ props }) => {
     }
   };
 
-  // Calculate indices for the cards to the left, center and right of the carousel.
+  // Calculate indices for the cards to the left, center, and right of the carousel.
   const leftIndex = centerIndex - 1 < 0 ? props.length - 1 : centerIndex - 1;
   const rightIndex = centerIndex + 1 > props.length - 1 ? 0 : centerIndex + 1;
 
   return (
     <div className="carousel">
+      <button
+        className="carousel__button carousel__button--left"
+        onClick={() => handleCardClick("left")}
+      >
+        ◀
+      </button>
       <div className="carousel__container">
         <div className="carousel__card" onClick={() => handleCardClick("left")}>
           <CarouselCard props={props[leftIndex]} isActive={false} />
@@ -44,6 +50,12 @@ const Carousel: React.FC<CarouselProps> = ({ props }) => {
           <CarouselCard props={props[rightIndex]} isActive={false} />
         </div>
       </div>
+      <button
+        className="carousel__button carousel__button--right"
+        onClick={() => handleCardClick("right")}
+      >
+        ▶
+      </button>
     </div>
   );
 };

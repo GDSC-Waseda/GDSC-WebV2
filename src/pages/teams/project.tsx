@@ -1,4 +1,3 @@
-//TEMPORARY TEAM PAGE
 import type { NextPage } from "next";
 import { HeaderCard, TeamCard, ImageCard } from "components/Cards/index";
 import CommonMeta from "components/CommonMeta";
@@ -23,17 +22,38 @@ export const ProjectTeams: NextPage = () => {
     {
       title: "Member 1", // Added title
       image: "project_lead.jpg",
-      size: "s",
     },
     {
       title: "Member 2",
-      image: "finance_lead.jpg",
-      size: "s",
+      image: "project_lead.jpg",
     },
     {
       title: "Member 3",
-      image: "backend_lead.png",
-      size: "s",
+      image: "project_lead.jpg",
+    },
+    {
+      title: "Member 4",
+      image: "project_lead.jpg",
+    },
+    {
+      title: "Member 5",
+      image: "project_lead.jpg",
+    },
+    {
+      title: "Member 6",
+      image: "project_lead.jpg",
+    },
+    {
+      title: "Member 6",
+      image: "project_lead.jpg",
+    },
+    {
+      title: "Member 6",
+      image: "project_lead.jpg",
+    },
+    {
+      title: "Member 6",
+      image: "project_lead.jpg",
     },
   ];
 
