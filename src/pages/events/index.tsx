@@ -245,7 +245,7 @@ const EventsPage: NextPage = () => {
           ))}
           <div className="events__body__button">
             <Button
-              variant="outline-dark"
+              variant="outline"
               onClick={togglePastEvents}
               className="button"
             >
