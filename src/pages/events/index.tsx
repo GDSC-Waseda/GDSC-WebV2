@@ -246,7 +246,7 @@ const EventsPage: NextPage = () => {
           {eventsCard_UpComing.length === 0 ? (
             <div className="no-events">
               <p>
-                There are currently no upcoming events. We'll be back with more.
+                Stay tuned for more exciting events!
               </p>
             </div>
           ) : (

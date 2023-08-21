@@ -3,8 +3,79 @@
   src: url("/fonts/prodsanB.ttf");
 }
 
-.event-details {
-  &__body {
-    text-align: center;
-  }
+.article {
+	margin: 0 13vw;
+
+	&__title {
+		margin: 90px 0 30px;
+		font-weight: bold;
+	}
+
+	&__inline {
+		display: inline;
+	}
+
+	&__author {
+		display: flex;
+		&-text {
+			margin-left: 10px;
+			margin-bottom: 0px;
+		}
+		&-names {
+			font-size: 15px;
+			margin-bottom: 2px;
+		}
+		&-info {
+		color: #39a114;
+		}
+	}
+
+	&__length {
+		margin: 0;
+		font-size: 12px;
+	}
+
+	&__image {
+		margin: 30px 0;
+	}
+
+	&__link {
+		color: #2578e9;
+		text-decoration: underline;
+	}
+
+	&__footer {
+		display: flex;
+		justify-content: end;
+		margin-top: 100px;
+	}
+
+	&__tags {
+		font-size: 16px;
+		display: inline-flex;
+		margin-bottom: 5px;
+		margin-left: 3px;
+	}
+	
+	&__tag {
+		padding: 2px 5px;
+		margin-right: 5px;
+		border: 0.5px solid;
+		border-radius: 50px;
+		color: #171717;
+		background-color: #f4f4f4;
+		border-color: transparent;
+	}
+
+	&__return-button {
+		color: "gray";
+		background-color: "transparent";
+		border: "none";
+		font-size: "16px";
+		cursor: "pointer";
+		position: "fixed";
+		bottom: 10;
+		right: 10;
+		z-index: 1000;
+	}
 }
