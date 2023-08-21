@@ -43,6 +43,7 @@ export interface MediaCardProps {
   tags: string[];
   date: string;
   description: string;
+  link: string;
   open: boolean;
   canOpen: boolean;
 }

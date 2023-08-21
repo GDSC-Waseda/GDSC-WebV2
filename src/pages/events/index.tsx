@@ -24,6 +24,7 @@ const EventsPage: NextPage = () => {
       tags: ["Solution Challenge", "Demo Day"],
       date: "July 14, 2023 @Google Japan",
       description: "2023 Mini-Solution Challenge by GDSC Waseda",
+      link: "/events/details/miniSolutionChallenge",
       open: true,
       canOpen: false,
     },
@@ -34,6 +35,7 @@ const EventsPage: NextPage = () => {
       tags: ["Workshop", "Study Group"],
       date: "July 11, 2023",
       description: "Lunchtime workshop planning session 2023-24",
+      link: "/404",
       open: true,
       canOpen: false,
     },
@@ -44,6 +46,7 @@ const EventsPage: NextPage = () => {
       tags: ["Speaker Session", "Tech Talk"],
       date: "June 15, 2023",
       description: "Embracing the Future: Web3 and NFTs",
+      link: "/404",
       open: true,
       canOpen: false,
     },
@@ -54,6 +57,7 @@ const EventsPage: NextPage = () => {
       tags: ["Workshop", "Study Group"],
       date: "June 8, 2023",
       description: "Flutter Study Jam 4: material design",
+      link: "/404",
       open: true,
       canOpen: false,
     },
@@ -64,6 +68,7 @@ const EventsPage: NextPage = () => {
       tags: ["Workshop", "Study Group"],
       date: "June 1, 2023",
       description: "Introduction to Flutter Study Jam 3 (offline)",
+      link: "/404",
       open: true,
       canOpen: false,
     },
@@ -74,6 +79,7 @@ const EventsPage: NextPage = () => {
       tags: ["Workshop", "Study Group"],
       date: "May 25, 2023",
       description: "Introduction to Flutter Study Jam 2",
+      link: "/404",
       open: true,
       canOpen: false,
     },
@@ -87,6 +93,7 @@ const EventsPage: NextPage = () => {
       tags: ["Workshop", "Study Group"],
       date: "May 18, 2023",
       description: "Introduction to Flutter Study Jam 1",
+      link: "/404",
       open: true,
       canOpen: false,
     },
@@ -97,6 +104,7 @@ const EventsPage: NextPage = () => {
       tags: ["Speaker Session", "Tech Talk"],
       date: "May 6, 2023",
       description: "GDSC Waseda Networking Event",
+      link: "/404",
       open: true,
       canOpen: false,
     },
@@ -107,6 +115,7 @@ const EventsPage: NextPage = () => {
       tags: ["Speaker Session", "Tech Talk"],
       date: "April 28, 2023",
       description: "WTM International Women's Day 2023",
+      link: "/404",
       open: true,
       canOpen: false,
     },
@@ -117,6 +126,7 @@ const EventsPage: NextPage = () => {
       tags: ["Workshop", "Study Group"],
       date: "April 15, 2023",
       description: "Android Dev. Part 1",
+      link: "/404",
       open: true,
       canOpen: false,
     },
@@ -127,6 +137,7 @@ const EventsPage: NextPage = () => {
       tags: ["Speaker Session", "Tech Talk"],
       date: "March 8, 2023",
       description: "Safeguarding the Future of Automotive Tech",
+      link: "/404",
       open: true,
       canOpen: false,
     },
@@ -137,6 +148,7 @@ const EventsPage: NextPage = () => {
       tags: ["Solution Challenge"],
       date: "February 7, 2023",
       description: "GDSC Solution Challenge Info Session",
+      link: "/404",
       open: true,
       canOpen: false,
     },
@@ -147,6 +159,7 @@ const EventsPage: NextPage = () => {
       tags: ["Workshop", "Study Group"],
       date: "January 7 2023",
       description: "An Introduction to Photoshop",
+      link: "/404",
       open: true,
       canOpen: false,
     },
@@ -157,6 +170,7 @@ const EventsPage: NextPage = () => {
       tags: ["Speaker Session", "Tech Talk"],
       date: "December 23 2022",
       description: "Meet The Student Team Behind WasedaTime",
+      link: "/404",
       open: true,
       canOpen: false,
     },
@@ -167,6 +181,7 @@ const EventsPage: NextPage = () => {
       tags: ["Workshop", "Study Group"],
       date: "November 22, 2022",
       description: "Machine Learning Study Jams Session 1",
+      link: "/404",
       open: true,
       canOpen: false,
     },
@@ -177,6 +192,7 @@ const EventsPage: NextPage = () => {
       tags: ["GDSC", "Recruitment"],
       date: "October 14, 2022",
       description: "All You Need To Know About GDSC Waseda",
+      link: "/404",
       open: true,
       canOpen: false,
     },
@@ -216,7 +232,7 @@ const EventsPage: NextPage = () => {
               {eventsCard_UpComing.map((eventCard, index) => {
                 return (
                   <Link
-                    href="/events/details/placeholder"
+                    href={eventCard.link}
                     key={index}
                     className="a"
                   >
@@ -237,7 +253,7 @@ const EventsPage: NextPage = () => {
             ? [...eventCard_Past_Preview, ...eventsCard_Past]
             : eventCard_Past_Preview
           ).map((eventCard, index) => (
-            <Link href="/events/details/placeholder" key={index}>
+            <Link href={eventCard.link} key={index}>
               <a>
                 <MediaCard props={eventCard} />
               </a>
