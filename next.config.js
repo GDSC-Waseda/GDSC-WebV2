@@ -11,7 +11,7 @@ module.exports = {
     ignoreDuringBuilds: true,
   },
   images: {
-    loader: 'akamai',
-    path: '',
+    loader: "akamai",
+    path: "",
   },
 };
