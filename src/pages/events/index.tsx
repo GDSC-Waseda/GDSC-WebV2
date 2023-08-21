@@ -214,7 +214,7 @@ const EventsPage: NextPage = () => {
       tags: ["Solution Challenge", "Demo Day"],
       date: "July 17, 2022 @Google Japan",
       description: "2022 Mini-Solution Challenge by GDSC Waseda",
-      link: "/events/details/mini-solution-challenge",
+      link: "/events/details/mini-solution-challenge-2022",
       open: true,
       canOpen: false,
     },
@@ -253,11 +253,7 @@ const EventsPage: NextPage = () => {
             <div className="events__body__container">
               {eventsCard_UpComing.map((eventCard, index) => {
                 return (
-                  <Link
-                    href={eventCard.link}
-                    key={index}
-                    className="a"
-                  >
+                  <Link href={eventCard.link} key={index} className="a">
                     <a>
                       <MediaCard props={eventCard} />
                     </a>
