@@ -245,9 +245,7 @@ const EventsPage: NextPage = () => {
           </div>
           {eventsCard_UpComing.length === 0 ? (
             <div className="no-events">
-              <p>
-                Stay tuned for more exciting events!
-              </p>
+              <p>Stay tuned for more exciting events!</p>
             </div>
           ) : (
             <div className="events__body__container">
