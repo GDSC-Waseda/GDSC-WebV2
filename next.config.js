@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  basePath: '/GDSC-web',
-  assetPrefix: '/GDSC-web/',
+  basePath: "/GDSC-web",
+  assetPrefix: "/GDSC-web/",
 };
 
 module.exports = {
