@@ -49,10 +49,11 @@ const ArticlePage: NextPage = () => {
       <hr />
 
       <div>
-        <img className = "article__image" src={`assets/img/events/${article.image}`}/>
-        I can't get an image to render here (help) ;-;
+        {/*Figure this out (image directory)*/}
+        <img className = "article__image" src="https://developers.google.com/community/images/gdsc-solution-challenge/solutionchallenge-homepage.png"/>
+        {/*https://developers.google.com/community/images/gdsc-solution-challenge/solutionchallenge-homepage.png*/}
+        {/*{`..../assets/img/events/${article.image}`}*/}
       </div>
-      
 
       <div>
         <p>
@@ -113,7 +114,10 @@ const ArticlePage: NextPage = () => {
             onClick={handleClick}
             className="article__return-button"
           >
-            <i className="fas fa-arrow-up"></i>
+            {/*Figure this out (image directory)*/}
+            <img className="article__arrow-img" src="https://cdn-icons-png.flaticon.com/512/25/25637.png"/>
+            {/*<img src="src/assets/img/up-arrow.png"/>*/}
+
           </Button>
         </div>
       </div>
