@@ -1,5 +1,7 @@
-import { NextPage } from "next";
-import React from "react";
+import type { NextPage } from "next";
+import Link from "next/link";
+import { useState } from "react";
+import { Button } from "react-bootstrap";
 
 const PlaceholderPage: NextPage = () => {
   const article = {
