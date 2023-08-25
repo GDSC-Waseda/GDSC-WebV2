@@ -13,7 +13,6 @@ const MediaCardRender: React.FC<{
   link: string;
   title: string;
   canOpen: boolean;
-  link: string;
 }> = ({ children, ...props }) => {
   return <MediaCard props={props}>{children}</MediaCard>;
 };
