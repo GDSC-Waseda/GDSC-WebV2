@@ -13,6 +13,7 @@ const MediaCardRender: React.FC<{
   link: string;
   title: string;
   canOpen: boolean;
+  link: string;
 }> = ({ children, ...props }) => {
   return <MediaCard props={props}>{children}</MediaCard>;
 };
@@ -62,5 +63,6 @@ export default {
     description: { control: "text" },
     open: { control: "boolean" },
     canOpen: { control: "boolean" },
+    link: { control: "text" },
   },
 } as ComponentMeta<typeof MediaCard>;
