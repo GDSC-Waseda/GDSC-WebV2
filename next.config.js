@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  basePath: "/GDSC-web/public/",
+  basePath: "/GDSC-web/",
   assetPrefix: "/GDSC-web/",
 };
 
