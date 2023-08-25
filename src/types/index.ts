@@ -12,12 +12,6 @@ export interface CarouselCardProps {
   old: boolean;
 }
 
-export interface MembersCardProps {
-  teamName: string;
-  leader: MemberType;
-  member: Array<MemberType>;
-}
-
 export interface HeaderCardProps {
   headTitle?: string;
   title: string;

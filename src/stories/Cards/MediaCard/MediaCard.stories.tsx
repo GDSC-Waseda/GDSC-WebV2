@@ -10,6 +10,7 @@ const MediaCardRender: React.FC<{
   date: string;
   description: string;
   open: boolean;
+  link: string;
   title: string;
   canOpen: boolean;
 }> = ({ children, ...props }) => {
