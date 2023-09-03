@@ -19,7 +19,9 @@ export const NavigationBar = (): JSX.Element => {
             </Link>
           </Navbar.Brand>
           <Navbar.Brand>
-            <Link href="/" className="nav-title">GDSC Waseda</Link>
+            <Link href="/" className="nav-title">
+              GDSC Waseda
+            </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav" className="navbarCollaps">

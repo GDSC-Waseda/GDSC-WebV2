@@ -34,35 +34,35 @@ const Home: NextPage = () => {
       <div className="home-page">
         <div className="home-page__top">
           {/* <ImageCard props={topCard}> */}
-            <div className="home-page__top__title">Change the World</div>
-            <div className="home-page__top__button">
-              <a href="https://forms.gle/uewfWU2QZjpHmSqc9" target="_blank">
-                <Button variant="outline-dark" className="button">
-                  <small>Join Us</small>
-                </Button>
-              </a>
-            </div>
+          <div className="home-page__top__title">Change the World</div>
+          <div className="home-page__top__button">
+            <a href="https://forms.gle/uewfWU2QZjpHmSqc9" target="_blank">
+              <Button variant="outline-dark" className="button">
+                <small>Join Us</small>
+              </Button>
+            </a>
+          </div>
           {/* </ImageCard> */}
         </div>
         <div className="home-page__about">
           {/* <ImageCard props={secondCard}> */}
-            <div className="home-page__about__title">About us</div>
-            <div className="home-page__about__description">
-              <p>{about_contents[0]}</p>
-              <p>{about_contents[1]}</p>
-            </div>
-            <Stack spacing={2} direction="row" padding={2}>
-              <Link href="/teams">
-                <Button variant="outline-dark" className="about-page__button">
-                  Teams
-                </Button>
-              </Link>
-              <Link href="/events">
-                <Button variant="outline-dark" className="about-page__button">
-                  Events
-                </Button>
-              </Link>
-            </Stack>
+          <div className="home-page__about__title">About us</div>
+          <div className="home-page__about__description">
+            <p>{about_contents[0]}</p>
+            <p>{about_contents[1]}</p>
+          </div>
+          <Stack spacing={2} direction="row" padding={2}>
+            <Link href="/teams">
+              <Button variant="outline-dark" className="about-page__button">
+                Teams
+              </Button>
+            </Link>
+            <Link href="/events">
+              <Button variant="outline-dark" className="about-page__button">
+                Events
+              </Button>
+            </Link>
+          </Stack>
           {/* </ImageCard> */}
         </div>
         <div className="home-page__teams">
