@@ -14,8 +14,8 @@ export const ImageCard: React.FC<{
   const imageProps = (
     <Image
       className="imageCard__image"
-      src={`/GDSC-web/tempImg/home/${props.image}`}
-      layout="intrinsic"
+      src={`/tempImg/home/${props.image}`}
+      layout="fill"
       alt="image-card"
     />
   );

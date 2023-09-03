@@ -87,7 +87,7 @@ export const TeamsPage: NextPage = () => {
           <div key={index} className="team-leader">
             <img
               className="team-leader-image"
-              src={`/GDSC-web/tempImg/${teamCard.image}`}
+              src={`tempImg/teams/${teamCard.image}`}
               style={{
                 border: `5px solid ${
                   outlineColors[index % outlineColors.length]
@@ -97,7 +97,7 @@ export const TeamsPage: NextPage = () => {
             />
             <div className="team-leader-name">{teamCard.name}</div>
             <a className="team-leader-link" href={`/teams/${teamCard.link}`}>
-              Learn more?
+              Learn more
             </a>
           </div>
         ))}

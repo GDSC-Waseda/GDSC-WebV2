@@ -153,12 +153,10 @@ const ArticlePage: NextPage = () => {
             onClick={handleClick}
             className="article__return-button"
           >
-            {/*Figure this out (image directory)*/}
             <img
               className="article__arrow-img"
-              src="https://cdn-icons-png.flaticon.com/512/25/25637.png"
+              src="/tempImg/events/mini-solution-challenge-2022/up-arrow.png"
             />
-            {/*<img src="src/assets/img/up-arrow.png"/>*/}
           </Button>
         </div>
       </div>
