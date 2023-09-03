@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Container, Nav, Button, Navbar } from "react-bootstrap";
 
-import logo from "assets/svg/logo.svg";
+import logo from "/public/tempImg/svg/logo.svg";
 
 export const NavigationBar = (): JSX.Element => {
   return (
