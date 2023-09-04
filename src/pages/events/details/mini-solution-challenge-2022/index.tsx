@@ -155,7 +155,7 @@ const ArticlePage: NextPage = () => {
           >
             <img
               className="article__arrow-img"
-              src="/tempImg/events/mini-solution-challenge-2022/up-arrow.png"
+              src="/tempImg/events/up-arrow.png"
             />
           </Button>
         </div>
