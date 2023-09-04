@@ -57,3 +57,14 @@
     max-width: 20%;
   }
 }
+
+.team-card__expanded-details {
+  font-size: 0.8em;
+  color: #666;
+  margin-top: 5px;
+  padding-left: 10px;
+
+  p {
+    margin: 3px 0;
+  }
+}
