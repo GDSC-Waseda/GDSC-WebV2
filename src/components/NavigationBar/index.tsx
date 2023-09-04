@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Container, Nav, Button, Navbar } from "react-bootstrap";
 
-import logo from "assets/svg/logo.svg";
+import logo from "/public/tempImg/svg/logo.svg";
 
 export const NavigationBar = (): JSX.Element => {
   return (
@@ -15,8 +15,12 @@ export const NavigationBar = (): JSX.Element => {
             <Link href="/">
               <div className="logo">
                 <Image alt="" src={logo} layout="intrinsic" />
-                <span>GDSC Waseda</span>
               </div>
+            </Link>
+          </Navbar.Brand>
+          <Navbar.Brand>
+            <Link href="/" className="nav-title">
+              GDSC Waseda
             </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />

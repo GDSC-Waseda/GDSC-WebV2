@@ -2,8 +2,8 @@ import "./HeaderCard.css";
 
 import { Col, Row, Card } from "react-bootstrap";
 
-import LogoLeft from "assets/svg/logo-left.svg";
-import LogoRight from "assets/svg/logo-right.svg";
+import LogoLeft from "/public/tempImgsvg/logo-left.svg";
+import LogoRight from "/public/tempImgsvg/logo-right.svg";
 import { HeaderCardProps } from "~/types/index";
 
 export const HeaderCard: React.FC<{ props: HeaderCardProps }> = ({ props }) => {
