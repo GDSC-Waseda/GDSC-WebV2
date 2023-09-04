@@ -20,7 +20,7 @@ export const MediaCard: React.FC<{
         <div className={`media-card__image-container ${props.size}`}>
           <Image
             className={`media-card__image ${props.size}`}
-            src={`/tempImg/events/${props.image}`}
+            src={require(`/src/assets/img/events/${props.image}`)}
             alt="media-card"
             width={360}
             height={190}
