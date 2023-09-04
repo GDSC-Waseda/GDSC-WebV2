@@ -3,7 +3,12 @@
   border-radius: 20px;
   box-shadow: 3px 5px 5px #c4c4c4;
   width: 10%;
+  overflow: hidden;
+  transition: all 0.3s ease;
 
+  &:hover {
+    transform: scale(1.2);
+  }
   &__image-container {
     text-align: center;
     border-bottom: 1px solid;
@@ -21,7 +26,9 @@
   }
 
   &__details {
-    padding: 10px;
+    padding: 20px;
+    max-height: 500px;
+    overflow-y: auto;
   }
 
   &__title {
@@ -39,13 +46,14 @@
 .team-cards-container {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
   justify-content: center;
   max-width: 50%;
   margin: 0 auto;
   gap: 20px;
 
   .team-card {
-    flex-basis: 20%; // Adjust this to control the size of the individual cards
+    flex-basis: 20%; // control  the size of the individual card
     max-width: 20%;
   }
 }

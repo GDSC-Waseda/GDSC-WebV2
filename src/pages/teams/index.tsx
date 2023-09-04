@@ -97,7 +97,7 @@ export const TeamsPage: NextPage = () => {
             />
             <div className="team-leader-name">{teamCard.name}</div>
             <a className="team-leader-link" href={`/teams/${teamCard.link}`}>
-              Learn more?
+              Learn more
             </a>
           </div>
         ))}

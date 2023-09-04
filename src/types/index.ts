@@ -34,6 +34,9 @@ export interface ImageCardProps {
 export interface TeamCardProps {
   image: string;
   title: string;
+  major?: string;
+  school?: string;
+  year?: string;
 }
 
 export interface MediaCardProps {
