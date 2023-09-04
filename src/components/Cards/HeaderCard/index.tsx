@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { Col, Row, Card } from "react-bootstrap";
 
+import LogoLeft from "/src/assets/svg/logo-left.svg";
+import LogoRight from "/src/assets/svg/logo-right.svg";
 import { HeaderCardProps } from "~/types/index";
 
 export const HeaderCard: React.FC<{ props: HeaderCardProps }> = ({ props }) => {
@@ -15,11 +17,9 @@ export const HeaderCard: React.FC<{ props: HeaderCardProps }> = ({ props }) => {
         <Row>
           <Col xs={2} style={{ textAlign: "end", alignSelf: "center" }}>
             <Image
-              src="/src/assets/svg/logo-left.svg"
+              src={LogoLeft}
               className="headerCard__logoLeft"
               alt="logo-left"
-              width={70}
-              height={70}
             />
           </Col>
           <Col xs={8}>
@@ -27,11 +27,9 @@ export const HeaderCard: React.FC<{ props: HeaderCardProps }> = ({ props }) => {
           </Col>
           <Col xs={2} style={{ alignSelf: "center" }}>
             <Image
-              src="/src/assets/svg/logo-right.svg"
+              src={LogoRight}
               className="headerCard__logoRight"
               alt="logo-right"
-              width={70}
-              height={70}
             />
           </Col>
         </Row>
