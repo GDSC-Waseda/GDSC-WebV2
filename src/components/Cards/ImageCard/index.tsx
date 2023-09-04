@@ -6,6 +6,7 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 
 import { ImageCardProps } from "~/types/index";
+import { Height } from "@mui/icons-material";
 
 export const ImageCard: React.FC<{
   children?: React.ReactNode;
@@ -15,7 +16,7 @@ export const ImageCard: React.FC<{
     <Image
       className="imageCard__image"
       src={`/GDSC-web/tempImg/home/${props.image}`}
-      layout="intrinsic"
+      layout="fill"
       alt="image-card"
     />
   );
