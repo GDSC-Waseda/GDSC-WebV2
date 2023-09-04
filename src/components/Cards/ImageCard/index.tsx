@@ -16,7 +16,8 @@ export const ImageCard: React.FC<{
     <Image
       className="imageCard__image"
       src={`/tempImg/home/${props.image}`}
-      layout="fill"
+      width={600}
+      height={429}
       alt="image-card"
     />
   );
