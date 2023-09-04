@@ -15,7 +15,7 @@ export const HeaderCard: React.FC<{ props: HeaderCardProps }> = ({ props }) => {
         <Row>
           <Col xs={2} style={{ textAlign: "end", alignSelf: "center" }}>
             <Image
-              src="/tempImg/svg/logo-left.svg"
+              src="/src/assets/svg/logo-left.svg"
               className="headerCard__logoLeft"
               alt="logo-left"
               width={70}
@@ -27,7 +27,7 @@ export const HeaderCard: React.FC<{ props: HeaderCardProps }> = ({ props }) => {
           </Col>
           <Col xs={2} style={{ alignSelf: "center" }}>
             <Image
-              src="/tempImg/svg/logo-right.svg"
+              src="/src/assets/svg/logo-right.svg"
               className="headerCard__logoRight"
               alt="logo-right"
               width={70}
