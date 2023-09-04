@@ -14,37 +14,37 @@
     height: 50%;
     width: 100%;
 
-    @media screen and (min-width: 768px) {
-      &.s {
-        min-height: 20vh;
-        min-width: 15vh;
-      }
+    // @media screen and (min-width: 768px) {
+    //   &.s {
+    //     min-height: 20vh;
+    //     min-width: 15vh;
+    //   }
 
-      &.m {
-        min-height: 20vh;
-        min-width: 25vh;
-      }
-      &.l {
-        min-height: 30vh;
-        min-width: 35vh;
-      }
-    }
+    //   &.m {
+    //     min-height: 20vh;
+    //     min-width: 25vh;
+    //   }
+    //   &.l {
+    //     min-height: 30vh;
+    //     min-width: 35vh;
+    //   }
+    // }
 
-    @media screen and (max-width: 768px) {
-      &.s {
-        min-height: 20vh;
-        min-width: 15vh;
-      }
+    // @media screen and (max-width: 768px) {
+    //   &.s {
+    //     min-height: 20vh;
+    //     min-width: 15vh;
+    //   }
 
-      &.m {
-        min-height: 20vh;
-        min-width: 25vh;
-      }
-      &.l {
-        min-height: 30vh;
-        min-width: 35vh;
-      }
-    }
+    //   &.m {
+    //     min-height: 20vh;
+    //     min-width: 25vh;
+    //   }
+    //   &.l {
+    //     min-height: 30vh;
+    //     min-width: 35vh;
+    //   }
+    // }
   }
 
   .none {
@@ -101,7 +101,7 @@
   .media-card.m {
     max-width: 305vh;
     min-width: 335px;
-    max-height: 180vh;
+    max-height: 180px;
   }
 
   &__image.l,

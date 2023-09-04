@@ -11,7 +11,7 @@ export const ProjectTeams: NextPage = () => {
   };
 
   const imageCardProps: ImageCardProps = {
-    title: "Project Team - Priya",
+    title: "Who Are We?",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     image: "everyone.png",
@@ -21,39 +21,39 @@ export const ProjectTeams: NextPage = () => {
   const teamCards: Array<TeamCardProps> = [
     {
       title: "Member 1",
-      image: "project_lead.png",
+      image: "project_lead.jpg",
     },
     {
       title: "Member 2",
-      image: "project_lead.png",
+      image: "project_lead.jpg",
     },
     {
       title: "Member 3",
-      image: "project_lead.png",
+      image: "project_lead.jpg",
     },
     {
       title: "Member 4",
-      image: "project_lead.png",
+      image: "project_lead.jpg",
     },
     {
       title: "Member 5",
-      image: "project_lead.png",
+      image: "project_lead.jpg",
     },
     {
       title: "Member 6",
-      image: "project_lead.png",
+      image: "project_lead.jpg",
     },
     {
       title: "Member 6",
-      image: "project_lead.png",
+      image: "project_lead.jpg",
     },
     {
       title: "Member 6",
-      image: "project_lead.png",
+      image: "project_lead.jpg",
     },
     {
       title: "Member 6",
-      image: "project_lead.png",
+      image: "project_lead.jpg",
     },
   ];
 

@@ -1,10 +1,10 @@
 import Link from "next/link";
 
 import "./Footer.css";
-import Google from "/public/tempImg/svg/google.svg";
-import Instagram from "/public/tempImg/svg/instagram.svg";
-import LinkedIn from "/public/tempImg/svg/linked-in.svg";
-import logo from "/public/tempImg/svg/logo.svg";
+import Google from "assets/svg/google.svg";
+import Instagram from "assets/svg/instagram.svg";
+import LinkedIn from "assets/svg/linked-in.svg";
+import logo from "assets/svg/logo.svg";
 
 export const Footer = (): JSX.Element => {
   return (

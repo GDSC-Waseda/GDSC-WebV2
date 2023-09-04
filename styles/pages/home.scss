@@ -1,6 +1,8 @@
 @font-face {
   font-family: myFont;
   src: url("/fonts/prodsanReg.ttf");
+  font-family: myFont6;
+  src: url("/fonts/rubikReg.ttf");
 }
 .home-page {
   @media (min-width: 798px) {
@@ -8,8 +10,6 @@
   }
   &__top {
     padding: 20px 40px;
-    width: 100%;
-    height: auto;
     &__title {
       font-size: 56px;
     }
@@ -73,7 +73,6 @@
     &:hover {
       background-color: #000000;
       color: rgb(255, 255, 255);
-      border-radius: 25px;
     }
   }
 }

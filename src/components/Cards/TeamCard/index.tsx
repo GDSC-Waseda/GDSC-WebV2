@@ -12,10 +12,9 @@ export const TeamCard: React.FC<{
         <div className="team-card__image-container">
           <Image
             className="team-card__image"
-            src={`/tempImg/home/${props.image}`}
+            src={require(`assets/img/${props.image}`)}
             alt="team-card"
-            width={200}
-            height={200}
+            layout="intrinsic"
           />
         </div>
       ) : (

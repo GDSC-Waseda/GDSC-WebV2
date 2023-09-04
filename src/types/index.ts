@@ -12,6 +12,12 @@ export interface CarouselCardProps {
   old: boolean;
 }
 
+export interface MembersCardProps {
+  teamName: string;
+  leader: MemberType;
+  member: Array<MemberType>;
+}
+
 export interface HeaderCardProps {
   headTitle?: string;
   title: string;
@@ -37,7 +43,6 @@ export interface MediaCardProps {
   tags: string[];
   date: string;
   description: string;
-  link: string;
   open: boolean;
   canOpen: boolean;
 }

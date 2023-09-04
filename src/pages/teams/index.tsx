@@ -23,7 +23,7 @@ export const TeamsPage: NextPage = () => {
     {
       name: "Project",
       image: "project_lead.png",
-      link: "project",
+      link: "/project",
     },
     {
       name: "Finance",
@@ -87,7 +87,7 @@ export const TeamsPage: NextPage = () => {
           <div key={index} className="team-leader">
             <img
               className="team-leader-image"
-              src={`tempImg/teams/${teamCard.image}`}
+              src={`/tempImg/${teamCard.image}`}
               style={{
                 border: `5px solid ${
                   outlineColors[index % outlineColors.length]
@@ -97,7 +97,7 @@ export const TeamsPage: NextPage = () => {
             />
             <div className="team-leader-name">{teamCard.name}</div>
             <a className="team-leader-link" href={`/teams/${teamCard.link}`}>
-              Learn more
+              Learn more?
             </a>
           </div>
         ))}
