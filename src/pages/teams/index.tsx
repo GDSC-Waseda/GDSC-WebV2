@@ -85,17 +85,19 @@ export const TeamsPage: NextPage = () => {
       <div className="team-leaders-container">
         {teamLeaders.map((teamCard, index) => (
           <div key={index} className="team-leader">
-            <img
-              className="team-leader-image"
-              src={`/tempImg/${teamCard.image}`}
-              style={{
-                border: `5px solid ${
-                  outlineColors[index % outlineColors.length]
-                }`,
-              }}
-              alt="team leader"
-            />
-            <div className="team-leader-name">{teamCard.name}</div>
+            <a className="team-leader-link" href={`/teams/${teamCard.link}`}>
+              <img
+                className="team-leader-image"
+                src={`/tempImg/${teamCard.image}`}
+                style={{
+                  border: `5px solid ${
+                    outlineColors[index % outlineColors.length]
+                  }`,
+                }}
+                alt="team leader"
+              />
+              <div className="team-leader-name">{teamCard.name}</div>
+            </a>
             <a className="team-leader-link" href={`/teams/${teamCard.link}`}>
               Learn more
             </a>
