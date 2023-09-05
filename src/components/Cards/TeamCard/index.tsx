@@ -30,7 +30,7 @@ export const TeamCard: React.FC<{
               className="expand-icon"
               onClick={() => setIsExpanded(!isExpanded)}
             >
-              {isExpanded ? "▲" : "▼"}
+              {/* {isExpanded} */}
             </span>
           </div>
         )}
