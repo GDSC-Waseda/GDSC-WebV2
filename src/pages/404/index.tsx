@@ -26,9 +26,7 @@ export const ErrorPage: NextPage<{ text?: string }> = ({ text }) => {
         </h1>
         <h2 className="error__detail">{text && message(text)}</h2>
         <Link href="/">
-          <Button className="error__button">
-            Go back to Home
-          </Button>
+          <Button className="error__button">Go back to Home</Button>
         </Link>
       </div>
     </div>
