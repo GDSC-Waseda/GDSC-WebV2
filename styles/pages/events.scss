@@ -10,21 +10,20 @@
   &__search-bar {
     position: relative;
     display: inline-block;
-    margin-left: 70px;
+    margin-left: 130px;
   }
-  &__search-bar img.events__search-icon {
-    top: 50%;
-    left: 10px; 
+  &__search-icon {
+    position: absolute;
+    margin-left: 4px;
+    margin-top: 8px;
   }
   &__search {
-    border: none; 
-    border-bottom: 1px solid #333; 
-    outline: none; 
-    padding: 5px; 
-    width: 175px;
-  }
-  .search-bar input::placeholder {
-    margin-left: 30px;
+    border: none;
+    border-bottom: 1px solid #333;
+    outline: none;
+    padding: 5px;
+    padding-left: 35px;
+    width: 200px;
   }
 
   @media screen and (min-width: 768px) {

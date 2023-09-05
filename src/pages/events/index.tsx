@@ -229,7 +229,7 @@ const EventsPage: NextPage = () => {
 
   const togglePastEvents = () => {
     setShowAllPastEvents((prevState) => !prevState);
-    setSearchInput(""); 
+    setSearchInput("");
     setSearchResults([]);
   };
 
@@ -241,9 +241,9 @@ const EventsPage: NextPage = () => {
 
   const filterPastEvents = (input: string) => {
     const pastEvents = showAllPastEvents
-    ? [...eventCard_Past_Preview, ...eventsCard_Past]
-    : eventCard_Past_Preview;
-  
+      ? [...eventCard_Past_Preview, ...eventsCard_Past]
+      : eventCard_Past_Preview;
+
     return pastEvents.filter(
       (event) =>
         event.title.toLowerCase().includes(input.toLowerCase()) ||
@@ -288,8 +288,13 @@ const EventsPage: NextPage = () => {
           <div className="events__body__header">
             <span>Past</span>
             <div className="events__search-bar">
-              <img src="/tempImg/events/magnefying-glass.png" alt="" className="events__search-icon" 
-              width={20} height={20}/>
+              <img
+                src="/tempImg/events/magnefying-glass.png"
+                alt=""
+                className="events__search-icon"
+                width={20}
+                height={20}
+              />
               <input
                 className="events__search"
                 type="text"
@@ -312,27 +317,29 @@ const EventsPage: NextPage = () => {
                 </Link>
               ))}
             </>
-          ) : (searchInput == "" ? ((showAllPastEvents
-            ? ([...eventCard_Past_Preview, ...eventsCard_Past])
-            : eventCard_Past_Preview
-          ).map((eventCard, index) => (
-            <Link href={eventCard.link} key={index}>
-              <a>
-                <MediaCard props={eventCard} />
-              </a>
-            </Link>
-          ))) : (null))
-          }
+          ) : searchInput == "" ? (
+            (showAllPastEvents
+              ? [...eventCard_Past_Preview, ...eventsCard_Past]
+              : eventCard_Past_Preview
+            ).map((eventCard, index) => (
+              <Link href={eventCard.link} key={index}>
+                <a>
+                  <MediaCard props={eventCard} />
+                </a>
+              </Link>
+            ))
+          ) : null}
           {searchInput.length == 0 ? (
-          <div className="events__body__button">
-            <Button
-              variant="outline"
-              onClick={togglePastEvents}
-              className="button"
-            >
-              {showAllPastEvents ? "Show Less" : "Show More"}
-            </Button>
-          </div>) : (null)}
+            <div className="events__body__button">
+              <Button
+                variant="outline"
+                onClick={togglePastEvents}
+                className="button"
+              >
+                {showAllPastEvents ? "Show Less" : "Show More"}
+              </Button>
+            </div>
+          ) : null}
         </div>
       </div>
     </>
