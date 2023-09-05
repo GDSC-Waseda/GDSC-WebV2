@@ -32,32 +32,37 @@ export const TeamsPage: NextPage = () => {
     },
     {
       name: "Outreach",
-      image: "s_lead.png",
+      image: "outreach_lead.png",
       link: "outreach",
     },
     {
       name: "Operations",
-      image: "edu_lead.png",
+      image: "operations_lead.png",
       link: "test1",
     },
     {
       name: "Frontend",
-      image: "backend_lead.png",
+      image: "frontend_lead.png",
       link: "test1",
     },
     {
       name: "Backend",
-      image: "lead.png",
+      image: "backend.png",
       link: "test1",
     },
     {
       name: "Education",
-      image: "edu_lead.png",
+      image: "education_lead.png",
       link: "test1",
     },
     {
       name: "Marketing",
-      image: "market_lead.png",
+      image: "marketing_lead.png",
+      link: "test1",
+    },
+    {
+      name: "Agile",
+      image: "agile_lead.png",
       link: "test1",
     },
   ];
