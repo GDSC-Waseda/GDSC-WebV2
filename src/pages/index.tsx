@@ -52,13 +52,16 @@ const Home: NextPage = () => {
               <p>{about_contents[1]}</p>
             </div>
             <Stack spacing={2} direction="row" padding={2}>
-              <Button variant="outline-dark" className="about-page__button">
-                <Link href="/teams">Teams</Link>
-              </Button>
-              {/* TODO: remove disabled when Event Page is released */}
-              <Button variant="outline-dark" className="about-page__button">
-                <Link href="/events">Events</Link>
-              </Button>
+              <Link href="/teams">
+                <Button variant="outline-dark" className="about-page__button">
+                  Teams
+                </Button>
+              </Link>
+              <Link href="/events">
+                <Button variant="outline-dark" className="about-page__button">
+                  Events
+                </Button>
+              </Link>
             </Stack>
           </ImageCard>
         </div>
