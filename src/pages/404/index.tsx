@@ -25,9 +25,11 @@ export const ErrorPage: NextPage<{ text?: string }> = ({ text }) => {
           We're sorry, but there seems to be a problem
         </h1>
         <h2 className="error__detail">{text && message(text)}</h2>
-        <Button className="error__button">
-          <Link href="/Home">Go back to Home</Link>
-        </Button>
+        <Link href="/">
+          <Button className="error__button">
+            Go back to Home
+          </Button>
+        </Link>
       </div>
     </div>
   );

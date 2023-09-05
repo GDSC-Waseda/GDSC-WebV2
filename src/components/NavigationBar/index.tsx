@@ -15,8 +15,12 @@ export const NavigationBar = (): JSX.Element => {
             <Link href="/">
               <div className="logo">
                 <Image alt="" src={logo} layout="intrinsic" />
-                <span>GDSC Waseda</span>
               </div>
+            </Link>
+          </Navbar.Brand>
+          <Navbar.Brand>
+            <Link href="/" className="nav-title">
+              GDSC Waseda
             </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
