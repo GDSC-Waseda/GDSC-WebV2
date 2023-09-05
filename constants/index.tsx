@@ -35,7 +35,7 @@ export const imageIconData: Array<ImageIconProps> = [
     size: "m",
     color: "blue",
     title: "Education",
-    image: "/tempImg/education_lead.png",
+    image: "/tempImg/education_lead1.png",
   },
   {
     size: "m",

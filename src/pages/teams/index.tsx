@@ -47,12 +47,12 @@ export const TeamsPage: NextPage = () => {
     },
     {
       name: "Backend",
-      image: "backend.png",
+      image: "backend_lead.png",
       link: "test1",
     },
     {
       name: "Education",
-      image: "education_lead.png",
+      image: "education_lead2.png",
       link: "test1",
     },
     {
