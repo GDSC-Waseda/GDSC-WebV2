@@ -293,7 +293,7 @@ const EventsPage: NextPage = () => {
                 alt=""
                 className="events__search-icon"
                 width={20}
-                height={20}
+                height={22}
               />
               <input
                 className="events__search"
