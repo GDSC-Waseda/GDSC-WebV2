@@ -22,7 +22,7 @@ export const ErrorPage: NextPage<{ text?: string }> = ({ text }) => {
     <div className="error">
       <div className="error__container">
         <h1 className="error__title">
-          We're sorry, but there seems to be a problem
+          We're sorry. This page is under development.
         </h1>
         <h2 className="error__detail">{text && message(text)}</h2>
         <Link href="/">
