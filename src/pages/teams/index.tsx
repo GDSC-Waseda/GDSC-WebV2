@@ -9,7 +9,12 @@ export const TeamsPage: NextPage = () => {
     title: "Our Teams",
     content: "Waseda University's chapter of the Google Developer Student Club",
   };
-  const teamLeaders: Array<{ name: string; image: string; link: string; color: string}> = [
+  const teamLeaders: Array<{
+    name: string;
+    image: string;
+    link: string;
+    color: string;
+  }> = [
     {
       name: "Project",
       image: "project_lead.png",
@@ -19,7 +24,7 @@ export const TeamsPage: NextPage = () => {
     {
       name: "Backend",
       image: "backend_lead.png",
-      link: "/backend", 
+      link: "/backend",
       color: "#4283f3",
     },
     {
