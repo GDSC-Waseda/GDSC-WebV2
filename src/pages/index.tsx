@@ -68,8 +68,7 @@ const Home: NextPage = () => {
         <div className="home-page__teams">
           <div className="home-page__teams__title">Teams</div>
           <div className="home-page__teams__description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor
+            Meet the core team
           </div>
           <div className="home-page__teams__icons">
             <Row xs={2} md={4} className="justify-content-center">

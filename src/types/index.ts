@@ -56,6 +56,7 @@ export interface ImageIconProps {
   title?: string;
   color: "yellow" | "green" | "blue" | "red";
   image?: string;
+  link: string;
 }
 
 /* Pages */

@@ -9,61 +9,60 @@ export const TeamsPage: NextPage = () => {
     title: "Our Teams",
     content: "Waseda University's chapter of the Google Developer Student Club",
   };
-  const outlineColors = [
-    "#e94336",
-    "#4283f3",
-    "#00a150",
-    "#fabb08",
-    "#e94336",
-    "#4283f3",
-    "#00a150",
-    "#fabb08",
-  ];
-  const teamLeaders: Array<{ name: string; image: string; link: string }> = [
+  const teamLeaders: Array<{ name: string; image: string; link: string; color: string}> = [
     {
       name: "Project",
       image: "project_lead.png",
       link: "/project",
-    },
-    {
-      name: "Finance",
-      image: "finance_lead.png",
-      link: "finance",
-    },
-    {
-      name: "Outreach",
-      image: "outreach_lead.png",
-      link: "outreach",
-    },
-    {
-      name: "Operations",
-      image: "operations_lead.png",
-      link: "test1",
-    },
-    {
-      name: "Frontend",
-      image: "frontend_lead.png",
-      link: "test1",
+      color: "#00a150",
     },
     {
       name: "Backend",
       image: "backend_lead.png",
-      link: "test1",
+      link: "/backend", 
+      color: "#4283f3",
+    },
+    {
+      name: "Frontend",
+      image: "frontend_lead.png",
+      link: "/frontend",
+      color: "#fabb08",
     },
     {
       name: "Education",
       image: "education_lead1.png",
-      link: "test1",
-    },
-    {
-      name: "Marketing",
-      image: "marketing_lead.png",
-      link: "test1",
+      link: "/education",
+      color: "#4283f3",
     },
     {
       name: "Agile",
       image: "agile_lead.png",
-      link: "test1",
+      link: "/agile",
+      color: "#fabb08",
+    },
+    {
+      name: "Outreach",
+      image: "outreach_lead.png",
+      link: "/outreach",
+      color: "#e94336",
+    },
+    {
+      name: "Operations",
+      image: "operations_lead.png",
+      link: "/operations",
+      color: "#00a150",
+    },
+    {
+      name: "Marketing",
+      image: "marketing_lead.png",
+      link: "/marketing",
+      color: "#e94336",
+    },
+    {
+      name: "Finance",
+      image: "finance_lead.png",
+      link: "/finance",
+      color: "#fabb08",
     },
   ];
 
@@ -95,9 +94,7 @@ export const TeamsPage: NextPage = () => {
                 className="team-leader-image"
                 src={`/tempImg/${teamCard.image}`}
                 style={{
-                  border: `5px solid ${
-                    outlineColors[index % outlineColors.length]
-                  }`,
+                  border: `5px solid ${teamCard.color}`,
                 }}
                 alt="team leader"
               />

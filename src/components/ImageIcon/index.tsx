@@ -22,19 +22,23 @@ export const ImageIcon: React.FC<{
     <div className={`image-icon ${props.size}`}>
       <div className={`image-icon__image-container ${props.size}`}>
         {props.image ? (
-          <img
-            className={`image-icon__image ${props.size} ${props.color}`}
-            src={image}
-            alt="image-icon"
-          />
+          <a href={`/teams/${props.link}`}>
+            <img
+              className={`image-icon__image ${props.size} ${props.color}`}
+              src={image}
+              alt="image-icon"
+            />
+          </a>
         ) : (
           <div className={`image-icon__image ${props.size} ${props.color}`} />
         )}
       </div>
       <div className="image-icon__detail-container">
-        {props.title !== undefined && (
-          <div className="image-icon__title">{props.title}</div>
-        )}
+        <a href={`/teams/${props.link}`}>
+          {props.title !== undefined && (
+            <div className="image-icon__title">{props.title}</div>
+          )}
+        </a>
         <div className="image-icon__other">
           {children !== undefined && children}
         </div>
