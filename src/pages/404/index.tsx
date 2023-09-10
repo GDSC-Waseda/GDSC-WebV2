@@ -16,6 +16,10 @@ export const ErrorPage: NextPage<{ text?: string }> = ({ text }) => {
     }
   };
 
+  const goBack = () => {
+    window.history.back();
+  };
+
   console.log(router.pathname);
 
   return (
@@ -26,8 +30,12 @@ export const ErrorPage: NextPage<{ text?: string }> = ({ text }) => {
         </h1>
         <h2 className="error__detail">{text && message(text)}</h2>
         <Link href="/">
-          <Button className="error__button">Go back to Home</Button>
+          <Button className="error__button-home">Go back to Home</Button>
         </Link>
+        <br />
+        <Button className="error__button-back" onClick={goBack}>
+          Go back
+        </Button>
       </div>
     </div>
   );

@@ -334,7 +334,7 @@ const EventsPage: NextPage = () => {
               <Button
                 variant="outline"
                 onClick={togglePastEvents}
-                className="button"
+                className="events__button"
               >
                 {showAllPastEvents ? "Show Less" : "Show More"}
               </Button>

@@ -12,11 +12,31 @@
   &__detail {
     margin-bottom: 25px;
   }
-  &__button {
+  &__button-home {
     margin-top: 15px;
-    a {
-      color: white;
-      text-decoration: none;
-    }
+    background-color: transparent;
+    border-color: #2578e9;
+    color: #2578e9;
+    border-radius: 5px;
+  }
+  &__button-home:hover {
+    background-color: #e7f0fe;
+    border-color: #d2e3fc;
+    color: #2578e9;
+    border-radius: 5px;
+  }
+  &__button-back {
+    width: 150px;
+    margin-top: 16px;
+    background-color: #2578e9;
+    border-color: #2578e9;
+    color: white;
+    border-radius: 5px;
+  }
+  &__button-back:hover {
+    background-color: #0057d1;
+    border-color: #0057d1;
+    color: white;
+    border-radius: 5px;
   }
 }

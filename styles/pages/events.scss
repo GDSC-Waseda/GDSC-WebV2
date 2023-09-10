@@ -25,6 +25,20 @@
     padding-left: 35px;
     width: 200px;
   }
+  &__button {
+    margin-top: 30px;
+    background-color: transparent;
+    border-color: #e0e1e4;
+    color: #2578e9;
+    transition: background-color 0.3s;
+    border-radius: 25px;
+  }
+  &__button:hover {
+    background-color: #e7f0fe;
+    border-color: #d2e3fc;
+    color: #2578e9;
+    border-radius: 25px;
+  }
 
   @media screen and (min-width: 768px) {
     &__body {
@@ -98,20 +112,4 @@
   p {
     font-weight: bold;
   }
-}
-
-.button {
-  margin-top: 30px;
-  background-color: transparent;
-  border-color: #e0e1e4;
-  color: #2578e9;
-  transition: background-color 0.3s;
-  border-radius: 25px;
-}
-
-.button:hover {
-  background-color: #e7f0fe;
-  border-color: #d2e3fc;
-  color: #2578e9;
-  border-radius: 25px;
 }
