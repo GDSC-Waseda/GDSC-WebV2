@@ -29,13 +29,13 @@ export const ErrorPage: NextPage<{ text?: string }> = ({ text }) => {
           We're sorry. This page is under development.
         </h1>
         <h2 className="error__detail">{text && message(text)}</h2>
-        <Link href="/">
-          <Button className="error__button-home">Go back to Home</Button>
-        </Link>
-        <br />
         <Button className="error__button-back" onClick={goBack}>
           Go back
         </Button>
+        <br />
+        <Link href="/">
+          <Button className="error__button-home">Go back to Home</Button>
+        </Link>
       </div>
     </div>
   );

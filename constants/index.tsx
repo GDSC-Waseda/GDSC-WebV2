@@ -12,7 +12,7 @@ export const imageIconData: Array<ImageIconProps> = [
     size: "m",
     color: "green",
     title: "Project",
-    image: "/tempImg/projectlead.png",
+    image: "/tempImg/project_lead.png",
     link: "/project",
   },
   {

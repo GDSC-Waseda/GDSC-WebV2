@@ -52,10 +52,7 @@ const ArticlePage: NextPage = () => {
 
       <div>
         {/*Figure this out (image directory)*/}
-        <img
-          className="article__image"
-          src="https://developers.google.com/community/images/gdsc-solution-challenge/solutionchallenge-homepage.png"
-        />
+        <img className="article__image" src="/tempImg/events/miniSL22-1.png" />
         {/*https://developers.google.com/community/images/gdsc-solution-challenge/solutionchallenge-homepage.png*/}
         {/*{`..../assets/img/events/${article.image}`}*/}
       </div>
