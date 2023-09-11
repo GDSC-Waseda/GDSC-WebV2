@@ -25,7 +25,7 @@ export const ImageIcon: React.FC<{
           <a href={`/teams/${props.link}`}>
             <img
               className={`image-icon__image ${props.size} ${props.color}`}
-              src={image}
+              src={`/tempImg/leads/${image}`}
               alt="image-icon"
             />
           </a>

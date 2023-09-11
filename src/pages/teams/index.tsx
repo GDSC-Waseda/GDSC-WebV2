@@ -97,7 +97,7 @@ export const TeamsPage: NextPage = () => {
             <a className="team-leader-link" href={`/teams/${teamCard.link}`}>
               <img
                 className="team-leader-image"
-                src={`/tempImg/${teamCard.image}`}
+                src={`/tempImg/leads/${teamCard.image}`}
                 style={{
                   border: `5px solid ${teamCard.color}`,
                 }}
