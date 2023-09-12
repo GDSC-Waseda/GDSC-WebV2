@@ -76,14 +76,14 @@ const ArticlePage: NextPage = () => {
           .
         </p>
         <p>
-          Last year, GDSC Waseda held a mini-version of the Solution Challenge,
+          Last year, GDSC Waseda held a small-scale version of the Solution Challenge,
           where four teams that had participated in the 2022 Solution Challenge
           had the opportunity to present and discuss their submitted solutions.
         </p>
         <br />
 
         {/* Team Mimi 4 Me */}
-        <h2>Team Mimi 4 Me</h2>
+        <h2 className="article__h2">Team Mimi 4 Me</h2>
         <p>
           Team Mimi 4 Me (耳 for Me by Sien Peralta, Hosu “Hollie” Choi,
           Minkyoung Choi, Khaled Muhammed) created an application that tells the
@@ -91,7 +91,7 @@ const ArticlePage: NextPage = () => {
           sound reaches a certain decibel.
         </p>
         {/* Team Carbon Calculator App */}
-        <h2>Team Carbon Calculator App</h2>
+        <h2 className="article__h2">Team Carbon Calculator App</h2>
         <p>
           Team Carbon Calculator App (by Jake Underland, Kyung Min Park,
           Jaewoong Jeong, Andre) created an app that utilizes image recognition
@@ -100,7 +100,7 @@ const ArticlePage: NextPage = () => {
           mindful of our carbon footprint.
         </p>
         {/* Food Waste Fighter */}
-        <h2>Food Waste Fighter</h2>
+        <h2 className="article__h2">Food Waste Fighter</h2>
         <p>
           Food Waste Fighter (by Kaede Iijima, Navya Ann Eldho, Haru Okuda,
           Takumi Otsuka) created an application where organizations can notify
@@ -109,7 +109,7 @@ const ArticlePage: NextPage = () => {
           possible.
         </p>
         {/* SPOGAPP */}
-        <h2>SPOGAPP</h2>
+        <h2 className="article__h2">SPOGAPP</h2>
         <p>
           SPOGAPP (by Jion Tominaga, Hiroto Fukuoka, Ryo Togashi) created an
           application encouraging people to lead a healthier lifestyle through
@@ -119,11 +119,17 @@ const ArticlePage: NextPage = () => {
         </p>
         <br />
 
+        <div className="article__two-image-container">
+          <img src="/tempImg/events/miniSL22-2.png" />
+        </div>
+        <div className="article__two-image-container">
+          <img src="/tempImg/events/miniSL22-3.png" />
+        </div>
         <p>
           With almost 40 people in attendance, the event was a huge success. The
-          event continued with Q&A sessions as well as a voting session where
+          event continued with Q&A sessions and a voting session where
           the audience voted for their favorite team. This was followed by lunch
-          and an engaging networking session with fun games like pictionary and
+          and an engaging networking session with fun games like Pictionary and
           table tennis.
         </p>
         <p>
