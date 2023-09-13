@@ -39,7 +39,7 @@ const ArticlePage: NextPage = () => {
           <img src="/tempImg/leads/backend_lead.png" alt="author_image" />
         </div>
         <div className="article__author-image">
-          <img src="/tempImg/events/placeholder.jpeg" alt="author_image" />
+          <img src="/tempImg/events/irfan.png" alt="author_image" />
         </div>
         <div className="article__author-text">
           <p className="article__author-names">
@@ -57,7 +57,7 @@ const ArticlePage: NextPage = () => {
       <hr />
 
       <div>
-        <img className="article__image" src="/tempImg/events/minisl23-1.png" />
+        <img className="article__image" src="/tempImg/events/mini-231.png" />
       </div>
 
       <div>
@@ -133,7 +133,7 @@ const ArticlePage: NextPage = () => {
       <br />
 
       <div className="article__image-container">
-        <img src="/tempImg/events/minisl23-2.png" />
+        <img src="/tempImg/events/mini-232.png" />
       </div>
       <div>
         <p>
