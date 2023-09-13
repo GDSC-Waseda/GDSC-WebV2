@@ -7,7 +7,7 @@ const ArticlePage: NextPage = () => {
   const article = {
     title: "Mini Solution Challenge 2023",
     author: "Priya Srivastava & Irfan",
-    // date: "Date Here",
+    date: "Sep 5, 2023",
     // content: {},
     // image: "Image Path Here",
     tags: ["Solution Challenge", "Demo Day"],
@@ -35,7 +35,12 @@ const ArticlePage: NextPage = () => {
     <div className="article">
       <h1 className="article__title">{article.title}</h1>
       <div className="article__author">
-        <div>[Author Image]</div>
+        <div className="article__author-image">
+          <img src="/tempImg/leads/backend_lead.png" alt="author_image" />
+        </div>
+        <div className="article__author-image">
+          <img src="/tempImg/events/placeholder.jpeg" alt="author_image" />
+        </div>
         <div className="article__author-text">
           <p className="article__author-names">
             {article.author}・
@@ -43,7 +48,9 @@ const ArticlePage: NextPage = () => {
               View
             </a>
           </p>
-          <p className="article__length">{article.length} min read</p>
+          <p className="article__length">
+            {article.length} min read ・ {article.date}
+          </p>
         </div>
       </div>
 
@@ -55,33 +62,41 @@ const ArticlePage: NextPage = () => {
 
       <div>
         <p>
-          GDSC Waseda held our "Mini Solution Challenge 2023" on 14th July
-          2023 at the Google Japan Office with over 50 participants. This event
+          GDSC Waseda held our "Mini Solution Challenge 2023" on 14th July 2023
+          at the Google Japan Office with over 50 participants. This event
           showcased the different teams that participated in the Solution
           Challenge 2023 from GDSC Waseda.
         </p>
         <p>
           The GDSC Solution Challenge is a competition held annually by Google,
-          where students from GDSC Chapters all over the world form teams of
-          2-4 developers to create a solution that solves or addresses at least
-          one of the 17 United Nations Sustainable Development Goals. The Mini
-          Solution Challenge is a small-scale version of the Solution Challenge
-          demo day, for the teams to present their unique projects.
+          where students from GDSC Chapters all over the world form teams of 2-4
+          developers to create a solution that solves or addresses at least one
+          of{" "}
+          <a
+            className="article__link"
+            target="_blank"
+            href="https://developers.google.com/community/gdsc-solution-challenge/UN-goals"
+          >
+            {" "}
+            the 17 United Nations Sustainable Development Goals
+          </a>
+          . The Mini Solution Challenge is a small-scale version of the Solution
+          Challenge demo day, for the teams to present their unique projects.
         </p>
         <p>
           This year four teams participated in the events and presented their
           solutions for different SDGs.
         </p>
-		<br/>
+        <br />
 
         {/* Team Cheezu */}
         <h2 className="article__h2">Team Cheezu</h2>
         <p>
           Team Cheezu (Takumi Otsuka, Hosu Choi, Khaled Mohammed, Sien Peralta)
-          focused on SDG 3 (Good Health and Wellbeing) by helping guardians watch
-          over elderly dementia patients through shared Google Maps making it easy
-          to track patients when they are outside. If they are lost, they will
-          automatically be redirected to a safe space.
+          focused on SDG 3 (Good Health and Wellbeing) by helping guardians
+          watch over elderly dementia patients through shared Google Maps making
+          it easy to track patients when they are outside. If they are lost,
+          they will automatically be redirected to a safe space.
         </p>
 
         {/* Team Gaijin Recycle */}
@@ -108,39 +123,54 @@ const ArticlePage: NextPage = () => {
         <h2 className="article__h2">Team myBasket</h2>
         <p>
           Team myBasket (Gunjan Srivastava, Aditya Sundar, Priya Mukkundi,
-          Cedric Purwanto) targeted SDG 12 (Responsible Consumption and Production)
-          by creating an application that allowed for efficient tracking of expiry
-          dates. The app had three distinct features to help users reduce their
-          amount of food waste - shelf monitoring, creating shopping lists, and budget tracking.
+          Cedric Purwanto) targeted SDG 12 (Responsible Consumption and
+          Production) by creating an application that allowed for efficient
+          tracking of expiry dates. The app had three distinct features to help
+          users reduce their amount of food waste - shelf monitoring, creating
+          shopping lists, and budget tracking.
         </p>
       </div>
-	  <br/>
+      <br />
 
-	  <div className="article__image-container">
+      <div className="article__image-container">
         <img src="/tempImg/events/miniSL23-2.png" />
       </div>
       <div>
         <p>
           The Mini Solution Challenge proceeded with a networking and voting
           session during which the audience voted for the team with the best
-          solution. The successful event was able to be held due to Reisa Matsuda san
-          and the Google Japan Team. Because of this, we were able to hold the
-          event at the Google Japan Office and graciously provided catering for
-          our wonderful audience.
+          solution. The successful event was able to be held due to Reisa
+          Matsuda san and the Google Japan Team. Because of this, we were able
+          to hold the event at the Google Japan Office and graciously provided
+          catering for our wonderful audience.
         </p>
         <p>
-          Advaith, the lead of GDSC Waseda 2022-23, was delighted with the success
-          of the event after months of planning and corresponding with the Google Japan Team.
-          Googlers who attended also expressed that they were impressed with the quality
-          of the presentations. Moreover, these events have promoted our chapter to students
-          from various universities, fostering team expansion and collaboration with chapters
+          Advaith, the lead of GDSC Waseda 2022-23, was delighted with the
+          success of the event after months of planning and corresponding with
+          the Google Japan Team. Googlers who attended also expressed that they
+          were impressed with the quality of the presentations. Moreover, these
+          events have promoted our chapter to students from various
+          universities, fostering team expansion and collaboration with chapters
           across Japan.
         </p>
         <p>
-          The Mini Solution Challenge 2023 concluded with the awarding of the winning team - Team Gaijin Recycle.
-          This team was also one of the only two teams from Japan to be in the Top 100 teams that qualified for the Solution Challenge 2023.
+          The Mini Solution Challenge 2023 concluded with the awarding of the
+          winning team - Team Gaijin Recycle. This team was also one of the only
+          two teams from Japan to be in the{" "}
+          <a
+            className="article__link"
+            target="_blank"
+            href="https://developers.google.com/community/gdsc-solution-challenge/winners"
+          >
+            {" "}
+            Top 100 teams
+          </a>{" "}
+          that qualified for the Solution Challenge 2023.
         </p>
-        <p>We look forward to hosting more large-scale events and showcasing unique solutions!</p>
+        <p>
+          We look forward to hosting more large-scale events and showcasing
+          unique solutions!
+        </p>
       </div>
 
       <div className="article__footer">

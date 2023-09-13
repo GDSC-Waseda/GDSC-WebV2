@@ -17,13 +17,25 @@
 
   &__author {
     display: flex;
+    &-image {
+      width: 7vw;
+      height: 7vw;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+    &-image img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+    }
     &-text {
       margin-left: 10px;
-      margin-bottom: 0px;
+      margin-top: 10px;
     }
     &-names {
       font-size: 15px;
-      margin-bottom: 2px;
+      margin-bottom: 4px;
     }
     &-info {
       color: #39a114;
@@ -98,7 +110,7 @@
   &__image-container {
     width: 74vw;
     height: 40vw;
-    margin-bottom: 30px
+    margin-bottom: 30px;
   }
   &__image-container img {
     width: 100%;
@@ -110,8 +122,8 @@
     width: 35vw;
     height: 35vw;
     display: inline-block;
-    margin-right: 10px; 
-    margin-bottom: 30px
+    margin-right: 10px;
+    margin-bottom: 30px;
   }
   &__two-image-container img {
     width: 100%;

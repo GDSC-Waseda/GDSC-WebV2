@@ -8,7 +8,7 @@ const ArticlePage: NextPage = () => {
   const article = {
     title: "Mini Solution Challenge 2022",
     author: "Gunjan Srivastava & Pryia Mukkundi",
-    //date: "July 10, 2023",
+    date: "Sep 5, 2023",
     //content: {},
     image: "event-mini-solution-challenge-2022.png",
     tags: ["Solution Challenge", "Demo Day"],
@@ -36,7 +36,12 @@ const ArticlePage: NextPage = () => {
     <div className="article">
       <h1 className="article__title">{article.title}</h1>
       <div className="article__author">
-        <div>[Author Image]</div>
+        <div className="article__author-image">
+          <img src="/tempImg/leads/backend_lead.png" alt="author_image" />
+        </div>
+        <div className="article__author-image">
+          <img src="/tempImg/leads/project_lead.png" alt="author_image" />
+        </div>
         <div className="article__author-text">
           <p className="article__author-names">
             {article.author}・
@@ -44,7 +49,9 @@ const ArticlePage: NextPage = () => {
               View
             </a>
           </p>
-          <p className="article__length">{article.length} min read</p>
+          <p className="article__length">
+            {article.length} min read ・ {article.date}
+          </p>
         </div>
       </div>
 
@@ -69,16 +76,21 @@ const ArticlePage: NextPage = () => {
           where students from GDSC Chapters all over the world form teams of 2-4
           developers to create a solution that solves or addresses at least one
           of the seventeen{" "}
-          <a className="article__link" href="https://sdgs.un.org/goals">
+          <a
+            className="article__link"
+            target="_blank"
+            href="https://sdgs.un.org/goals"
+          >
             {" "}
             United Nations Sustainable Development Goals
           </a>
           .
         </p>
         <p>
-          Last year, GDSC Waseda held a small-scale version of the Solution Challenge,
-          where four teams that had participated in the 2022 Solution Challenge
-          had the opportunity to present and discuss their submitted solutions.
+          Last year, GDSC Waseda held a small-scale version of the Solution
+          Challenge, where four teams that had participated in the 2022 Solution
+          Challenge had the opportunity to present and discuss their submitted
+          solutions.
         </p>
         <br />
 
@@ -127,9 +139,9 @@ const ArticlePage: NextPage = () => {
         </div>
         <p>
           With almost 40 people in attendance, the event was a huge success. The
-          event continued with Q&A sessions and a voting session where
-          the audience voted for their favorite team. This was followed by lunch
-          and an engaging networking session with fun games like Pictionary and
+          event continued with Q&A sessions and a voting session where the
+          audience voted for their favorite team. This was followed by lunch and
+          an engaging networking session with fun games like Pictionary and
           table tennis.
         </p>
         <p>
