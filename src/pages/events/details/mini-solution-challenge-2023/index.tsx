@@ -57,7 +57,7 @@ const ArticlePage: NextPage = () => {
       <hr />
 
       <div>
-        <img className="article__image" src="/tempImg/events/miniSL23-1.png" />
+        <img className="article__image" src="/tempImg/events/minisl23-1.png" />
       </div>
 
       <div>
@@ -133,7 +133,7 @@ const ArticlePage: NextPage = () => {
       <br />
 
       <div className="article__image-container">
-        <img src="/tempImg/events/miniSL23-2.png" />
+        <img src="/tempImg/events/minisl23-2.png" />
       </div>
       <div>
         <p>

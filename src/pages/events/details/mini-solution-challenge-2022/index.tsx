@@ -59,7 +59,7 @@ const ArticlePage: NextPage = () => {
 
       <div>
         {/*Figure this out (image directory)*/}
-        <img className="article__image" src="/tempImg/events/miniSL22-1.png" />
+        <img className="article__image" src="/tempImg/events/minisl22-1.png" />
         {/*https://developers.google.com/community/images/gdsc-solution-challenge/solutionchallenge-homepage.png*/}
         {/*{`..../assets/img/events/${article.image}`}*/}
       </div>
@@ -132,10 +132,10 @@ const ArticlePage: NextPage = () => {
         <br />
 
         <div className="article__two-image-container">
-          <img src="/tempImg/events/miniSL22-2.png" />
+          <img src="/tempImg/events/minisl22-2.png" />
         </div>
         <div className="article__two-image-container">
-          <img src="/tempImg/events/miniSL22-3.png" />
+          <img src="/tempImg/events/minisl22-3.png" />
         </div>
         <p>
           With almost 40 people in attendance, the event was a huge success. The
