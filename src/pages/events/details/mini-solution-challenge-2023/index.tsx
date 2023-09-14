@@ -6,7 +6,7 @@ import { Button } from "react-bootstrap";
 const ArticlePage: NextPage = () => {
   const article = {
     title: "Mini Solution Challenge 2023",
-    author: "Priya Srivastava & Irfan",
+    author: "Priya Srivastava & Irfan Nurhadi Satria",
     date: "Sep 5, 2023",
     // content: {},
     // image: "Image Path Here",
@@ -35,11 +35,11 @@ const ArticlePage: NextPage = () => {
     <div className="article">
       <h1 className="article__title">{article.title}</h1>
       <div className="article__author">
-        <div className="article__author-image">
+        <div className="article__author-image-left">
           <img src="/tempImg/leads/backend_lead.png" alt="author_image" />
         </div>
         <div className="article__author-image">
-          <img src="/tempImg/events/irfan.png" alt="author_image" />
+          <img src="/tempImg/events/irfan.png" alt="author_image"/>
         </div>
         <div className="article__author-text">
           <p className="article__author-names">

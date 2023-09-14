@@ -17,13 +17,11 @@ export const MediaCard: React.FC<{
   return (
     <div className={`media-card ${props.size}`}>
       {props.image !== undefined ? (
-        <div className={`media-card__image-container ${props.size}`}>
+        <div className="media-card__image-container">
           <Image
-            className={`media-card__image ${props.size}`}
+            className="media-card__image"
             src={require(`/src/assets/img/events/${props.image}`)}
             alt="media-card"
-            width={360}
-            height={190}
           />
         </div>
       ) : (

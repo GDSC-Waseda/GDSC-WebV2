@@ -1,3 +1,5 @@
+/* TO-DO: Make font sizes reactive to media screen size*/
+
 .media-card {
   position: relative;
   margin-bottom: 10px;
@@ -8,43 +10,15 @@
   margin: 20px;
 
   &__image-container {
-    text-align: center;
     border-bottom: 1px solid;
     border-radius: 20px 20px 0px 0px;
     height: 50%;
     width: 100%;
+    box-sizing: border-box;
+  }
 
-    // @media screen and (min-width: 768px) {
-    //   &.s {
-    //     min-height: 20vh;
-    //     min-width: 15vh;
-    //   }
-
-    //   &.m {
-    //     min-height: 20vh;
-    //     min-width: 25vh;
-    //   }
-    //   &.l {
-    //     min-height: 30vh;
-    //     min-width: 35vh;
-    //   }
-    // }
-
-    // @media screen and (max-width: 768px) {
-    //   &.s {
-    //     min-height: 20vh;
-    //     min-width: 15vh;
-    //   }
-
-    //   &.m {
-    //     min-height: 20vh;
-    //     min-width: 25vh;
-    //   }
-    //   &.l {
-    //     min-height: 30vh;
-    //     min-width: 35vh;
-    //   }
-    // }
+  &__image-container img{
+    border-radius: 20px 20px 0px 0px;
   }
 
   .none {
@@ -70,6 +44,11 @@
   }
 
   &__title {
+    @media screen and (min-width: 768px) {
+      font-size: 20px;
+      margin: 5px 0;
+    }
+    
     padding: 15px 5px 0 2%;
     font-weight: bold;
     max-width: 300px;
@@ -118,6 +97,10 @@
   }
 
   &__tag {
+    @media screen and (min-width: 768px) {
+      font-size: 15px;
+      margin: 3px;
+     }
     padding: 2px 5px;
     margin-right: 5px;
     border: 0.5px solid;
@@ -127,11 +110,18 @@
   }
   &__date {
     font-size: 11px;
+    @media screen and (min-width: 768px) {
+      font-size: 15px;
+      margin-bottom: 8px;
+     }
     margin-left: 2%;
     margin-bottom: 6px;
   }
   &__details {
     font-size: 11px;
+    @media screen and (min-width: 768px) {
+      font-size: 15px;
+     }
     margin-left: 2%;
     margin-bottom: 10px;
     max-height: 6em;

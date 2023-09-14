@@ -36,7 +36,7 @@ const ArticlePage: NextPage = () => {
     <div className="article">
       <h1 className="article__title">{article.title}</h1>
       <div className="article__author">
-        <div className="article__author-image">
+        <div className="article__author-image-left">
           <img src="/tempImg/leads/backend_lead.png" alt="author_image" />
         </div>
         <div className="article__author-image">
@@ -130,12 +130,13 @@ const ArticlePage: NextPage = () => {
           the application helps filter and sort the relevant recruitment posts.
         </p>
         <br />
-
         <div className="article__two-image-container">
-          <img src="/tempImg/events/mini-222.png" />
-        </div>
-        <div className="article__two-image-container">
-          <img src="/tempImg/events/mini-223.png" />
+          <div className="article__two-image">
+            <img src="/tempImg/events/mini-222.png" />
+          </div>
+          <div className="article__two-image">
+            <img src="/tempImg/events/mini-223.png" />
+          </div>
         </div>
         <p>
           With almost 40 people in attendance, the event was a huge success. The
