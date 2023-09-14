@@ -13,53 +13,25 @@ export const BackendTeam: NextPage = () => {
   const imageCardProps: ImageCardProps = {
     title: "Backend Team - Gunjan ",
     content:
-      "Hello everyone! I'm Priya, a third-year student at Waseda University, and the proud leader of the Project Team. Our group is a diverse mix of tech enthusiasts, event planners, and project management maestros. As part of the Google Developer Student Clubs, we strive to bridge classroom learning with hands-on projects, ensuring our members get the best of both worlds. Come and be a part of our journey as we learn, innovate, and grow together!",
-    image: "priya.png",
+      "Hello everyone! I’m Gunjan, a third year student at Waseda University studying Computer Science and Communications Engineering. In my team, I hope to drive development through implementation of creative solutions (and a little bit of ChatGPT). Together, let's push boundaries and unlock new possibilities, one step at a time!",
+    image: "backend_lead.png",
     imagePosition: "left",
   };
 
   const teamCards: Array<TeamCardProps> = [
     {
       title: "Lahiru",
-      image: "project_lead.jpg",
+      image: "lead.png",
       major: "Computer Science",
       school: "FSE",
       year: "4th year",
     },
     {
       title: "Tazkya",
-      image: "project_lead.jpg",
+      image: "lead.png",
       major: "Physics",
       school: "ASE",
       year: "2nd year",
-    },
-    {
-      title: "Haru",
-      image: "project_lead.jpg",
-      major: "Politics and Econ",
-      school: "PSE",
-      year: "3rd year",
-    },
-    {
-      title: "Gun",
-      image: "project_lead.jpg",
-      major: "Civil Eng",
-      school: "CSE",
-      year: "2nd year",
-    },
-    {
-      title: "Bea",
-      image: "project_lead.jpg",
-      major: "Politics and Econ",
-      school: "PSE",
-      year: "3rd year",
-    },
-    {
-      title: "Leeroy",
-      image: "project_lead.jpg",
-      major: "Politics and Econ",
-      school: "PSE",
-      year: "3rd year",
     },
   ];
 

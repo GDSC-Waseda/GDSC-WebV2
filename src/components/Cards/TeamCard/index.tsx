@@ -26,8 +26,9 @@ export const TeamCard: React.FC<{
         )}
         <div className="team-card__expanded-details">
           <p>{props.major}</p>
-          <p>{props.school}</p>
-          <p>{props.year}</p>
+          <p>
+            {props.school}, {props.year}
+          </p>
         </div>
         <div className="team-card__other">
           {children !== undefined && children}

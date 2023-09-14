@@ -6,61 +6,61 @@ import { HeaderCardProps, ImageCardProps, TeamCardProps } from "~/types";
 export const FrontendTeam: NextPage = () => {
   const card: HeaderCardProps = {
     headTitle: "",
-    title: "Project Team",
+    title: "Frontend Team",
     content: "Waseda University's chapter of the Google Developer Student Club",
   };
 
   const imageCardProps: ImageCardProps = {
     title: "Frontend Team - Haruki ",
     content:
-      "Hello everyone! I'm Priya, a third-year student at Waseda University, and the proud leader of the Project Team. Our group is a diverse mix of tech enthusiasts, event planners, and project management maestros. As part of the Google Developer Student Clubs, we strive to bridge classroom learning with hands-on projects, ensuring our members get the best of both worlds. Come and be a part of our journey as we learn, innovate, and grow together!",
-    image: "priya.png",
+      "Hello there! 👋 My name is Haruki,  a second year student at Waseda University majoring in Computer Science and Communications Engineering. In this team, we craft user-centric interfaces and use code to develop lively websites and applications. I’m thrilled to craft projects in collaborations with other teams, expand my knowledge, and innovate remarkable experiences with all of you!",
+    image: "frontend_lead.png",
     imagePosition: "left",
   };
 
   const teamCards: Array<TeamCardProps> = [
     {
       title: "Lahiru",
-      image: "project_lead.jpg",
+      image: "lead.png",
       major: "Computer Science",
       school: "FSE",
       year: "4th year",
     },
     {
       title: "Tazkya",
-      image: "project_lead.jpg",
+      image: "backend_lead.png",
       major: "Physics",
       school: "ASE",
       year: "2nd year",
     },
     {
       title: "Haru",
-      image: "project_lead.jpg",
+      image: "priya.png",
       major: "Politics and Econ",
       school: "PSE",
       year: "3rd year",
     },
-    {
-      title: "Gun",
-      image: "project_lead.jpg",
-      major: "Civil Eng",
-      school: "CSE",
-      year: "2nd year",
-    },
-    {
-      title: "Bea",
-      image: "project_lead.jpg",
-      major: "Politics and Econ",
-      school: "PSE",
-      year: "3rd year",
-    },
-    {
-      title: "Leeroy",
-      image: "project_lead.jpg",
-      major: "Politics and Econ",
-      school: "PSE",
-      year: "3rd year",
-    },
+    // {
+    //   title: "Gun",
+    //   image: "project_lead.jpg",
+    //   major: "Civil Eng",
+    //   school: "CSE",
+    //   year: "2nd year",
+    // },
+    // {
+    //   title: "Bea",
+    //   image: "project_lead.jpg",
+    //   major: "Politics and Econ",
+    //   school: "PSE",
+    //   year: "3rd year",
+    // },
+    // {
+    //   title: "Leeroy",
+    //   image: "project_lead.jpg",
+    //   major: "Politics and Econ",
+    //   school: "PSE",
+    //   year: "3rd year",
+    // },
   ];
 
   return (

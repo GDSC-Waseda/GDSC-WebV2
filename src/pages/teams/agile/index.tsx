@@ -11,9 +11,9 @@ export const AgileTeam: NextPage = () => {
   };
 
   const imageCardProps: ImageCardProps = {
-    title: "Agile Team - Lahiru ",
+    title: "Agile Team - Lahiru Udawatta",
     content:
-      "Hello everyone! I'm Priya, a third-year student at Waseda University, and the proud leader of the Project Team. Our group is a diverse mix of tech enthusiasts, event planners, and project management maestros. As part of the Google Developer Student Clubs, we strive to bridge classroom learning with hands-on projects, ensuring our members get the best of both worlds. Come and be a part of our journey as we learn, innovate, and grow together!",
+      "Hoi everyone 🙌, my name's Lahiru, and I'm honored to be the lead of the Agile team for GDSC Waseda. Our dynamic team uses the Agile methodology, infusing industry-oriented practices into our web development projects. The sleek website you're currently browsing is brought to you by my team ;). Excited to see what we can build this year with all of you!",
     image: "priya.png",
     imagePosition: "left",
   };

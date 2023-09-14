@@ -6,15 +6,15 @@ import { HeaderCardProps, ImageCardProps, TeamCardProps } from "~/types";
 export const FinanceTeam: NextPage = () => {
   const card: HeaderCardProps = {
     headTitle: "",
-    title: "Project Team",
+    title: "Finance Team",
     content: "Waseda University's chapter of the Google Developer Student Club",
   };
 
   const imageCardProps: ImageCardProps = {
-    title: "Operations Team - Hollie ",
+    title: "Finance Team - Hyonjoon Park ",
     content:
-      "Hello everyone! I'm Priya, a third-year student at Waseda University, and the proud leader of the Project Team. Our group is a diverse mix of tech enthusiasts, event planners, and project management maestros. As part of the Google Developer Student Clubs, we strive to bridge classroom learning with hands-on projects, ensuring our members get the best of both worlds. Come and be a part of our journey as we learn, innovate, and grow together!",
-    image: "priya.png",
+      "Hey there :) This is Hyonjoon, a junior year student attending School of International Liberal Studies (SILS), Waseda University. It is my absolute honor to introduce to you our GDSC Waseda Finance Team as this year's newly appointed team lead.",
+    image: "finance_lead.png",
     imagePosition: "left",
   };
 

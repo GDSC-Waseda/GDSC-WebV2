@@ -32,7 +32,7 @@ export const AboutPage: NextPage = () => {
       image: "workshop.png",
       subtitle: "Hands-on Workshop",
       title: "JUN 22, 2022",
-      old: true,
+      old: false,
     },
     {
       image: "demoday.png",
@@ -41,40 +41,16 @@ export const AboutPage: NextPage = () => {
       old: false,
     },
     {
-      image: "tech-talk-1.png",
+      image: "tech-talk-2.png",
       subtitle: "Speaker Session / Tech Talk",
       title: "APR 21, 2022",
-      old: true,
+      old: false,
     },
     {
       image: "demoday.png",
       subtitle: "Demo Day",
       title: "JUL 17, 2022",
       old: false,
-    },
-    {
-      image: "tech-talk-1.png",
-      subtitle: "Speaker Session / Tech Talk",
-      title: "APR 21, 2022",
-      old: true,
-    },
-    {
-      image: "tech-talk-1.png",
-      subtitle: "Speaker Session / Tech Talk",
-      title: "APR 21, 2022",
-      old: true,
-    },
-    {
-      image: "workshop.png",
-      subtitle: "Hands-on Workshop",
-      title: "JUN 22, 2022",
-      old: true,
-    },
-    {
-      image: "tech-talk-1.png",
-      subtitle: "Speaker Session / Tech Talk",
-      title: "APR 21, 2022",
-      old: true,
     },
   ];
   /*
