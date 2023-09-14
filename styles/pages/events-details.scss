@@ -21,7 +21,7 @@
 
   &__author {
     display: flex;
-    transform: translateX(-3.0vw);
+    transform: translateX(-3vw);
     &-image {
       width: 7vw;
       height: 7vw;
@@ -40,7 +40,7 @@
       height: 7vw;
       border-radius: 50%;
       margin-right: 0.65vw;
-      transform: translateX(3.0vw);
+      transform: translateX(3vw);
     }
     &-image-left img {
       width: 100%;

@@ -17,7 +17,7 @@
     box-sizing: border-box;
   }
 
-  &__image-container img{
+  &__image-container img {
     border-radius: 20px 20px 0px 0px;
   }
 
@@ -48,7 +48,7 @@
       font-size: 20px;
       margin: 5px 0;
     }
-    
+
     padding: 15px 5px 0 2%;
     font-weight: bold;
     max-width: 300px;
@@ -100,7 +100,7 @@
     @media screen and (min-width: 768px) {
       font-size: 15px;
       margin: 3px;
-     }
+    }
     padding: 2px 5px;
     margin-right: 5px;
     border: 0.5px solid;
@@ -113,7 +113,7 @@
     @media screen and (min-width: 768px) {
       font-size: 15px;
       margin-bottom: 8px;
-     }
+    }
     margin-left: 2%;
     margin-bottom: 6px;
   }
@@ -121,7 +121,7 @@
     font-size: 11px;
     @media screen and (min-width: 768px) {
       font-size: 15px;
-     }
+    }
     margin-left: 2%;
     margin-bottom: 10px;
     max-height: 6em;

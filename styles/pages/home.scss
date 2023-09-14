@@ -16,6 +16,9 @@
     &__button {
       margin-top: 33px;
     }
+    &__container {
+      width: 100%;
+    }
 
     @media (max-width: 798px) {
       padding: 0;
