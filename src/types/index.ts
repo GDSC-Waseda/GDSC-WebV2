@@ -10,6 +10,7 @@ export interface CarouselCardProps {
   subtitle: string;
   title: string;
   old: boolean;
+  link: string;
 }
 
 export interface MembersCardProps {

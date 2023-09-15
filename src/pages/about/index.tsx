@@ -29,29 +29,32 @@ export const AboutPage: NextPage = () => {
 
   const carouselCards: Array<CarouselCardProps> = [
     {
-      image: "workshop.png",
-      subtitle: "Hands-on Workshop",
-      title: "JUN 22, 2022",
+      image: "minisch2023.png",
+      subtitle: "Mini Solution Challenge 23",
+      title: "JUL 17, 2022",
       old: false,
+      link: "events/details/mini-solution-challenge-2023",
+    },
+    {
+      image: "hackath.png",
+      subtitle: "Bridge Hackathon 2023",
+      title: "FEB 11, 2023",
+      old: false,
+      link: "events/details/bridge-hackathon-2023",
     },
     {
       image: "demoday.png",
-      subtitle: "Demo Day",
+      subtitle: "Mini Solution Challenge 22",
       title: "JUL 17, 2022",
       old: false,
+      link: "events/details/mini-solution-challenge-2022",
     },
-    {
-      image: "tech-talk-2.png",
-      subtitle: "Speaker Session / Tech Talk",
-      title: "APR 21, 2022",
-      old: false,
-    },
-    {
-      image: "demoday.png",
-      subtitle: "Demo Day",
-      title: "JUL 17, 2022",
-      old: false,
-    },
+    // {
+    //   image: "web3s.png",
+    //   subtitle: "Web3 Speaker Session",
+    //   title: "JUN 14, 2023",
+    //   old: false,
+    // },
   ];
   /*
   useEffect(() => {

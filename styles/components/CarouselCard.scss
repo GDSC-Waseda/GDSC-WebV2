@@ -1,7 +1,13 @@
 .carousel-card {
-  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   img {
+    align-items: center;
+    align-self: center;
+    align-content: center;
     max-width: 200px;
     @media (max-width: 798px) {
       max-width: 100px;
@@ -9,6 +15,7 @@
   }
 
   &__image {
+    align-self: center;
     max-width: 200px;
     @media (max-width: 798px) {
       max-width: 100px;
@@ -28,4 +35,10 @@
       display: none;
     }
   }
+}
+.carousel-card__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; // to ensure text within each element is centered
 }

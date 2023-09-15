@@ -14,7 +14,7 @@ export const AgileTeam: NextPage = () => {
     title: "Agile Team - Lahiru Udawatta",
     content:
       "Hoi everyone 🙌, my name's Lahiru, and I'm honored to be the lead of the Agile team for GDSC Waseda. Our dynamic team uses the Agile methodology, infusing industry-oriented practices into our web development projects. The sleek website you're currently browsing is brought to you by my team ;). Excited to see what we can build this year with all of you!",
-    image: "priya.png",
+    image: "agile_lead.png",
     imagePosition: "left",
   };
 
