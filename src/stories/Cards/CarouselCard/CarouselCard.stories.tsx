@@ -7,6 +7,7 @@ const CarouselCardRender: React.FC<{
   subtitle: string;
   image: string;
   old: boolean;
+  link: string;
 }> = ({ ...props }) => {
   return <CarouselCard props={props} />;
 };
@@ -20,6 +21,7 @@ DefaultCard.args = {
   subtitle: "Demo Day",
   image: "events/demoday.png",
   old: false,
+  link: "events/details/demo-day",
 };
 
 export default {
@@ -30,5 +32,6 @@ export default {
     subtitle: { control: "text" },
     image: { control: "text" },
     old: { control: "boolean" },
+    link: { control: "text" },
   },
 } as ComponentMeta<typeof CarouselCardRender>;
