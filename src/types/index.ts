@@ -56,6 +56,8 @@ export interface ImageIconProps {
   title?: string;
   color: "yellow" | "green" | "blue" | "red";
   image?: string;
+  image2: string | null;
+  multiple: boolean;
   link: string;
 }
 

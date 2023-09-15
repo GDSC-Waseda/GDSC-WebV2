@@ -13,6 +13,32 @@
     background-color: #c4c4c4;
   }
 
+  //this assumes size m
+  &__swap-container {
+    height: 20vh;
+    width: 20vh;
+    display: inline-block;
+    position: relative;
+  }
+
+  &__swap-button {
+    border-radius: 50%;
+    position: absolute;
+    height: 5.5vh;
+    width: 5.5vh;
+    border-color: transparent;
+    background-color: transparent;
+    transform: translate(-5vh, 1vh);
+    z-index: 100;
+    padding: 0;
+  }
+
+  &__swap {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+
   &__detail-container {
     margin-top: 4px;
   }

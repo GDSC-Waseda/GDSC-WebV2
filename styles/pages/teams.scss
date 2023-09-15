@@ -17,6 +17,31 @@
   display: flex;
   flex-direction: column;
   align-items: center; /* Center children vertically */
+
+  &-swap-container {
+    height: 220px;
+    width: 220px;
+    display: inline-block;
+    position: relative;
+  }
+
+  &-swap-button {
+    border-radius: 50%;
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    border-color: transparent;
+    background-color: transparent;
+    transform: translate(50px, -210px);
+    z-index: 100;
+    padding: 0;
+  }
+
+  &-swap {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
 }
 
 .team-leader-image {
@@ -25,6 +50,7 @@
   border-radius: 50%;
   display: block;
   margin: auto;
+  border: 5px solid;
 }
 
 .team-leader-name {
@@ -42,4 +68,20 @@
   text-align: center;
   padding-top: 30px;
   font-size: 15px;
+}
+
+.red {
+  color: #ea4335;
+}
+
+.blue {
+  color: #4285f4;
+}
+
+.green {
+  color: #36a852;
+}
+
+.yellow {
+  color: #fbbc04;
 }

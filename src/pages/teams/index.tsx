@@ -1,7 +1,9 @@
 import type { NextPage } from "next";
+import React, { useState } from "react";
 import { HeaderCard, TeamCard, ImageCard } from "components/Cards/index";
 import CommonMeta from "components/CommonMeta";
 import { HeaderCardProps, ImageCardProps, TeamCardProps } from "~/types";
+import { SignalCellularNullOutlined } from "@mui/icons-material";
 
 export const TeamsPage: NextPage = () => {
   const card: HeaderCardProps = {
@@ -9,67 +11,108 @@ export const TeamsPage: NextPage = () => {
     title: "Our Teams",
     content: "Waseda University's chapter of the Google Developer Student Club",
   };
+
   const teamLeaders: Array<{
     name: string;
     image: string;
+    image2: string | null;
+    multiple: boolean;
     link: string;
     color: string;
   }> = [
     {
       name: "Project",
       image: "project_lead.png",
+      image2: null,
+      multiple: false,
       link: "/project",
-      color: "#00a150",
+      color: "green",
     },
     {
       name: "Backend",
       image: "backend_lead.png",
+      image2: null,
+      multiple: false,
       link: "/backend",
-      color: "#4283f3",
+      color: "blue",
     },
     {
       name: "Frontend",
       image: "frontend_lead.png",
+      image2: null,
+      multiple: false,
       link: "/frontend",
-      color: "#fabb08",
+      color: "yellow",
     },
     {
       name: "Education",
       image: "education_lead1.png",
+      image2: "education_lead2.png",
+      multiple: true,
       link: "/education",
-      color: "#4283f3",
+      color: "blue",
     },
     {
       name: "Agile",
       image: "agile_lead.png",
+      image2: null,
+      multiple: false,
       link: "/agile",
-      color: "#fabb08",
+      color: "yellow",
     },
     {
       name: "Outreach",
       image: "outreach_lead.png",
+      image2: null,
+      multiple: false,
       link: "/outreach",
-      color: "#e94336",
+      color: "red",
     },
     {
       name: "Operations",
       image: "operations_lead.png",
+      image2: null,
+      multiple: false,
       link: "/operations",
-      color: "#00a150",
+      color: "green",
     },
     {
       name: "Marketing",
       image: "marketing_lead.png",
+      image2: null,
+      multiple: false,
       link: "/marketing",
-      color: "#e94336",
+      color: "red",
     },
     {
       name: "Finance",
       image: "finance_lead.png",
+      image2: null,
+      multiple: false,
       link: "/finance",
-      color: "#fabb08",
+      color: "yellow",
     },
   ];
+
+  const [teamLeaderImages, setTeamLeaderImages] = useState(
+    teamLeaders.map((leader) => leader.image)
+  );
+
+  const handleSwapClick = (index: number) => {
+    setTeamLeaderImages((prevImages) => {
+      const newImages = [...prevImages];
+      const teamLeader = teamLeaders[index];
+
+      if (teamLeader.multiple && teamLeader.image2) {
+        newImages[index] =
+          newImages[index] === teamLeader.image
+            ? teamLeader.image2
+            : teamLeader.image;
+      }
+
+      return newImages;
+    });
+  };
 
   return (
     <div className="team-page">
@@ -94,17 +137,39 @@ export const TeamsPage: NextPage = () => {
       <div className="team-leaders-container">
         {teamLeaders.map((teamCard, index) => (
           <div key={index} className="team-leader">
-            <a className="team-leader-link" href={`/teams/${teamCard.link}`}>
-              <img
-                className="team-leader-image"
-                src={`/tempImg/leads/${teamCard.image}`}
-                style={{
-                  border: `5px solid ${teamCard.color}`,
-                }}
-                alt="team leader"
-              />
-              <div className="team-leader-name">{teamCard.name}</div>
-            </a>
+            {teamCard.multiple == true ? (
+              <div className="team-leader-swap-container">
+                <a
+                  className="team-leader-link"
+                  href={`/teams/${teamCard.link}`}
+                >
+                  <img
+                    className={`team-leader-image ${teamCard.color}`}
+                    src={`/tempImg/leads/${teamLeaderImages[index]}`}
+                    alt="team leader"
+                  />
+                </a>
+                <button
+                  className="team-leader-swap-button"
+                  onClick={() => handleSwapClick(index)}
+                >
+                  <img
+                    className="team-leader-swap"
+                    src={`/tempImg/arrows-${teamCard.color}.png`}
+                    alt="arrows"
+                  />
+                </button>
+              </div>
+            ) : (
+              <a className="team-leader-link" href={`/teams/${teamCard.link}`}>
+                <img
+                  className={`team-leader-image ${teamCard.color}`}
+                  src={`/tempImg/leads/${teamLeaderImages[index]}`}
+                  alt="team leader"
+                />
+              </a>
+            )}
+            <div className="team-leader-name">{teamCard.name}</div>
             <a className="team-leader-link" href={`/teams/${teamCard.link}`}>
               Learn more
             </a>

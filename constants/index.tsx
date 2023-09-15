@@ -1,3 +1,4 @@
+import { SignalCellularNullOutlined } from "@mui/icons-material";
 import { ImageIconProps } from "~/types";
 
 export const imageIconData: Array<ImageIconProps> = [
@@ -6,6 +7,8 @@ export const imageIconData: Array<ImageIconProps> = [
     color: "red",
     title: "Lead",
     image: "/lead.png",
+    image2: null,
+    multiple: false,
     link: "/lead",
   },
   {
@@ -13,6 +16,8 @@ export const imageIconData: Array<ImageIconProps> = [
     color: "green",
     title: "Project",
     image: "/project_lead.png",
+    image2: null,
+    multiple: false,
     link: "/project",
   },
   {
@@ -20,6 +25,8 @@ export const imageIconData: Array<ImageIconProps> = [
     color: "blue",
     title: "Backend",
     image: "/backend_lead.png",
+    image2: null,
+    multiple: false,
     link: "/backend",
   },
   {
@@ -27,13 +34,17 @@ export const imageIconData: Array<ImageIconProps> = [
     color: "yellow",
     title: "Frontend",
     image: "/frontend_lead.png",
+    image2: null,
+    multiple: false,
     link: "/frontend",
   },
   {
     size: "m",
     color: "blue",
     title: "Education",
-    image: "/education_lead.png",
+    image: "/education_lead1.png",
+    image2: "/education_lead2.png",
+    multiple: true,
     link: "/education",
   },
   {
@@ -41,6 +52,8 @@ export const imageIconData: Array<ImageIconProps> = [
     color: "yellow",
     title: "Agile",
     image: "/agile_lead.png",
+    image2: null,
+    multiple: false,
     link: "/agile",
   },
   {
@@ -48,6 +61,8 @@ export const imageIconData: Array<ImageIconProps> = [
     color: "red",
     title: "Outreach",
     image: "/outreach_lead.png",
+    image2: null,
+    multiple: false,
     link: "/outreach",
   },
   {
@@ -55,6 +70,8 @@ export const imageIconData: Array<ImageIconProps> = [
     color: "green",
     title: "Operations",
     image: "/operations_lead.png",
+    image2: null,
+    multiple: false,
     link: "/operations",
   },
   {
@@ -62,6 +79,8 @@ export const imageIconData: Array<ImageIconProps> = [
     color: "red",
     title: "Marketing",
     image: "/marketing_lead.png",
+    image2: null,
+    multiple: false,
     link: "/marketing",
   },
   {
@@ -69,6 +88,8 @@ export const imageIconData: Array<ImageIconProps> = [
     color: "yellow",
     title: "Finance",
     image: "/finance_lead.png",
+    image2: null,
+    multiple: false,
     link: "/finance",
   },
 ];

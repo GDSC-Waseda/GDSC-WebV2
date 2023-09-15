@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import Image from "next/image";
 
 import { ImageIconProps } from "~/types/index";
@@ -6,7 +7,7 @@ export const ImageIcon: React.FC<{
   children?: React.ReactNode;
   props: ImageIconProps;
 }> = ({ children, props }) => {
-  const image = props.image !== undefined ? props.image : undefined;
+  const [currentImage, setCurrentImage] = useState(props.image);
 
   const imageSize = () => {
     switch (props.size) {
@@ -18,17 +19,46 @@ export const ImageIcon: React.FC<{
         return 100;
     }
   };
+
+  const handleSwapClick = () => {
+    setCurrentImage((prevImage) =>
+      prevImage === props.image ? props.image2 ?? "" : props.image ?? ""
+    );
+  };
+
   return (
     <div className={`image-icon ${props.size}`}>
       <div className={`image-icon__image-container ${props.size}`}>
         {props.image ? (
-          <a href={`/teams/${props.link}`}>
-            <img
-              className={`image-icon__image ${props.size} ${props.color}`}
-              src={`/tempImg/leads/${image}`}
-              alt="image-icon"
-            />
-          </a>
+          props.multiple == true ? (
+            <div className="image-icon__swap-container">
+              <a href={`/teams/${props.link}`}>
+                <img
+                  className={`image-icon__image ${props.size} ${props.color}`}
+                  src={`/tempImg/leads/${currentImage}`}
+                  alt="image-icon"
+                />
+              </a>
+              <button
+                className="image-icon__swap-button"
+                onClick={handleSwapClick}
+              >
+                <img
+                  className="image-icon__swap"
+                  src={`/tempImg/arrows-${props.color}.png`}
+                  alt="arrows"
+                />
+              </button>
+            </div>
+          ) : (
+            <a href={`/teams/${props.link}`}>
+              <img
+                className={`image-icon__image ${props.size} ${props.color}`}
+                src={`/tempImg/leads/${currentImage}`}
+                alt="image-icon"
+              />
+            </a>
+          )
         ) : (
           <div className={`image-icon__image ${props.size} ${props.color}`} />
         )}
