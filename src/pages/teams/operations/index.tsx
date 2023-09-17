@@ -11,9 +11,9 @@ export const OperationsTeam: NextPage = () => {
   };
 
   const imageCardProps: ImageCardProps = {
-    title: "Operations Team - Hollie ",
+    title: "Operations Team - Hosu Choi ",
     content:
-      "Hello everyone! I'm Priya, a third-year student at Waseda University, and the proud leader of the Project Team. Our group is a diverse mix of tech enthusiasts, event planners, and project management maestros. As part of the Google Developer Student Clubs, we strive to bridge classroom learning with hands-on projects, ensuring our members get the best of both worlds. Come and be a part of our journey as we learn, innovate, and grow together!",
+      "Hi! I’m Hollie (Hosu), a M1 student majoring in Applied Physics at Waseda University. I’m the Operations Team Lead this year. Operations is a new team created as an attempt to integrate and recruit more Japanese students from Waseda into GDSC. Can’t wait to work with you all 😁",
     image: "operations_lead.png",
     imagePosition: "left",
   };

@@ -49,12 +49,13 @@ export const AboutPage: NextPage = () => {
       old: false,
       link: "events/details/mini-solution-challenge-2022",
     },
-    // {
-    //   image: "web3s.png",
-    //   subtitle: "Web3 Speaker Session",
-    //   title: "JUN 14, 2023",
-    //   old: false,
-    // },
+    {
+      image: "web3sesh.png",
+      subtitle: "Web3 Speaker Session",
+      title: "JUN 14, 2023",
+      old: false,
+      link: "/404",
+    },
   ];
   /*
   useEffect(() => {

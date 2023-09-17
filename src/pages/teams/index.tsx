@@ -9,7 +9,7 @@ export const TeamsPage: NextPage = () => {
   const card: HeaderCardProps = {
     headTitle: "",
     title: "Our Teams",
-    content: "Waseda University's chapter of the Google Developer Student Club",
+    content: " “Alone we can do so little; together we can do so much.” ",
   };
 
   const teamLeaders: Array<{

@@ -39,7 +39,8 @@
     }
     &__description {
       font-family: "myFont", sans-serif;
-      font-size: 20px;
+      font-size: 19px;
+      color: rgb(32, 30, 30);
       @media (min-width: 798px) {
         width: 140%;
       }

@@ -11,7 +11,7 @@ const EventsPage: NextPage = () => {
   const card: HeaderCardProps = {
     headTitle: "",
     title: "Events",
-    content: "“Alone  we can do so little; together we can do so much.”",
+    content: "Learn, Connect, Innovate: The Essence of GDSC Waseda's Events.",
   };
 
   const eventsCard_UpComing: MediaCardProps[] = [];

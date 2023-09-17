@@ -13,7 +13,7 @@ export const OperationsTeam: NextPage = () => {
   const imageCardProps: ImageCardProps = {
     title: "Outreach Team - Harshita Chivukula",
     content:
-      "Hello everyone! I'm Priya, a third-year student at Waseda University, and the proud leader of the Project Team. Our group is a diverse mix of tech enthusiasts, event planners, and project management maestros. As part of the Google Developer Student Clubs, we strive to bridge classroom learning with hands-on projects, ensuring our members get the best of both worlds. Come and be a part of our journey as we learn, innovate, and grow together!",
+      "Hello! I’m Harshita (Harshi), a senior at Waseda University’s School of Fundamental Science and Engineering. The outreach team is excited for another year or events where we can bridge the gap between students and working professionals in various technical fields.",
     image: "outreach_lead.png",
     imagePosition: "left",
   };
