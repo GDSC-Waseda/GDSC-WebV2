@@ -11,9 +11,9 @@ export const ProjectTeams: NextPage = () => {
   };
 
   const imageCardProps: ImageCardProps = {
-    title: "Project Team - Priya ",
+    title: "Project Team - Priya Mukkundi",
     content:
-      "Hello everyone! I'm Priya, a third-year student at Waseda University, and the proud leader of the Project Team. Our group is a diverse mix of tech enthusiasts, event planners, and project management maestros. As part of the Google Developer Student Clubs, we strive to bridge classroom learning with hands-on projects, ensuring our members get the best of both worlds. Come and be a part of our journey as we learn, innovate, and grow together!",
+      "Hi! I’m Priya, a third year student majoring in Economics at Waseda University. Project Team’s main goals are to foster innovation, efficiently deliver projects, and bridge technical and non-technical teams through effective communication and collaboration. No matter your tech background, we're thrilled to collaborate with you on your unique ideas and bring practical projects to life.😄",
     image: "priya.png",
     imagePosition: "left",
   };

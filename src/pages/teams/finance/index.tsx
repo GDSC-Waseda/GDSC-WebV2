@@ -13,7 +13,7 @@ export const FinanceTeam: NextPage = () => {
   const imageCardProps: ImageCardProps = {
     title: "Finance Team - Hyonjoon Park ",
     content:
-      "Hey there :) This is Hyonjoon, a junior year student attending School of International Liberal Studies (SILS), Waseda University. It is my absolute honor to introduce to you our GDSC Waseda Finance Team as this year's newly appointed team lead.",
+      "Hey there! 😊 I'm Hyonjoon, a junior at Waseda University's School of International Liberal Studies (SILS). I'm thrilled to serve as the team lead for GDSC Waseda's Finance Team this year. Our team plays a vital role in managing and optimizing project finances, ensuring the success of our tech initiatives. I'm looking forward to a fantastic year ahead and can't wait to collaborate with you and our GDSC community to achieve great things together!",
     image: "finance_lead.png",
     imagePosition: "left",
   };

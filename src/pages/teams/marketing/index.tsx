@@ -13,7 +13,7 @@ export const OperationsTeam: NextPage = () => {
   const imageCardProps: ImageCardProps = {
     title: "Marketing Team - Seongjoon Park ",
     content:
-      "Hello everyone! I'm Priya, a third-year student at Waseda University, and the proud leader of the Project Team. Our group is a diverse mix of tech enthusiasts, event planners, and project management maestros. As part of the Google Developer Student Clubs, we strive to bridge classroom learning with hands-on projects, ensuring our members get the best of both worlds. Come and be a part of our journey as we learn, innovate, and grow together!",
+      "Hi everyone! 😊 I’m Seongjoon, a junior year student at Waseda University's School of International Liberal Studies (SILS). Our Marketing Team at GDSC Waseda is all about promoting and spreading the word about the exciting tech events, workshops, and opportunities we have in store. From creating engaging content to utilizing social media and other marketing channels, we're dedicated to enhancing the GDSC Waseda brand and ensuring that students don't miss out on all the innovation and learning opportunities we offer.",
     image: "marketing_lead.png",
     imagePosition: "left",
   };

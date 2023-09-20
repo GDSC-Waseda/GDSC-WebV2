@@ -5,9 +5,14 @@
 
 .team-leaders-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   justify-items: center;
-  gap: 10px;
+  gap: 15px;
+}
+
+.team-leaders-container .team-leader:last-child {
+  grid-column: span 4; //span all 4
+  text-align: center; //center last
 }
 
 .team-leader {
@@ -68,20 +73,4 @@
   text-align: center;
   padding-top: 30px;
   font-size: 15px;
-}
-
-.red {
-  color: #e94336;
-}
-
-.blue {
-  color: #4283f3;
-}
-
-.green {
-  color: #00a150;
-}
-
-.yellow {
-  color: #fabb08;
 }
