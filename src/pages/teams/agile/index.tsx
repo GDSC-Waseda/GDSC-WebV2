@@ -76,7 +76,7 @@ export const AgileTeam: NextPage = () => {
         <HeaderCard props={card} />
       </div>
       <ImageCard props={imageCardProps} />
-      <h1 className="members-title">Meet Our Team</h1>
+      {/* <h1 className="members-title">Meet Our Team</h1> */}
       <div className="team-cards-container">
         {teamCards.map((teamCard, index) => (
           <TeamCard key={index} props={teamCard} />

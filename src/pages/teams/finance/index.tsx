@@ -19,27 +19,27 @@ export const FinanceTeam: NextPage = () => {
   };
 
   const teamCards: Array<TeamCardProps> = [
-    {
-      title: "Lahiru",
-      image: "frontend_lead.png",
-      major: "Computer Science",
-      school: "FSE",
-      year: "4th year",
-    },
-    {
-      title: "Tazkya",
-      image: "frontend_lead.png",
-      major: "Physics",
-      school: "ASE",
-      year: "2nd year",
-    },
-    {
-      title: "Haru",
-      image: "lead.png",
-      major: "Politics and Econ",
-      school: "PSE",
-      year: "3rd year",
-    },
+    // {
+    //   title: "Lahiru",
+    //   image: "frontend_lead.png",
+    //   major: "Computer Science",
+    //   school: "FSE",
+    //   year: "4th year",
+    // },
+    // {
+    //   title: "Tazkya",
+    //   image: "frontend_lead.png",
+    //   major: "Physics",
+    //   school: "ASE",
+    //   year: "2nd year",
+    // },
+    // {
+    //   title: "Haru",
+    //   image: "lead.png",
+    //   major: "Politics and Econ",
+    //   school: "PSE",
+    //   year: "3rd year",
+    // },
     // {
     //   title: "Gun",
     //   image: "frontend_lead.png",
@@ -76,7 +76,7 @@ export const FinanceTeam: NextPage = () => {
         <HeaderCard props={card} />
       </div>
       <ImageCard props={imageCardProps} />
-      <h1 className="members-title">Meet Our Team</h1>
+      {/* <h1 className="members-title">Meet Our Team</h1> */}
       <div className="team-cards-container">
         {teamCards.map((teamCard, index) => (
           <TeamCard key={index} props={teamCard} />
