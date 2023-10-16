@@ -19,16 +19,15 @@ export const NavigationBar = (): JSX.Element => {
             </Link>
           </Navbar.Brand>
           <Navbar.Brand>
-            <Link href="/" className="nav-title">
-              GDSC Waseda
-            </Link>
+            <a className="nav-text-title">
+              <Link href="/">DSC Waseda</Link>
+            </a>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav" className="navbarCollaps">
-            <Nav className="ms-auto">
-              <Nav.Item className="navItem">
-                <Link href="/">Home</Link>
-              </Nav.Item>
+            <Nav className="ms-auto gradient-container">
+              {/*  */}
+
               <Nav.Item className="navItem">
                 <Link href="/about">About</Link>
               </Nav.Item>
@@ -41,7 +40,7 @@ export const NavigationBar = (): JSX.Element => {
               <Nav.Item className="navItem">
                 <a href="https://forms.gle/uewfWU2QZjpHmSqc9" target="_blank">
                   <Button variant="outline-dark" className="butto">
-                    <small>Join Us</small>
+                    <small>More</small>
                   </Button>
                 </a>
               </Nav.Item>
