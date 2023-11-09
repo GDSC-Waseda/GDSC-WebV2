@@ -14,28 +14,28 @@ export const OperationsTeam: NextPage = () => {
     title: "Operations Team - Hosu Choi ",
     content:
       "Hi! I’m Hollie (Hosu), a M1 student majoring in Applied Physics at Waseda University. I’m the Operations Team Lead this year. Operations is a new team created as an attempt to integrate and recruit more Japanese students from Waseda into GDSC. Can’t wait to work with you all 😁",
-    image: "operations_lead.png",
+    image: "operations_lead.jpg",
     imagePosition: "left",
   };
 
   const teamCards: Array<TeamCardProps> = [
     // {
     //   title: "Lahiru",
-    //   image: "operations_lead.png",
+    //   image: "operations_lead.jpg",
     //   major: "Computer Science",
     //   school: "FSE",
     //   year: "4th year",
     // },
     // {
     //   title: "Haruki",
-    //   image: "operations_lead.png",
+    //   image: "operations_lead.jpg",
     //   major: "Physics",
     //   school: "ASE",
     //   year: "2nd year",
     // },
     // {
     //   title: "Taku",
-    //   image: "operations_lead.png",
+    //   image: "operations_lead.jpg",
     //   major: "Politics and Econ",
     //   school: "PSE",
     //   year: "3rd year",

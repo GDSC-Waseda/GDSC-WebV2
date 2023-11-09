@@ -15,8 +15,9 @@ import { HeaderCardProps, ImageCardProps, CarouselCardProps } from "~/types";
 export const AboutPage: NextPage = () => {
   const card: HeaderCardProps = {
     headTitle: "",
-    title: "About Us",
-    content: "Waseda University's chapter of the Google Developer Student Club",
+    title: "ABOUT US",
+    content: "",
+    button: true
   };
 
   const imageCard: ImageCardProps = {

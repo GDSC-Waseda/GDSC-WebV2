@@ -14,21 +14,21 @@ export const FrontendTeam: NextPage = () => {
     title: "Frontend Team - Haruki Oyama",
     content:
       "Hello there! 👋 My name is Haruki,  a second year student at Waseda University majoring in Computer Science and Communications Engineering. In this team, we craft user-centric interfaces and use code to develop lively websites and applications. I’m thrilled to craft projects in collaborations with other teams, expand my knowledge, and innovate remarkable experiences with all of you!",
-    image: "frontend_lead.png",
+    image: "frontend_lead.jpg",
     imagePosition: "left",
   };
 
   const teamCards: Array<TeamCardProps> = [
     // {
     //   title: "Lahiru",
-    //   image: "lead.png",
+    //   image: "lead.jpg",
     //   major: "Computer Science",
     //   school: "FSE",
     //   year: "4th year",
     // },
     // {
     //   title: "Tazkya",
-    //   image: "backend_lead.png",
+    //   image: "backend_lead.jpg",
     //   major: "Physics",
     //   school: "ASE",
     //   year: "2nd year",

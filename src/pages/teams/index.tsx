@@ -8,8 +8,8 @@ import { SignalCellularNullOutlined } from "@mui/icons-material";
 export const TeamsPage: NextPage = () => {
   const card: HeaderCardProps = {
     headTitle: "",
-    title: "Our Teams",
-    content: " “Alone we can do so little; together we can do so much.” ",
+    title: "TEAMS",
+    content: "Explore the teams that work together to make GDSC Waseda special",
   };
 
   const teamLeaders: Array<{
@@ -22,7 +22,7 @@ export const TeamsPage: NextPage = () => {
   }> = [
     {
       name: "Project",
-      image: "project_lead.png",
+      image: "project_lead.jpg",
       image2: null,
       multiple: false,
       link: "/project",
@@ -30,7 +30,7 @@ export const TeamsPage: NextPage = () => {
     },
     {
       name: "Backend",
-      image: "backend_lead.png",
+      image: "backend_lead.jpg",
       image2: null,
       multiple: false,
       link: "/backend",
@@ -38,7 +38,7 @@ export const TeamsPage: NextPage = () => {
     },
     {
       name: "Frontend",
-      image: "frontend_lead.png",
+      image: "frontend_lead.jpg",
       image2: null,
       multiple: false,
       link: "/frontend",
@@ -46,15 +46,15 @@ export const TeamsPage: NextPage = () => {
     },
     {
       name: "Education",
-      image: "education_lead1.png",
-      image2: "education_lead2.png",
+      image: "education_lead1.jpg",
+      image2: "education_lead2.jpg",
       multiple: true,
       link: "/education",
       color: "blue",
     },
     {
       name: "Agile",
-      image: "agile_lead.png",
+      image: "agile_lead.jpg",
       image2: null,
       multiple: false,
       link: "/agile",
@@ -62,7 +62,7 @@ export const TeamsPage: NextPage = () => {
     },
     {
       name: "Outreach",
-      image: "outreach_lead.png",
+      image: "outreach_lead.jpg",
       image2: null,
       multiple: false,
       link: "/outreach",
@@ -70,7 +70,7 @@ export const TeamsPage: NextPage = () => {
     },
     {
       name: "Operations",
-      image: "operations_lead.png",
+      image: "operations_lead.jpg",
       image2: null,
       multiple: false,
       link: "/operations",
@@ -78,7 +78,7 @@ export const TeamsPage: NextPage = () => {
     },
     {
       name: "Marketing",
-      image: "marketing_lead.png",
+      image: "marketing_lead.jpg",
       image2: null,
       multiple: false,
       link: "/marketing",
@@ -86,7 +86,7 @@ export const TeamsPage: NextPage = () => {
     },
     {
       name: "Finance",
-      image: "finance_lead.png",
+      image: "finance_lead.jpg",
       image2: null,
       multiple: false,
       link: "/finance",

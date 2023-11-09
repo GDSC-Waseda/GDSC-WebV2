@@ -23,6 +23,7 @@ export interface HeaderCardProps {
   headTitle?: string;
   title: string;
   content?: string;
+  button?: boolean
 }
 
 export interface ImageCardProps {

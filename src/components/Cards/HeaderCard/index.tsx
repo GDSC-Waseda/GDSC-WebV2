@@ -13,26 +13,8 @@ export const HeaderCard: React.FC<{ props: HeaderCardProps }> = ({ props }) => {
           {props.headTitle}
         </Card.Title>
       )}
-      <div className="headerCard__container">
-        <Row>
-          <Col xs={2} style={{ textAlign: "end", alignSelf: "center" }}>
-            <Image
-              src={LogoLeft}
-              className="headerCard__logoLeft"
-              alt="logo-left"
-            />
-          </Col>
-          <Col xs={8}>
+      <div className="headerCard__container">       
             <Card.Text className="headerCard__title">{props.title}</Card.Text>
-          </Col>
-          <Col xs={2} style={{ alignSelf: "center" }}>
-            <Image
-              src={LogoRight}
-              className="headerCard__logoRight"
-              alt="logo-right"
-            />
-          </Col>
-        </Row>
       </div>
       {props.content !== undefined &&
         props.content.split("\n").map((text, key) => (
@@ -40,6 +22,9 @@ export const HeaderCard: React.FC<{ props: HeaderCardProps }> = ({ props }) => {
             {text}
           </p>
         ))}
+      {props.button&&(<div className="headerCard__button">
+       <text className="text">Discover</text>
+      </div>)}
     </Card>
   );
 };
