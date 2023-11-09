@@ -14,21 +14,21 @@ export const BackendTeam: NextPage = () => {
     title: "Backend Team - Gunjan Srivastava",
     content:
       "Hello everyone! I’m Gunjan, a third year student at Waseda University studying Computer Science and Communications Engineering. In my team, I hope to drive development through implementation of creative solutions (and a little bit of ChatGPT). Together, let's push boundaries and unlock new possibilities, one step at a time!",
-    image: "backend_lead.png",
+    image: "backend_lead.jpg",
     imagePosition: "left",
   };
 
   const teamCards: Array<TeamCardProps> = [
     // {
     //   title: "Lahiru",
-    //   image: "lead.png",
+    //   image: "lead.jpg",
     //   major: "Computer Science",
     //   school: "FSE",
     //   year: "4th year",
     // },
     // {
     //   title: "Tazkya",
-    //   image: "lead.png",
+    //   image: "lead.jpg",
     //   major: "Physics",
     //   school: "ASE",
     //   year: "2nd year",

@@ -14,49 +14,49 @@ export const FinanceTeam: NextPage = () => {
     title: "Finance Team - Hyonjoon Park ",
     content:
       "Hey there! 😊 I'm Hyonjoon, a junior at Waseda University's School of International Liberal Studies (SILS). I'm thrilled to serve as the team lead for GDSC Waseda's Finance Team this year. Our team plays a vital role in managing and optimizing project finances, ensuring the success of our tech initiatives. I'm looking forward to a fantastic year ahead and can't wait to collaborate with you and our GDSC community to achieve great things together!",
-    image: "finance_lead.png",
+    image: "finance_lead.jpg",
     imagePosition: "left",
   };
 
   const teamCards: Array<TeamCardProps> = [
     // {
     //   title: "Lahiru",
-    //   image: "frontend_lead.png",
+    //   image: "frontend_lead.jpg",
     //   major: "Computer Science",
     //   school: "FSE",
     //   year: "4th year",
     // },
     // {
     //   title: "Tazkya",
-    //   image: "frontend_lead.png",
+    //   image: "frontend_lead.jpg",
     //   major: "Physics",
     //   school: "ASE",
     //   year: "2nd year",
     // },
     // {
     //   title: "Haru",
-    //   image: "lead.png",
+    //   image: "lead.jpg",
     //   major: "Politics and Econ",
     //   school: "PSE",
     //   year: "3rd year",
     // },
     // {
     //   title: "Gun",
-    //   image: "frontend_lead.png",
+    //   image: "frontend_lead.jpg",
     //   major: "Civil Eng",
     //   school: "CSE",
     //   year: "2nd year",
     // },
     // {
     //   title: "Bea",
-    //   image: "finance_lead.png",
+    //   image: "finance_lead.jpg",
     //   major: "Politics and Econ",
     //   school: "PSE",
     //   year: "3rd year",
     // },
     // {
     //   title: "Leeroy",
-    //   image: "finance_lead.png",
+    //   image: "finance_lead.jpg",
     //   major: "Politics and Econ",
     //   school: "PSE",
     //   year: "3rd year",

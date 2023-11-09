@@ -36,7 +36,7 @@ const ArticlePage: NextPage = () => {
       <h1 className="article__title">{article.title}</h1>
       <div className="article__author">
         <div className="article__author-image-left">
-          <img src="/tempImg/leads/backend_lead.png" alt="author_image" />
+          <img src="/tempImg/leads/backend_lead.jpg" alt="author_image" />
         </div>
         <div className="article__author-image">
           <img src="/tempImg/events/irfan.png" alt="author_image" />

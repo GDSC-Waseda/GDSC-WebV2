@@ -14,28 +14,28 @@ export const OperationsTeam: NextPage = () => {
     title: "Outreach Team - Harshita Chivukula",
     content:
       "Hello! I’m Harshita (Harshi), a senior at Waseda University’s School of Fundamental Science and Engineering. The outreach team is excited for another year or events where we can bridge the gap between students and working professionals in various technical fields.",
-    image: "outreach_lead.png",
+    image: "outreach_lead.jpg",
     imagePosition: "left",
   };
 
   const teamCards: Array<TeamCardProps> = [
     // {
     //   title: "Lahiru",
-    //   image: "lead.png",
+    //   image: "lead.jpg",
     //   major: "Computer Science",
     //   school: "FSE",
     //   year: "4th year",
     // },
     // {
     //   title: "Tazkya",
-    //   image: "backend_lead.png",
+    //   image: "backend_lead.jpg",
     //   major: "Physics",
     //   school: "ASE",
     //   year: "2nd year",
     // },
     // {
     //   title: "Haru",
-    //   image: "lead.png",
+    //   image: "lead.jpg",
     //   major: "Politics and Econ",
     //   school: "PSE",
     //   year: "3rd year",
