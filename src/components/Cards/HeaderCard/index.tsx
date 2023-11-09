@@ -13,8 +13,8 @@ export const HeaderCard: React.FC<{ props: HeaderCardProps }> = ({ props }) => {
           {props.headTitle}
         </Card.Title>
       )}
-      <div className="headerCard__container">       
-            <Card.Text className="headerCard__title">{props.title}</Card.Text>
+      <div className="headerCard__container">
+        <Card.Text className="headerCard__title">{props.title}</Card.Text>
       </div>
       {props.content !== undefined &&
         props.content.split("\n").map((text, key) => (
@@ -22,9 +22,11 @@ export const HeaderCard: React.FC<{ props: HeaderCardProps }> = ({ props }) => {
             {text}
           </p>
         ))}
-      {props.button&&(<div className="headerCard__button">
-       <text className="text">Discover</text>
-      </div>)}
+      {props.button && (
+        <div className="headerCard__button">
+          <text className="text">Discover</text>
+        </div>
+      )}
     </Card>
   );
 };

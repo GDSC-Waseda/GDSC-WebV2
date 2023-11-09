@@ -17,7 +17,7 @@ export const AboutPage: NextPage = () => {
     headTitle: "",
     title: "ABOUT US",
     content: "",
-    button: true
+    button: true,
   };
 
   const imageCard: ImageCardProps = {
