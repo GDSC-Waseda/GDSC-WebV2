@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Col, Row, Card } from "react-bootstrap";
+import Link from 'next/link';
 
 import LogoLeft from "assets/svg/logo-left.svg";
 import LogoRight from "assets/svg/logo-right.svg";
@@ -23,10 +24,13 @@ export const HeaderCard: React.FC<{ props: HeaderCardProps }> = ({ props }) => {
           </p>
         ))}
       {props.button && (
-        <div className="headerCard__button">
-          <text className="text">Discover</text>
-        </div>
+        <Link href="/events" passHref>
+          <a className="headerCard__button">
+            Discover
+          </a>
+        </Link>
       )}
+
     </Card>
   );
 };
