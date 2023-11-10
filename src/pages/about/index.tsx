@@ -10,7 +10,12 @@ import Button from "react-bootstrap/Button";
 import { ImageCard, HeaderCard, TextCard } from "components/Cards/index";
 import Carousel from "components/Carousel";
 import CommonMeta from "components/CommonMeta";
-import { HeaderCardProps, CarouselCardProps, TextCardProps, ImageCardProps} from "~/types";
+import {
+  HeaderCardProps,
+  CarouselCardProps,
+  TextCardProps,
+  ImageCardProps,
+} from "~/types";
 
 export const AboutPage: NextPage = () => {
   const card: HeaderCardProps = {
@@ -38,7 +43,6 @@ export const AboutPage: NextPage = () => {
     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
     nisi ut aliquip ex ea commodo consequat.`,
   };
-
 
   const carouselCards: Array<CarouselCardProps> = [
     {
