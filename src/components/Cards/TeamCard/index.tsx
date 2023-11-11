@@ -12,7 +12,7 @@ export const TeamCard: React.FC<{
         <div className="team-card__image-container">
           <Image
             className="team-card__image"
-            src={require(`assets/img/${props.image}`)}
+            src={`/tempImg/leads/${props.image}`}
             alt="team-card"
             layout="intrinsic"
           />

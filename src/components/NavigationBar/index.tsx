@@ -1,4 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import React, { useState, useEffect } from "react";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -7,6 +8,12 @@ import { Container, Nav, Button, Navbar } from "react-bootstrap";
 import logo from "assets/svg/logo.svg";
 
 export const NavigationBar = (): JSX.Element => {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   return (
     <div className="header">
       <Navbar expand="sm" className="header__container">
@@ -19,9 +26,11 @@ export const NavigationBar = (): JSX.Element => {
             </Link>
           </Navbar.Brand>
           <Navbar.Brand>
-            <a className="nav-text-title">
+            <div
+              className={`nav-text-title ${isClient ? "start-animation" : ""}`}
+            >
               <Link href="/">DSC Waseda</Link>
-            </a>
+            </div>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav" className="navbarCollaps">

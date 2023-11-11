@@ -14,7 +14,7 @@ export const ImageCard: React.FC<{
   const imageProps = (
     <Image
       className="imageCard__image"
-      src={require(`assets/img/${props.image}`)}
+      src={`/tempImg/leads/${props.image}`}
       layout="intrinsic"
       alt="image-card"
     />
