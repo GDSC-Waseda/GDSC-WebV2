@@ -58,6 +58,17 @@
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    font-family: "myFont", sans-serif;
+    font-size: 25px;
+
+    &:hover {
+      color: #fff;
+    }
   }
   .text {
     color: white;

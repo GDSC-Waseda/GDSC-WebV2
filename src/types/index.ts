@@ -63,6 +63,11 @@ export interface ImageIconProps {
   link: string;
 }
 
+export interface TextCardProps {
+  title: string;
+  content: string;
+}
+
 /* Pages */
 
 export interface ErrorPageProps {

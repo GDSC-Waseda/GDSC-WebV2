@@ -7,10 +7,15 @@ import "slick-carousel/slick/slick-theme.css";
 import Stack from "@mui/material/Stack";
 import Button from "react-bootstrap/Button";
 
-import { ImageCard, HeaderCard } from "components/Cards/index";
+import { ImageCard, HeaderCard, TextCard } from "components/Cards/index";
 import Carousel from "components/Carousel";
 import CommonMeta from "components/CommonMeta";
-import { HeaderCardProps, ImageCardProps, CarouselCardProps } from "~/types";
+import {
+  HeaderCardProps,
+  CarouselCardProps,
+  TextCardProps,
+  ImageCardProps,
+} from "~/types";
 
 export const AboutPage: NextPage = () => {
   const card: HeaderCardProps = {
@@ -20,12 +25,23 @@ export const AboutPage: NextPage = () => {
     button: true,
   };
 
-  const imageCard: ImageCardProps = {
-    title: "Google Developer Student Clubs",
-    content:
-      "Google Developer Student Clubs are university-based community groups supported by Google Developers intending href empower student developers and strengthen their leadership skills\nHere at GDSC Waseda, by collaborating with Google, we will organize many exciting events such as speaker sessions, hackathons, introductory hands-on workshops, study sessions, and so on",
-    image: "group-highfive.png",
-    imagePosition: "left",
+  const whatWeDo: TextCardProps = {
+    title: "What do we do?",
+    content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
+    culpa qui officia deserunt mollit anim id est laborum.`,
+  };
+
+  const leadsThoughts: TextCardProps = {
+    title: "Our Lead’s Thoughts",
+    content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+    nisi ut aliquip ex ea commodo consequat.`,
   };
 
   const carouselCards: Array<CarouselCardProps> = [
@@ -73,20 +89,10 @@ export const AboutPage: NextPage = () => {
         pageImgHeight={630}
       />
       <HeaderCard props={card} />
-      <ImageCard props={imageCard}>
-        <Stack spacing={2} direction="row" padding={2}>
-          <Link href="/teams">
-            <Button variant="outline-dark" className="about-page__button">
-              Teams
-            </Button>
-          </Link>
-          <Link href="/events">
-            <Button variant="outline-dark" className="about-page__button">
-              Events
-            </Button>
-          </Link>
-        </Stack>
-      </ImageCard>
+
+      <TextCard props={whatWeDo} />
+      <TextCard props={leadsThoughts} />
+
       <div className="about-page__events">
         <div className="about-page__events__container">
           <div className="about-page__events__title">
