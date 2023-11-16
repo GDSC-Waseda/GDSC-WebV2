@@ -15,7 +15,8 @@ export const ImageCard: React.FC<{
     <Image
       className="imageCard__image"
       src={`/tempImg/leads/${props.image}`}
-      layout="intrinsic"
+      width={350}
+      height={350}
       alt="image-card"
     />
   );

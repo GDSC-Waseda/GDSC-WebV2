@@ -1,10 +1,11 @@
 import type { NextPage } from "next";
 import { HeaderCard, TeamCard, ImageCard } from "components/Cards/index";
 import CommonMeta from "components/CommonMeta";
-import { HeaderCardProps, ImageCardProps, TeamCardProps } from "~/types";
+import { HeaderCardProps, ImageCardProps, TeamCardProps, TeamHeaderCardProps } from "~/types";
+import TeamHeaderCard from "~/components/Cards/TeamHeaderCard";
 
 export const ProjectTeams: NextPage = () => {
-  const card: HeaderCardProps = {
+  const card: TeamHeaderCardProps = {
     headTitle: "",
     title: "Project Team",
     content: "Waseda University's chapter of the Google Developer Student Club",
@@ -14,7 +15,7 @@ export const ProjectTeams: NextPage = () => {
     title: "Project Team - Priya Mukkundi",
     content:
       "Hi! I’m Priya, a third year student majoring in Economics at Waseda University. Project Team’s main goals are to foster innovation, efficiently deliver projects, and bridge technical and non-technical teams through effective communication and collaboration. No matter your tech background, we're thrilled to collaborate with you on your unique ideas and bring practical projects to life.😄",
-    image: "priya.png",
+    image: "project_lead.jpg",
     imagePosition: "left",
   };
 
@@ -73,7 +74,7 @@ export const ProjectTeams: NextPage = () => {
         pageImgHeight={630}
       />
       <div className="header-padding">
-        <HeaderCard props={card} />
+        <TeamHeaderCard props={card} />
       </div>
       <ImageCard props={imageCardProps} />
       {/* <h1 className="members-title">Meet Our Team</h1> */}
