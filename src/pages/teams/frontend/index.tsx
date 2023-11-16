@@ -1,7 +1,12 @@
 import type { NextPage } from "next";
 import { HeaderCard, TeamCard, ImageCard } from "components/Cards/index";
 import CommonMeta from "components/CommonMeta";
-import { HeaderCardProps, ImageCardProps, TeamCardProps, TeamHeaderCardProps } from "~/types";
+import {
+  HeaderCardProps,
+  ImageCardProps,
+  TeamCardProps,
+  TeamHeaderCardProps,
+} from "~/types";
 import TeamHeaderCard from "~/components/Cards/TeamHeaderCard";
 
 export const FrontendTeam: NextPage = () => {

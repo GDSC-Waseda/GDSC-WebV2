@@ -1,7 +1,12 @@
 import type { NextPage } from "next";
 import { HeaderCard, TeamCard, ImageCard } from "components/Cards/index";
 import CommonMeta from "components/CommonMeta";
-import { HeaderCardProps, ImageCardProps, TeamCardProps, TeamHeaderCardProps } from "~/types";
+import {
+  HeaderCardProps,
+  ImageCardProps,
+  TeamCardProps,
+  TeamHeaderCardProps,
+} from "~/types";
 import TeamHeaderCard from "~/components/Cards/TeamHeaderCard";
 
 export const BackendTeam: NextPage = () => {
@@ -9,7 +14,11 @@ export const BackendTeam: NextPage = () => {
     headTitle: "",
     title: "Backend Team",
     content: "Waseda University's chapter of the Google Developer Student Club",
-    featureList: ["Benifit of feature", "Benifit of feature", "Benifit of feature"],
+    featureList: [
+      "Benifit of feature",
+      "Benifit of feature",
+      "Benifit of feature",
+    ],
   };
 
   const imageCardProps: ImageCardProps = {

@@ -1,15 +1,25 @@
 import type { NextPage } from "next";
 import { HeaderCard, TeamCard, ImageCard } from "components/Cards/index";
 import CommonMeta from "components/CommonMeta";
-import { HeaderCardProps, ImageCardProps, TeamCardProps, TeamHeaderCardProps } from "~/types";
+import {
+  HeaderCardProps,
+  ImageCardProps,
+  TeamCardProps,
+  TeamHeaderCardProps,
+} from "~/types";
 import TeamHeaderCard from "~/components/Cards/TeamHeaderCard";
 
 export const AgileTeam: NextPage = () => {
   const card: TeamHeaderCardProps = {
     headTitle: "",
     title: "Agile Team",
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do\n eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    featureList:["Benifit of feature", "Benifit of feature", "Benifit of feature"]
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do\n eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    featureList: [
+      "Benifit of feature",
+      "Benifit of feature",
+      "Benifit of feature",
+    ],
   };
 
   const imageCardProps: ImageCardProps = {

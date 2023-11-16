@@ -1,11 +1,16 @@
 import type { NextPage } from "next";
 import { HeaderCard, TeamCard, ImageCard } from "components/Cards/index";
 import CommonMeta from "components/CommonMeta";
-import { HeaderCardProps, ImageCardProps, TeamCardProps, TeamHeaderCardProps } from "~/types";
+import {
+  HeaderCardProps,
+  ImageCardProps,
+  TeamCardProps,
+  TeamHeaderCardProps,
+} from "~/types";
 import TeamHeaderCard from "~/components/Cards/TeamHeaderCard";
 
 export const OperationsTeam: NextPage = () => {
-  const card: TeamHeaderCardProps= {
+  const card: TeamHeaderCardProps = {
     headTitle: "",
     title: "Marketing Team",
     content: "Waseda University's chapter of the Google Developer Student Club",
