@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Container, Nav, Button, Navbar } from "react-bootstrap";
-
+import LangSwitcher from "../LangSwitcher";
 import logo from "assets/svg/logo.svg";
 
 export const NavigationBar = (): JSX.Element => {
@@ -52,6 +52,9 @@ export const NavigationBar = (): JSX.Element => {
                     <small>More</small>
                   </Button>
                 </a>
+              </Nav.Item>
+              <Nav.Item className="navItem">
+                <LangSwitcher />
               </Nav.Item>
             </Nav>
           </Navbar.Collapse>
