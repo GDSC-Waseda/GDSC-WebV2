@@ -1,95 +1,71 @@
 @font-face {
   font-family: myFont;
   src: url("/fonts/prodsanReg.ttf");
+}
+
+@keyframes animatedText {
+  to {
+    background-position: -100% 0;
+  }
+}
+
+@font-face {
   font-family: myFont6;
   src: url("/fonts/rubikReg.ttf");
 }
+
 .home-page {
   @media (min-width: 798px) {
     padding: 0px 50px;
   }
+
   &__top {
     padding: 20px 40px;
-    &__title {
-      font-size: 56px;
-    }
-    &__button {
-      margin-top: 33px;
-    }
+
     &__container {
       width: 100%;
+
+      .content-with-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .image-section img {
+          max-width: 100%;
+          height: auto;
+        }
+
+        .text-section {
+          margin-right: 10px;
+          padding-right: 20px;
+        }
+      }
+    }
+
+    &__title {
+      font-family: "myFont", sans-serif;
+      font-size: 56px;
+      font-weight: bold;
+      background-image: linear-gradient(
+        to right,
+        #5f5f5f,
+        #4283f3,
+        #e94336,
+        #5f5f5f
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      background-size: 300%;
+      animation: animatedText 5s infinite linear;
     }
 
     @media (max-width: 798px) {
       padding: 0;
     }
-
-    @media (min-width: 798px) {
-      .imageCard__others {
-        margin-left: -140px;
-        width: 150%;
-      }
-    }
-  }
-
-  &__about {
-    margin-top: 60px;
-    &__title {
-      font-size: 56px;
-    }
-    &__description {
-      font-family: "myFont", sans-serif;
-      font-size: 19px;
-      color: rgb(32, 30, 30);
-      @media (min-width: 798px) {
-        width: 140%;
-      }
-    }
-  }
-  &__teams {
-    margin-top: 100px;
-    text-align: center;
-
-    &__title {
-      font-size: 40px;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-    &__description {
-      font-size: 20px;
-      font-family: "myFont", sans-serif;
-    }
-    &__icons {
-      @media (min-width: 798px) {
-        padding: 0px 50px;
-      }
-      margin-top: 100px;
-      text-align: center;
-    }
-  }
-
-  .button {
-    padding: 10px;
-    width: 110px;
-    border-radius: 25px;
-    font-size: 18px;
-
-    &:hover {
-      background-color: #000000;
-      color: rgb(255, 255, 255);
-    }
   }
 }
 
-.home-page__top__title {
-  font-family: "myFont", sans-serif;
-}
-.home-page__about__title {
-  font-family: "myFont", sans-serif;
-}
-.home-page__teams__title {
-  font-family: "myFont", sans-serif;
-}
 .home-page__about__description {
   font-family: "myFont6", sans-serif;
 }

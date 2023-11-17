@@ -9,8 +9,8 @@ import logo from "assets/svg/logo.svg";
 export const Footer = (): JSX.Element => {
   return (
     <footer className="footer">
-      <div className="footer__logoContainer">
-        <Image src={logo} layout="intrinsic" width="60px" alt="footer-logo" />
+      {/* <div className="footer__logoContainer">
+        <Image src={logo} layout="intrinsic" alt="footer-logo" />
       </div>
       <div className="footer__pathContainer">
         <Link href="/about" className="footer__pathItem">
@@ -50,7 +50,7 @@ export const Footer = (): JSX.Element => {
           <Image src={LinkedIn} layout="intrinsic" alt="linkdin" />
         </a>
       </div>
-      <div className="footer__reserved">All Rights Reserved by GDSC Waseda</div>
+      <div className="footer__reserved">All Rights Reserved by GDSC Waseda</div> */}
     </footer>
   );
 };
