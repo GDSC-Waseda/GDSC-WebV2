@@ -1,10 +1,11 @@
 import type { NextPage } from "next";
 import { HeaderCard, TeamCard, ImageCard } from "components/Cards/index";
 import CommonMeta from "components/CommonMeta";
-import { HeaderCardProps, ImageCardProps, TeamCardProps } from "~/types";
+import { ImageCardProps, TeamCardProps, TeamHeaderCardProps } from "~/types";
+import TeamHeaderCard from "~/components/Cards/TeamHeaderCard";
 
 export const FinanceTeam: NextPage = () => {
-  const card: HeaderCardProps = {
+  const card: TeamHeaderCardProps = {
     headTitle: "",
     title: "Finance Team",
     content: "Waseda University's chapter of the Google Developer Student Club",
@@ -73,7 +74,7 @@ export const FinanceTeam: NextPage = () => {
         pageImgHeight={630}
       />
       <div className="header-padding">
-        <HeaderCard props={card} />
+        <TeamHeaderCard props={card} />
       </div>
       <ImageCard props={imageCardProps} />
       {/* <h1 className="members-title">Meet Our Team</h1> */}

@@ -25,6 +25,12 @@ export interface HeaderCardProps {
   content?: string;
   button?: boolean;
 }
+export interface TeamHeaderCardProps {
+  headTitle?: string;
+  title?: string;
+  content?: string;
+  featureList?: string[];
+}
 
 export interface ImageCardProps {
   title: string;

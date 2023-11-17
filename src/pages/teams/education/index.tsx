@@ -1,20 +1,31 @@
 import type { NextPage } from "next";
 import { HeaderCard, TeamCard, ImageCard } from "components/Cards/index";
 import CommonMeta from "components/CommonMeta";
-import { HeaderCardProps, ImageCardProps, TeamCardProps } from "~/types";
+import {
+  HeaderCardProps,
+  ImageCardProps,
+  TeamCardProps,
+  TeamHeaderCardProps,
+} from "~/types";
+import TeamHeaderCard from "~/components/Cards/TeamHeaderCard";
 
 export const EducationTeam: NextPage = () => {
-  const card: HeaderCardProps = {
+  const card: TeamHeaderCardProps = {
     headTitle: "",
     title: "Education Team",
     content: "Waseda University's chapter of the Google Developer Student Club",
+    featureList: [
+      "Benifit of feature",
+      "Benifit of feature",
+      "Benifit of feature",
+    ],
   };
 
   const imageCardProps: ImageCardProps = {
     title: "Education Team - Beatrix Sylvani ",
     content:
       "Hi! My name is Beatrix, but you can call me Bea(🐝)! I am one of the co-leaders for the Education team for GDSC Waseda. Our team is focused on hosting coding classes with the public and building a wide range of connections. For this semester, we are planning to host Figma and Powerpoint 101 classes. Our team is welcoming for anyone who wants to learn and test the waters for different kind of programming classes :>",
-    image: "education_lead.jpg",
+    image: "education_lead1.jpg",
     imagePosition: "left",
   };
 
@@ -73,7 +84,7 @@ export const EducationTeam: NextPage = () => {
         pageImgHeight={630}
       />
       <div className="header-padding">
-        <HeaderCard props={card} />
+        <TeamHeaderCard props={card} />
       </div>
       <ImageCard props={imageCardProps} />
       {/* <h1 className="members-title">Meet Our Team</h1> */}
