@@ -7,8 +7,9 @@ import { Footer } from "components/Footer";
 import { NavigationBar } from "components/NavigationBar";
 import Loading from "../components/Loading"; // Import the Loading component
 import "styles/globals.scss";
+import { appWithTranslation } from "next-i18next";
 
-export default function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps }: AppProps) {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -36,3 +37,5 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     </>
   );
 }
+
+export default appWithTranslation(MyApp);
