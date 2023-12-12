@@ -46,7 +46,7 @@ const Home: NextPage = () => {
               </div>
             </div>
           </div>
-          <p>{t("home:trusted_by_worlds_best")}</p>
+          <p>{t("home:trusted_by")}</p>
         </div>
       </div>
     </>

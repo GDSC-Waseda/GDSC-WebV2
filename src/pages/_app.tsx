@@ -1,6 +1,5 @@
 import type { AppProps } from "next/app";
 import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
 import Router from "next/router";
 
 import { Footer } from "components/Footer";
