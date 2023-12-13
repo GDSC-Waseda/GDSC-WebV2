@@ -1,16 +1,23 @@
-import type { NextPage } from "next";
-import Link from "next/link";
-import { Button, Col, Container, Row } from "react-bootstrap";
-
-import Stack from "@mui/material/Stack";
-import Typography from "@mui/material/Typography";
+import type { GetServerSideProps, NextPage } from "next";
 
 import CommonMeta from "components/CommonMeta";
-import { ImageIcon } from "components/ImageIcon";
-import { imageIconData } from "constants/index";
-import { ImageCardProps } from "~/types";
 
-const Home: NextPage = () => {
+import { listDriveFiles } from "../services/driveApi";
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  try {
+    const files = await listDriveFiles();
+    return { props: { files } };
+  } catch (error) {
+    console.error("Error fetching files:", error);
+    return { props: { files: [] } }; // Return an empty array in case of error
+  }
+};
+
+interface HomeProps {
+  files: Array<{ id: string; name: string }>; // Adjust this type based on the actual structure of your file data
+}
+const Home: NextPage<HomeProps> = ({ files }) => {
   return (
     <>
       <CommonMeta pageTitle="Home" />
@@ -29,6 +36,16 @@ const Home: NextPage = () => {
             </div>
           </div>
           <p>Trusted by the World's Best Companies</p>
+        </div>
+
+        {/* Displaying the files from Google Drive */}
+        <div className="file-list">
+          <h2>Files from Google Drive</h2>
+          <ul>
+            {files.map((file) => (
+              <li key={file.id}>{file.name}</li>
+            ))}
+          </ul>
         </div>
       </div>
     </>
