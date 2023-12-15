@@ -16,7 +16,7 @@ const Home: NextPage = () => {
                 </div>
               </div>
               <div className="image-section">
-                <img src="gdsc-top.jpg" alt="GDSC Top" />
+                <img src="/gdsc-top.jpg" alt="GDSC TOP" />
               </div>
             </div>
           </div>
