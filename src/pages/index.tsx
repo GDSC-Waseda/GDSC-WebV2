@@ -1,14 +1,6 @@
 import type { NextPage } from "next";
-import Link from "next/link";
-import { Button, Col, Container, Row } from "react-bootstrap";
-
-import Stack from "@mui/material/Stack";
-import Typography from "@mui/material/Typography";
-
 import CommonMeta from "components/CommonMeta";
-import { ImageIcon } from "components/ImageIcon";
-import { imageIconData } from "constants/index";
-import { ImageCardProps } from "~/types";
+import Image from "next/image";
 
 const Home: NextPage = () => {
   return (
@@ -24,11 +16,29 @@ const Home: NextPage = () => {
                 </div>
               </div>
               <div className="image-section">
-                <img src="gdsc-top.jpg" alt="GDSC Top" />
+                <img src="/gdsc-top.jpg" alt="GDSC TOP" />
               </div>
             </div>
           </div>
-          <p>Trusted by the World's Best Companies</p>
+          <p className="trusted-message">
+            Trusted by the World's Best Companies
+          </p>
+          <div className="trusted-companies">
+            <Image
+              src="/women_tech.jpg"
+              alt="women-tech"
+              width={100}
+              height={100}
+            />
+            <Image src="/google.jpg" alt="google" width={100} height={100} />
+            <Image src="/fingate.jpg" alt="fingate" width={100} height={100} />
+            <Image
+              src="/fincatch.jpg"
+              alt="fincatch"
+              width={100}
+              height={100}
+            />
+          </div>
         </div>
       </div>
     </>

@@ -19,12 +19,23 @@
     padding: 0px 50px;
   }
 
+  .trusted-message {
+    font-family: "myFont", sans-serif;
+    margin-top: 5px;
+  }
+
+  .trusted-companies {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 20px;
+  }
+
   &__top {
     padding: 20px 40px;
 
     &__container {
       width: 100%;
-
       .content-with-image {
         display: flex;
         align-items: center;
@@ -32,7 +43,6 @@
 
         .image-section img {
           max-width: 100%;
-          height: auto;
         }
 
         .text-section {
@@ -64,8 +74,4 @@
       padding: 0;
     }
   }
-}
-
-.home-page__about__description {
-  font-family: "myFont6", sans-serif;
 }
