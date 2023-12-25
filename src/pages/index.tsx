@@ -1,11 +1,9 @@
 import type { NextPage } from "next";
 import CommonMeta from "components/CommonMeta";
-import { ImageIcon } from "components/ImageIcon";
-import { imageIconData } from "constants/index";
-import { ImageCardProps } from "~/types";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import type { GetStaticProps, GetStaticPropsContext } from "next";
 import { useTranslation } from "next-i18next";
+import Image from "next/image";
 
 export const getStaticProps: GetStaticProps = async (
   context: GetStaticPropsContext
