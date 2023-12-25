@@ -29,7 +29,7 @@ const Home: NextPage = () => {
             <div className="content-with-image">
               <div className="text-section">
                 <div className="home-page__top__title">
-                  {t("home:welcome_mes")}
+                  {t("home:welcome_me")}
                 </div>
               </div>
               <div className="image-section">
