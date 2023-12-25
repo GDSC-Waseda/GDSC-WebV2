@@ -6,10 +6,11 @@ import Link from "next/link";
 import { Container, Nav, Button, Navbar } from "react-bootstrap";
 
 import logo from "assets/svg/logo.svg";
+import { useRouter } from "next/router";
 
 export const NavigationBar = (): JSX.Element => {
   const [isClient, setIsClient] = useState(false);
-
+  const router = useRouter();
   useEffect(() => {
     setIsClient(true);
   }, []);
@@ -47,6 +48,12 @@ export const NavigationBar = (): JSX.Element => {
                 <Link href="/events">Events</Link>
               </Nav.Item>
               <Nav.Item className="navItem">
+                {/* <Link href={router.pathname} locale={router.locale == "en" ? "ja" : "en"}>
+                  Toggle
+                </Link> */}
+                <LanguageToggle />
+              </Nav.Item>
+              <Nav.Item className="navItem">
                 <a href="https://forms.gle/uewfWU2QZjpHmSqc9" target="_blank">
                   <Button variant="outline-dark" className="butto">
                     <small>More</small>
@@ -62,3 +69,24 @@ export const NavigationBar = (): JSX.Element => {
 };
 
 export default NavigationBar;
+const LanguageToggle = () => {
+  const router = useRouter();
+  return (
+    <select
+      name="language-picker-select"
+      id="language-picker-select"
+      onChange={(e) => {
+        router.push(router.pathname, router.pathname, {
+          locale: e.target.value,
+        });
+      }}
+    >
+      <option lang="ja" value="ja">
+        日本語
+      </option>
+      <option lang="en" value="en" selected>
+        English
+      </option>
+    </select>
+  );
+};  

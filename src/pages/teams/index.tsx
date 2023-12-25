@@ -9,12 +9,29 @@ import {
 import CommonMeta from "components/CommonMeta";
 import { HeaderCardProps, ImageCardProps, TeamCardProps } from "~/types";
 import { SignalCellularNullOutlined } from "@mui/icons-material";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import type { GetStaticProps, GetStaticPropsContext } from "next";
+import { useTranslation } from "next-i18next";
+
+export const getStaticProps: GetStaticProps = async (
+  context: GetStaticPropsContext
+) => {
+  const { locale } = context;
+
+  return {
+    props: {
+      ...(await serverSideTranslations(locale as string, ["teams"])),
+    },
+  };
+};
 
 export const TeamsPage: NextPage = () => {
+  const { t } = useTranslation();
+
   const card: HeaderCardProps = {
     headTitle: "",
-    title: "TEAMS",
-    content: "Explore the teams that work together to make GDSC Waseda special",
+    title: t("teams:team"),
+    content: t("teams:team_mes"),
   };
 
   const teamLeaders: Array<{
@@ -26,7 +43,7 @@ export const TeamsPage: NextPage = () => {
     color: string;
   }> = [
     {
-      name: "Project",
+      name: t("teams:project"),
       image: "project_lead.jpg",
       image2: null,
       multiple: false,
@@ -34,7 +51,7 @@ export const TeamsPage: NextPage = () => {
       color: "green",
     },
     {
-      name: "Backend",
+      name: t("teams:backend"),
       image: "backend_lead.jpg",
       image2: null,
       multiple: false,
@@ -42,7 +59,7 @@ export const TeamsPage: NextPage = () => {
       color: "blue",
     },
     {
-      name: "Frontend",
+      name: t("teams:frontend"),
       image: "frontend_lead.jpg",
       image2: null,
       multiple: false,
@@ -50,7 +67,7 @@ export const TeamsPage: NextPage = () => {
       color: "yellow",
     },
     {
-      name: "Education",
+      name: t("teams:education"),
       image: "education_lead1.jpg",
       image2: "education_lead2.jpg",
       multiple: true,
@@ -58,7 +75,7 @@ export const TeamsPage: NextPage = () => {
       color: "blue",
     },
     {
-      name: "Agile",
+      name: t("teams:agile"),
       image: "agile_lead.jpg",
       image2: null,
       multiple: false,
@@ -66,7 +83,7 @@ export const TeamsPage: NextPage = () => {
       color: "yellow",
     },
     {
-      name: "Outreach",
+      name: t("teams:outreach"),
       image: "outreach_lead.jpg",
       image2: null,
       multiple: false,
@@ -74,7 +91,7 @@ export const TeamsPage: NextPage = () => {
       color: "red",
     },
     {
-      name: "Operations",
+      name: t("teams:operations"),
       image: "operations_lead.jpg",
       image2: null,
       multiple: false,
@@ -82,7 +99,7 @@ export const TeamsPage: NextPage = () => {
       color: "green",
     },
     {
-      name: "Marketing",
+      name: t("teams:marketing"),
       image: "marketing_lead.jpg",
       image2: null,
       multiple: false,
@@ -90,7 +107,7 @@ export const TeamsPage: NextPage = () => {
       color: "red",
     },
     {
-      name: "Finance",
+      name: t("teams:finance"),
       image: "finance_lead.jpg",
       image2: null,
       multiple: false,
@@ -156,10 +173,8 @@ export const TeamsPage: NextPage = () => {
 
       <div className="bold-text">
         <a>
-          Teams are the foundation to any organization.
+          {t("teams:team_second_mes")}
           <br></br>
-          Explore the different teams that work together to make GDSC Waseda
-          truly special.
         </a>
       </div>
 
@@ -206,7 +221,7 @@ export const TeamsPage: NextPage = () => {
             )}
             <div className="team-leader-name">{teamCard.name}</div>
             <a className="team-leader-link" href={`/teams/${teamCard.link}`}>
-              Learn more
+              {t("teams:learn_more")}
             </a>
           </div>
         ))}
