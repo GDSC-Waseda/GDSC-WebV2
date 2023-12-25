@@ -1,6 +1,11 @@
 import type { NextPage } from "next";
 import React, { useState } from "react";
-import { HeaderCard, TeamCard, ImageCard } from "components/Cards/index";
+import {
+  HeaderCard,
+  TeamCard,
+  ImageCard,
+  YearBar,
+} from "components/Cards/index";
 import CommonMeta from "components/CommonMeta";
 import { HeaderCardProps, ImageCardProps, TeamCardProps } from "~/types";
 import { SignalCellularNullOutlined } from "@mui/icons-material";
@@ -114,6 +119,30 @@ export const TeamsPage: NextPage = () => {
     });
   };
 
+  const [selectedYear, setSelectedYear] = useState("GDSC 23/24");
+
+  const teamLeadersByYear: Record<
+    string,
+    Array<{
+      name: string;
+      image: string;
+      image2: string | null;
+      multiple: boolean;
+      link: string;
+      color: string;
+    }>
+  > = {
+    "GDSC 23/24": teamLeaders,
+    "GDSC 22/23": [teamLeaders[0], teamLeaders[1], teamLeaders[5]],
+    "GDSC 21/22": [teamLeaders[6], teamLeaders[3]],
+  };
+
+  const handleYearChange = (year: string) => {
+    setSelectedYear(year);
+  };
+
+  const filteredTeamLeaders = teamLeadersByYear[selectedYear] || [];
+
   return (
     <div className="team-page">
       <CommonMeta
@@ -134,8 +163,14 @@ export const TeamsPage: NextPage = () => {
         </a>
       </div>
 
+      <YearBar
+        years={Object.keys(teamLeadersByYear)}
+        selectedYear={selectedYear}
+        onYearChange={handleYearChange}
+      />
+
       <div className="team-leaders-container">
-        {teamLeaders.map((teamCard, index) => (
+        {filteredTeamLeaders.map((teamCard, index) => (
           <div key={index} className="team-leader">
             {teamCard.multiple == true ? (
               <div className="team-leader-swap-container">
