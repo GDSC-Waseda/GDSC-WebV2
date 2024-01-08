@@ -96,3 +96,30 @@ export interface MetaData {
   pageImgWidth?: number;
   pageImgHeight?: number;
 }
+
+/* article type */
+
+// types.ts
+export interface ContentBlock {
+  type: string;
+  children: { text: string }[];
+}
+
+export interface ArticleAttributes {
+  Title: string;
+  publicationDate: string;
+  content: ContentBlock[];
+  media: any; // Adjust this based on the actual structure of your media fields
+  author1: any; // Same here
+  author2: any; // And here
+  coverimg: any; // And here
+}
+
+export interface Article {
+  id: number;
+  attributes: ArticleAttributes;
+}
+
+export interface ArticlesResponse {
+  data: Article[];
+}
