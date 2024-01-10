@@ -109,10 +109,10 @@ export interface ArticleAttributes {
   Title: string;
   publicationDate: string;
   content: ContentBlock[];
-  media: any; // Adjust this based on the actual structure of your media fields
-  author1: any; // Same here
-  author2: any; // And here
-  coverimg: any; // And here
+  media: any;
+  author1: any;
+  author2: any;
+  coverimg: any;
 }
 
 export interface Article {
