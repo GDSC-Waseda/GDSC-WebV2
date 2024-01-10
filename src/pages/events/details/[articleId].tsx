@@ -32,6 +32,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 const ArticlePage: NextPage<{ article: Article }> = ({ article }) => {
   const renderContent = (content: any) => {
     return content.map((item: any, index: number) => {
+      // Handle paragraphs
       if (item.type === "paragraph") {
         return (
           <p key={index}>
@@ -39,14 +40,58 @@ const ArticlePage: NextPage<{ article: Article }> = ({ article }) => {
           </p>
         );
       }
-      // Add other type cases as needed
+      // Add more conditions here for other content types like images, videos, etc.
     });
   };
 
   return (
-    <div>
-      <h1>{article.attributes.Title}</h1>
-      {article.attributes.content && renderContent(article.attributes.content)}
+    <div className="article">
+      <h1 className="article__title">{article.attributes.Title}</h1>
+
+      <div className="article__author">
+        <div className="article__author-image-left">
+          {/* Replace with the actual path to the author's image */}
+          <img src={article.attributes.author1.picture} alt="Author 1" />
+        </div>
+        <div className="article__author-image">
+          {/* Replace with the actual path to the author's image */}
+          <img src={article.attributes.author2.picture} alt="Author 2" />
+        </div>
+        <div className="article__author-text">
+          <p className="article__author-names">
+            {article.attributes.author1.name} &{" "}
+            {article.attributes.author2.name}
+          </p>
+          {/* <p className="article__length">
+            {article.attributes.length} min read ・{" "}
+            {new Date(article.attributes.publicationDate).toLocaleDateString()}
+          </p> */}
+        </div>
+      </div>
+
+      <hr />
+
+      <div className="article__image-container">
+        {/* Replace with the actual path to the cover image */}
+        <img
+          className="article__image"
+          src={article.attributes.coverimg.url}
+          alt="Article cover"
+        />
+      </div>
+
+      <div className="article__content">
+        {article.attributes.content &&
+          renderContent(article.attributes.content)}
+      </div>
+
+      {/* <div className="article__footer">
+        {article.attributes.tags.map((tag: string, index: number) => (
+          <div className="article__tag" key={index}>
+            {tag}
+          </div>
+        ))}
+      </div> */}
     </div>
   );
 };
