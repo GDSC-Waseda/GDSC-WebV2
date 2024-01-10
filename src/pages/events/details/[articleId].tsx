@@ -1,7 +1,6 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { Article, ArticlesResponse } from "../../../types";
 
-// Strapi API Base URL
 const STRAPI_API_URL =
   "https://agile-dawn-20856-3c917b85c4f4.herokuapp.com/api";
 
@@ -22,7 +21,9 @@ export const getStaticProps: GetStaticProps = async (context) => {
     return { notFound: true };
   }
 
-  const res = await fetch(`${STRAPI_API_URL}/articles/${params.articleId}`);
+  const res = await fetch(
+    `${STRAPI_API_URL}/articles/${params.articleId}?populate=*`
+  );
   const articleData: { data: Article } = await res.json();
   const article = articleData.data;
 
@@ -32,7 +33,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
 const ArticlePage: NextPage<{ article: Article }> = ({ article }) => {
   const renderContent = (content: any) => {
     return content.map((item: any, index: number) => {
-      // Handle paragraphs
       if (item.type === "paragraph") {
         return (
           <p key={index}>
@@ -40,58 +40,81 @@ const ArticlePage: NextPage<{ article: Article }> = ({ article }) => {
           </p>
         );
       }
-      // Add more conditions here for other content types like images, videos, etc.
     });
   };
+
+  const baseUrl = "https://agile-dawn-20856-3c917b85c4f4.herokuapp.com";
+
+  const author1ImageUrl = article.attributes.author1?.data
+    ? `${baseUrl}${article.attributes.author1.data.attributes.url}`
+    : null;
+  const author2ImageUrl = article.attributes.author2?.data
+    ? `${baseUrl}${article.attributes.author2.data.attributes.url}`
+    : null;
+  const coverImageUrl = article.attributes.coverimg?.data
+    ? `${baseUrl}${article.attributes.coverimg.data.attributes.url}`
+    : null;
 
   return (
     <div className="article">
       <h1 className="article__title">{article.attributes.Title}</h1>
 
       <div className="article__author">
-        <div className="article__author-image-left">
-          {/* Replace with the actual path to the author's image */}
-          <img src={article.attributes.author1.picture} alt="Author 1" />
-        </div>
-        <div className="article__author-image">
-          {/* Replace with the actual path to the author's image */}
-          <img src={article.attributes.author2.picture} alt="Author 2" />
-        </div>
+        {author1ImageUrl && (
+          <div className="article__author-image-left">
+            <img src={author1ImageUrl} alt="Author 1" />
+          </div>
+        )}
+        {author2ImageUrl && (
+          <div className="article__author-image">
+            <img src={author2ImageUrl} alt="Author 2" />
+          </div>
+        )}
         <div className="article__author-text">
           <p className="article__author-names">
-            {article.attributes.author1.name} &{" "}
-            {article.attributes.author2.name}
+            {article.attributes.author1Name} & {article.attributes.author2Name}
           </p>
-          {/* <p className="article__length">
+          <p className="article__length">
             {article.attributes.length} min read ・{" "}
             {new Date(article.attributes.publicationDate).toLocaleDateString()}
-          </p> */}
+          </p>
         </div>
       </div>
 
       <hr />
 
-      <div className="article__image-container">
-        {/* Replace with the actual path to the cover image */}
-        <img
-          className="article__image"
-          src={article.attributes.coverimg.url}
-          alt="Article cover"
-        />
-      </div>
+      {coverImageUrl && (
+        <div className="article__image-container">
+          <img src={coverImageUrl} alt="Article cover" />
+        </div>
+      )}
 
       <div className="article__content">
         {article.attributes.content &&
           renderContent(article.attributes.content)}
       </div>
 
-      {/* <div className="article__footer">
-        {article.attributes.tags.map((tag: string, index: number) => (
-          <div className="article__tag" key={index}>
-            {tag}
-          </div>
-        ))}
-      </div> */}
+      {/* Render additional details */}
+      <div className="article__details">
+        <p>
+          <strong>Event Date:</strong>{" "}
+          {new Date(article.attributes.eventDate).toLocaleDateString()}
+        </p>
+        <p>
+          <strong>Location:</strong> {article.attributes.location}
+        </p>
+        <p>
+          <strong>Event Description:</strong>{" "}
+          {article.attributes.eventDescription}
+        </p>
+        <p>
+          <strong>Tags:</strong> {article.attributes.tagOne},{" "}
+          {article.attributes.tagTwo}, {article.attributes.tagThree}
+        </p>
+      </div>
+
+      {/* Footer section */}
+      <div className="article__footer">{/* Footer content */}</div>
     </div>
   );
 };

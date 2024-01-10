@@ -105,14 +105,68 @@ export interface ContentBlock {
   children: { text: string }[];
 }
 
+interface MediaFormat {
+  ext: string;
+  url: string;
+  hash: string;
+  mime: string;
+  name: string;
+  path: string | null;
+  size: number;
+  width: number;
+  height: number;
+}
+
+interface MediaAttributes {
+  name: string;
+  alternativeText: string | null;
+  caption: string | null;
+  width: number;
+  height: number;
+  formats: {
+    large?: MediaFormat;
+    small?: MediaFormat;
+    medium?: MediaFormat;
+    thumbnail?: MediaFormat;
+  };
+  hash: string;
+  ext: string;
+  mime: string;
+  size: number;
+  url: string;
+  previewUrl: string | null;
+  provider: string;
+  provider_metadata: any; // adjust this based on actual data structure
+  createdAt: string;
+  updatedAt: string;
+}
+
+interface MediaData {
+  id: number;
+  attributes: MediaAttributes;
+}
+
+interface Media {
+  data: MediaData | null;
+}
+
 export interface ArticleAttributes {
   Title: string;
   publicationDate: string;
-  content: ContentBlock[];
-  media: any;
-  author1: any;
-  author2: any;
-  coverimg: any;
+  content: ContentBlock[]; // Assuming you have already defined ContentBlock based on your rich text structure
+  media: Media[];
+  author1: Media;
+  author2: Media;
+  coverimg: Media;
+  length: string;
+  author1Name: string;
+  author2Name: string;
+  eventDate: string;
+  location: string;
+  eventDescription: string;
+  tagOne: string;
+  tagTwo: string;
+  tagThree: string;
 }
 
 export interface Article {
