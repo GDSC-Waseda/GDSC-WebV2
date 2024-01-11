@@ -11,5 +11,8 @@ module.exports = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  images: {
+    domains: ["agile-dawn-20856-3c917b85c4f4.herokuapp.com"],
+  },
   i18n,
 };
