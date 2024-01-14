@@ -43,17 +43,15 @@ const ArticlePage: NextPage<{ article: Article }> = ({ article }) => {
     });
   };
 
-  const baseUrl = "https://agile-dawn-20856-3c917b85c4f4.herokuapp.com";
-
-  const author1ImageUrl = article.attributes.author1?.data
-    ? `${baseUrl}${article.attributes.author1.data.attributes.url}`
-    : null;
-  const author2ImageUrl = article.attributes.author2?.data
-    ? `${baseUrl}${article.attributes.author2.data.attributes.url}`
-    : null;
-  const coverImageUrl = article.attributes.coverimg?.data
-    ? `${baseUrl}${article.attributes.coverimg.data.attributes.url}`
-    : null;
+  const author1ImageUrl =
+    article.attributes.author1?.data?.attributes?.formats?.large?.url ||
+    "/default-image-path.jpg";
+  const author2ImageUrl =
+    article.attributes.author2?.data?.attributes?.formats?.large?.url ||
+    "/default-image-path.jpg";
+  const coverImageUrl =
+    article.attributes.coverimg?.data?.attributes?.url ||
+    "/default-image-path.jpg";
 
   return (
     <div className="article">

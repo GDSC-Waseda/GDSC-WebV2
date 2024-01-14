@@ -12,7 +12,10 @@ module.exports = {
     ignoreDuringBuilds: true,
   },
   images: {
-    domains: ["agile-dawn-20856-3c917b85c4f4.herokuapp.com"],
+    domains: [
+      "agile-dawn-20856-3c917b85c4f4.herokuapp.com",
+      "res.cloudinary.com",
+    ],
   },
   i18n,
 };

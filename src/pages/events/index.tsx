@@ -14,18 +14,13 @@ const STRAPI_API_URL =
 export const getStaticProps: GetStaticProps = async () => {
   const res = await fetch(`${STRAPI_API_URL}/articles?populate=*`);
   const articlesData: { data: Article[] } = await res.json();
-  const baseUrl = "https://agile-dawn-20856-3c917b85c4f4.herokuapp.com";
 
   const dynamicArticles: MediaCardProps[] = articlesData.data.map(
     (article) => ({
       size: "m",
       title: article.attributes.Title,
       image: article.attributes.coverimg?.data
-        ? `${baseUrl}${
-            article.attributes.coverimg.data.attributes.url.startsWith("/")
-              ? ""
-              : "/"
-          }${article.attributes.coverimg.data.attributes.url}`
+        ? article.attributes.coverimg.data.attributes.url
         : "/default-image-path.jpg",
       tags: [article.attributes.tagOne],
       date: new Date(article.attributes.eventDate).toLocaleDateString(),
@@ -57,7 +52,7 @@ const EventsPage: NextPage<EventsPageProps> = ({ dynamicArticles }) => {
       size: "m",
       title: "Mini Solution Challenge",
       image:
-        "https://agile-dawn-20856-3c917b85c4f4.herokuapp.com/uploads/event_solutionchallenge_1c87406aaf.png",
+        "https://res.cloudinary.com/df3ab0lxf/image/upload/v1705215902/thumbnail_event_solutionchallenge_3770ac70da.png",
       tags: ["Solution Challenge", "Demo Day"],
       date: "July 14, 2023 @Google Japan",
       description: "2023 Mini-Solution Challenge by GDSC Waseda",
@@ -69,7 +64,7 @@ const EventsPage: NextPage<EventsPageProps> = ({ dynamicArticles }) => {
       size: "m",
       title: "The Bridge Hackathon 2023",
       image:
-        "https://agile-dawn-20856-3c917b85c4f4.herokuapp.com/uploads/event_bridgehack_59989dfe4e.jpg",
+        "https://res.cloudinary.com/df3ab0lxf/image/upload/v1705215934/thumbnail_event_bridgehack_065e585923.jpg",
       tags: ["Hackathon", "International", "Demo Day"],
       date: "Feb 11th & 12th, 2023 @FinGATE KAYABA",
       description: "24-hour global hackathon across Japan and Korea",
@@ -81,7 +76,7 @@ const EventsPage: NextPage<EventsPageProps> = ({ dynamicArticles }) => {
       size: "m",
       title: "Mini Solution Challenge",
       image:
-        "https://agile-dawn-20856-3c917b85c4f4.herokuapp.com/uploads/event_mini_solution_challenge_2022_e7c0b4b41e.png",
+        "https://res.cloudinary.com/df3ab0lxf/image/upload/v1705215902/thumbnail_event_mini_solution_challenge_2022_3302800ad3.png",
       tags: ["Solution Challenge", "Demo Day"],
       date: "July 17, 2022 @Google Japan",
       description: "2022 Mini-Solution Challenge by GDSC Waseda",
