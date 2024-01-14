@@ -20,8 +20,10 @@ export const MediaCard: React.FC<{
         <div className="media-card__image-container">
           <Image
             className="media-card__image"
-            src={require(`/src/assets/img/events/${props.image}`)}
+            src={props.image}
             alt="media-card"
+            layout="fill"
+            objectFit="cover"
           />
         </div>
       ) : (

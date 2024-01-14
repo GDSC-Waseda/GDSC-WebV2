@@ -10,11 +10,10 @@
   margin: 20px;
 
   &__image-container {
-    border-bottom: 1px solid;
-    border-radius: 20px 20px 0px 0px;
-    height: 50%;
+    height: 50%; // 50% of the media card's height
     width: 100%;
-    box-sizing: border-box;
+    overflow: hidden; // This ensures the image doesn't exceed this container
+    position: relative; // Needed for Next.js Image component with layout="fill"
   }
 
   &__image-container img {
@@ -27,6 +26,11 @@
 
   &__image {
     border-radius: 20px 20px 0px 0px;
+    position: absolute; // Position the image absolutely within the container
+    top: 0;
+    left: 0;
+    width: 100%; // Fill the container
+    height: 100%; // Fill the container
   }
 
   &__collapse {
