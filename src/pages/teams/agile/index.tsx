@@ -1,15 +1,45 @@
 import type { NextPage } from "next";
 import { HeaderCard, TeamCard, ImageCard } from "components/Cards/index";
 import CommonMeta from "components/CommonMeta";
+import { MemberType, memberAtributes } from "../../../types";
+import { GetStaticPaths, GetStaticProps } from "next";
+
 import {
   HeaderCardProps,
   ImageCardProps,
   TeamCardProps,
   TeamHeaderCardProps,
 } from "~/types";
+
 import TeamHeaderCard from "~/components/Cards/TeamHeaderCard";
 
-export const AgileTeam: NextPage = () => {
+const STRAPI_API_URL =
+  "https://agile-dawn-20856-3c917b85c4f4.herokuapp.com/api";
+
+export const getStaticProps: GetStaticProps = async () => {
+  const res = await fetch(`${STRAPI_API_URL}/members?populate=*`);
+  const memberData: { data: MemberType[] } = await res.json();
+
+  const dynamicTeamCards: TeamCardProps[] = memberData.data
+    .filter((member) => member.attributes.team === "Agile") // Filter members who are part of the Agile team
+    .map((member) => ({
+      title: member.attributes.name || "No Name",
+      image:
+        member.attributes.memImage?.data?.attributes.url ||
+        "/default-image-path.jpg",
+      major: member.attributes.major || "No Major",
+      school: member.attributes.school || "No School",
+      year: member.attributes.year || "No Year",
+    }));
+
+  return { props: { dynamicTeamCards } };
+};
+
+interface AgileTeamProps {
+  dynamicTeamCards: TeamCardProps[];
+}
+
+export const AgileTeam: NextPage<AgileTeamProps> = ({ dynamicTeamCards }) => {
   const card: TeamHeaderCardProps = {
     headTitle: "",
     title: "Agile Team",
@@ -26,54 +56,10 @@ export const AgileTeam: NextPage = () => {
     title: "Agile Team - Lahiru Udawatta",
     content:
       "Hoi everyone 🙌, my name's Lahiru, and I'm honored to be the lead of the Agile team for GDSC Waseda. Our dynamic team uses the Agile methodology, infusing industry-oriented practices into our web development projects. The sleek website you're currently browsing is brought to you by my team ;). Excited to see what we can build this year with all of you!",
-    image: "agile_lead.jpg",
+    image:
+      "https://res.cloudinary.com/df3ab0lxf/image/upload/v1705303847/agile_lead_6946bcb022.png",
     imagePosition: "left",
   };
-
-  const teamCards: Array<TeamCardProps> = [
-    // {
-    //   title: "Haruki",
-    //   image: "project_lead.jpg",
-    //   major: "Computer Science",
-    //   school: "FSE",
-    //   year: "2nd year",
-    // },
-    // {
-    //   title: "Gunjan",
-    //   image: "project_lead.jpg",
-    //   major: "Physics",
-    //   school: "ASE",
-    //   year: "2nd year",
-    // },
-    // {
-    //   title: "Haru",
-    //   image: "project_lead.jpg",
-    //   major: "Politics and Econ",
-    //   school: "PSE",
-    //   year: "3rd year",
-    // },
-    // {
-    //   title: "Gun",
-    //   image: "project_lead.jpg",
-    //   major: "Civil Eng",
-    //   school: "CSE",
-    //   year: "2nd year",
-    // },
-    // {
-    //   title: "Bea",
-    //   image: "project_lead.jpg",
-    //   major: "Politics and Econ",
-    //   school: "PSE",
-    //   year: "3rd year",
-    // },
-    // {
-    //   title: "Leeroy",
-    //   image: "project_lead.jpg",
-    //   major: "Politics and Econ",
-    //   school: "PSE",
-    //   year: "3rd year",
-    // },
-  ];
 
   return (
     <div className="team-page">
@@ -88,9 +74,9 @@ export const AgileTeam: NextPage = () => {
         <TeamHeaderCard props={card} />
       </div>
       <ImageCard props={imageCardProps} />
-      {/* <h1 className="members-title">Meet Our Team</h1> */}
+      <h1 className="members-title">Meet Our Team</h1>
       <div className="team-cards-container">
-        {teamCards.map((teamCard, index) => (
+        {dynamicTeamCards.map((teamCard, index) => (
           <TeamCard key={index} props={teamCard} />
         ))}
       </div>
