@@ -20,7 +20,8 @@ export const OperationsTeam: NextPage = () => {
     title: "Outreach Team - Harshita Chivukula",
     content:
       "Hello! I’m Harshita (Harshi), a senior at Waseda University’s School of Fundamental Science and Engineering. The outreach team is excited for another year or events where we can bridge the gap between students and working professionals in various technical fields.",
-    image: "outreach_lead.jpg",
+    image:
+      "https://res.cloudinary.com/df3ab0lxf/image/upload/v1705310641/outreach_lead_c39fc2e84a.jpg",
     imagePosition: "left",
   };
 
