@@ -12,9 +12,10 @@ export const TeamCard: React.FC<{
         <div className="team-card__image-container">
           <Image
             className="team-card__image"
-            src={`/tempImg/leads/${props.image}`}
+            src={props.image}
             alt="team-card"
-            layout="intrinsic"
+            width={350}
+            height={350}
           />
         </div>
       ) : (

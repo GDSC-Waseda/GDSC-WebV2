@@ -20,7 +20,8 @@ export const ProjectTeams: NextPage = () => {
     title: "Project Team - Priya Mukkundi",
     content:
       "Hi! I’m Priya, a third year student majoring in Economics at Waseda University. Project Team’s main goals are to foster innovation, efficiently deliver projects, and bridge technical and non-technical teams through effective communication and collaboration. No matter your tech background, we're thrilled to collaborate with you on your unique ideas and bring practical projects to life.😄",
-    image: "project_lead.jpg",
+    image:
+      "https://res.cloudinary.com/df3ab0lxf/image/upload/v1705310641/project_lead_5bb6261bed.jpg",
     imagePosition: "left",
   };
 

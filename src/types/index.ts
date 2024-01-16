@@ -99,7 +99,6 @@ export interface MetaData {
 
 /* article type */
 
-// types.ts
 export interface ContentBlock {
   type: string;
   children: { text: string }[];
@@ -176,4 +175,18 @@ export interface Article {
 
 export interface ArticlesResponse {
   data: Article[];
+}
+
+export interface memberAtributes {
+  name: string;
+  year: string;
+  major: string;
+  team: string;
+  school: string;
+  memImage: Media;
+}
+
+export interface MemberType {
+  id: number;
+  attributes: memberAtributes;
 }
