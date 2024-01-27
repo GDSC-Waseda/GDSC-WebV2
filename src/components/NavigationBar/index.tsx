@@ -73,20 +73,21 @@ const LanguageToggle = () => {
   const router = useRouter();
   return (
     <select
-      name="language-picker-select"
+      className="select"
       id="language-picker-select"
       onChange={(e) => {
         router.push(router.pathname, router.pathname, {
           locale: e.target.value,
         });
       }}
+      value={router.locale}
     >
       <option lang="ja" value="ja">
         日本語
       </option>
-      <option lang="en" value="en" selected>
+      <option lang="en" value="en">
         English
       </option>
     </select>
   );
-};  
+};
