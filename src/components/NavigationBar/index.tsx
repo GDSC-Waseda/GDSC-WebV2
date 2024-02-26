@@ -30,7 +30,7 @@ export const NavigationBar = (): JSX.Element => {
             <div
               className={`nav-text-title ${isClient ? "start-animation" : ""}`}
             >
-              <Link href="/">DSC Waseda</Link>
+              <Link href="/">GDSC Waseda</Link>
             </div>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />

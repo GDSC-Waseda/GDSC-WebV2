@@ -36,6 +36,7 @@ export const getStaticProps: GetStaticProps = async () => {
 interface FrontendTeamProps {
   dynamicTeamCards: TeamCardProps[];
 }
+
 export const FrontendTeam: NextPage<FrontendTeamProps> = ({
   dynamicTeamCards,
 }) => {

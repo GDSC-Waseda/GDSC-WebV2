@@ -4,27 +4,54 @@
 }
 
 .about-page {
-  &__button {
-    padding: 10px;
-    width: 110px;
-    border-radius: 25px;
-  }
-
-  &__events {
+  .textCard__section {
+    padding: 0 20px;
+    margin: 60px 200px;
     font-family: "myFont", sans-serif;
-    text-align: center;
-    padding: 0px 20px;
-    margin-top: 30px;
 
-    &__container {
-      margin-bottom: 30px;
+    &__title,
+    &__content {
+      text-align: left;
+      color: #000;
     }
 
     &__title {
-      font-size: 25px;
-      font-family: "myFont", sans-serif;
-      font-weight: bold;
-      text-align: center;
+      font-size: 40px;
+      font-weight: 500;
+      line-height: normal;
+      margin-bottom: 20px;
+    }
+
+    &__content {
+      font-size: 24px;
+      line-height: 1.6;
+    }
+  }
+
+  .leads-thoughts-custom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 60px 200px; // Keep margin consistent with TextCard
+
+    .leads-thoughts-text {
+      // If you need to adjust the width of the text relative to the image
+      max-width: calc(
+        100% - 320px
+      ); // Adjust based on image width + some margin
+    }
+
+    .leader-vision-image {
+      flex-shrink: 0; // Prevent the image from shrinking
+      width: 300px; // Set a fixed width for the image
+      margin-left: 50px;
+      padding-top: 70px;
+
+      img {
+        border-radius: 8px; // Style as needed
+        width: 100%; // Ensure the image fills the container
+        height: auto; // Keep the image's aspect ratio
+      }
     }
   }
 }

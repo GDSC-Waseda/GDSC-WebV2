@@ -2,7 +2,6 @@ import type { NextPage } from "next";
 import { HeaderCard, TeamCard, ImageCard } from "components/Cards/index";
 import CommonMeta from "components/CommonMeta";
 import { MemberType, memberAtributes } from "../../../types";
-import { GetStaticPaths, GetStaticProps } from "next";
 
 import {
   HeaderCardProps,
@@ -12,6 +11,8 @@ import {
 } from "~/types";
 
 import TeamHeaderCard from "~/components/Cards/TeamHeaderCard";
+
+import { GetStaticProps } from "next";
 
 const STRAPI_API_URL =
   "https://agile-dawn-20856-3c917b85c4f4.herokuapp.com/api";
