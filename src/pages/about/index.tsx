@@ -4,20 +4,41 @@ import { HeaderCard } from "components/Cards/index";
 import CommonMeta from "components/CommonMeta";
 import { HeaderCardProps, TextCardProps } from "~/types";
 
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import type { GetStaticProps, GetStaticPropsContext } from "next";
+
+export const getStaticProps: GetStaticProps = async (
+  context: GetStaticPropsContext
+) => {
+  const { locale } = context;
+
+  return {
+    props: {
+      ...(await serverSideTranslations(locale as string, ["about", "common"])),
+    },
+  };
+};
+
 export const AboutPage: NextPage = () => {
+  const { t } = useTranslation();
+
   const card: HeaderCardProps = {
     headTitle: "",
-    title: "ABOUT US",
+    title: t("about:header"),
     content: "",
     button: true,
+    buttonText: t("about:discButt"),
   };
 
   const whatWeDo: TextCardProps = {
-    title: "What do we do?",
-    content: `Welcome to GDSC Waseda, where coding meets fun! 🎉 We're all about creating with code, from hackathons that feel like festivals to workshops where you actually build cool stuff. Get inspired by tech wizards, dive into hands-on projects, and join study jams that feel more like hangouts. We're not just a club; we're a community of innovators and friends ready to make some magic. Ready to join the adventure? 🚀✨`,
+    title: t("about:what"),
+    content: t("about:motomesg"),
   };
 
-  const leadsThoughtsContent = `Hey everyone! As a 4th-year Mathematical Sciences major and leader of Japan's largest GDSC chapter, I'm all about blending codes, ideas, and coffee☕. Our 200+ member family thrives on creativity and innovation. Here, we're more than coders; we're a community forging lasting friendships and pushing the boundaries of tech. My goal? To inspire us to dream big and code boldly. Let's make this year legendary by creating, learning, and growing together. Here's to coding our way to change! ✨`;
+  const leadsThoughtsContent = t("about:leadmesg");
+  console.log(t("about:head"));
+  console.log(t("about:discButt"));
 
   return (
     <div className="about-page">
@@ -39,7 +60,7 @@ export const AboutPage: NextPage = () => {
       {/* Our Lead's Thoughts Section Styled Similarly but Outside TextCard */}
       <div className="textCard__section leads-thoughts-custom">
         <div className="leads-thoughts-text">
-          <h2 className="textCard__section__title">Our Lead's Thoughts</h2>
+          <h2 className="textCard__section__title">{t("about:leadthought")}</h2>
           <p className="textCard__section__content">{leadsThoughtsContent}</p>
         </div>
         <div className="leader-vision-image">

@@ -30,6 +30,7 @@ export interface HeaderCardProps {
   title: string;
   content?: string;
   button?: boolean;
+  buttonText?: string;
 }
 export interface TeamHeaderCardProps {
   headTitle?: string;

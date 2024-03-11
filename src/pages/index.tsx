@@ -12,7 +12,7 @@ export const getStaticProps: GetStaticProps = async (
 
   return {
     props: {
-      ...(await serverSideTranslations(locale as string, ["home"])),
+      ...(await serverSideTranslations(locale as string, ["home", "common"])),
     },
   };
 };
@@ -29,7 +29,7 @@ const Home: NextPage = () => {
             <div className="content-with-image">
               <div className="text-section">
                 <div className="home-page__top__title">
-                  {t("home:welcome_me")}
+                  {t("home:welcome_mes")}
                 </div>
               </div>
               <div className="image-section">

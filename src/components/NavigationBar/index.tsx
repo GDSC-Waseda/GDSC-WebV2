@@ -7,8 +7,11 @@ import { Container, Nav, Button, Navbar } from "react-bootstrap";
 
 import logo from "assets/svg/logo.svg";
 import { useRouter } from "next/router";
+import { useTranslation } from "next-i18next";
 
 export const NavigationBar = (): JSX.Element => {
+  const { t } = useTranslation("common");
+
   const [isClient, setIsClient] = useState(false);
   const router = useRouter();
   useEffect(() => {
@@ -39,13 +42,16 @@ export const NavigationBar = (): JSX.Element => {
               {/*  */}
 
               <Nav.Item className="navItem">
-                <Link href="/about">About</Link>
+                <Link href="/about">{t("about")}</Link>
               </Nav.Item>
               <Nav.Item className="navItem">
-                <Link href="/teams">Teams</Link>
+                <Link href="/teams">{t("team")}</Link>
               </Nav.Item>
               <Nav.Item className="navItem">
-                <Link href="/events">Events</Link>
+                <Link href="/events">{t("event")}</Link>
+              </Nav.Item>
+              <Nav.Item className="navItem">
+                <Link href="/events">{t("project")}</Link>
               </Nav.Item>
               <Nav.Item className="navItem">
                 {/* <Link href={router.pathname} locale={router.locale == "en" ? "ja" : "en"}>
@@ -56,7 +62,7 @@ export const NavigationBar = (): JSX.Element => {
               <Nav.Item className="navItem">
                 <a href="https://forms.gle/uewfWU2QZjpHmSqc9" target="_blank">
                   <Button variant="outline-dark" className="butto">
-                    <small>More</small>
+                    <small>{t("more")}</small>
                   </Button>
                 </a>
               </Nav.Item>

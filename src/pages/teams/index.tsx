@@ -1,14 +1,8 @@
 import type { NextPage } from "next";
 import React, { useState } from "react";
-import {
-  HeaderCard,
-  TeamCard,
-  ImageCard,
-  YearBar,
-} from "components/Cards/index";
+import { HeaderCard, YearBar } from "components/Cards/index";
 import CommonMeta from "components/CommonMeta";
-import { HeaderCardProps, ImageCardProps, TeamCardProps } from "~/types";
-import { SignalCellularNullOutlined } from "@mui/icons-material";
+import { HeaderCardProps } from "~/types";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import type { GetStaticProps, GetStaticPropsContext } from "next";
 import { useTranslation } from "next-i18next";
@@ -20,7 +14,7 @@ export const getStaticProps: GetStaticProps = async (
 
   return {
     props: {
-      ...(await serverSideTranslations(locale as string, ["teams"])),
+      ...(await serverSideTranslations(locale as string, ["teams", "common"])),
     },
   };
 };
