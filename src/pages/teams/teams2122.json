@@ -1,27 +1,26 @@
 [
-    {
-      "name": "Project Lead",
-      "image": "project_lead_22_23.jpg",
-      "image2": null,
-      "multiple": false,
-      "link": "/project",
-      "color": "green"
-    },
-    {
-      "name": "Backend Lead",
-      "image": "backend_lead_22_23.jpg",
-      "image2": null,
-      "multiple": false,
-      "link": "/backend",
-      "color": "blue"
-    },
-    {
-      "name": "Outreach Lead",
-      "image": "outreach_lead_22_23.jpg",
-      "image2": null,
-      "multiple": false,
-      "link": "/outreach",
-      "color": "red"
-    }
-  ]
-  
+  {
+    "name": "Project Lead",
+    "image": "project_lead_22_23.jpg",
+    "image2": null,
+    "multiple": false,
+    "link": "/project",
+    "color": "green"
+  },
+  {
+    "name": "Backend Lead",
+    "image": "backend_lead_22_23.jpg",
+    "image2": null,
+    "multiple": false,
+    "link": "/backend",
+    "color": "blue"
+  },
+  {
+    "name": "Outreach Lead",
+    "image": "outreach_lead_22_23.jpg",
+    "image2": null,
+    "multiple": false,
+    "link": "/outreach",
+    "color": "red"
+  }
+]
