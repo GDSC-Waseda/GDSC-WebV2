@@ -1,1 +1,7 @@
-{"about":"About","event":"Events","more":"More","project":"Project","team":"Teams"}
+{
+  "about": "About",
+  "event": "Events",
+  "more": "More",
+  "project": "Project",
+  "team": "Teams"
+}

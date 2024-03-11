@@ -51,7 +51,7 @@ export const NavigationBar = (): JSX.Element => {
                 <Link href="/events">{t("event")}</Link>
               </Nav.Item>
               <Nav.Item className="navItem">
-                <Link href="/events">{t("project")}</Link>
+                <Link href="/project">{t("project")}</Link>
               </Nav.Item>
               <Nav.Item className="navItem">
                 {/* <Link href={router.pathname} locale={router.locale == "en" ? "ja" : "en"}>
