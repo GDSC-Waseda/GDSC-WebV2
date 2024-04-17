@@ -1,48 +1,59 @@
-import { GetStaticPaths, GetStaticProps, NextPage } from "next";
+import {
+  GetStaticPaths,
+  GetStaticProps,
+  NextPage,
+  GetStaticPropsContext,
+} from "next";
 import Link from "next/link";
 import { useState } from "react";
 import { Button } from "react-bootstrap";
 import { Article, ArticlesResponse } from "../../types";
+import { useTranslation } from "next-i18next";
 
 import { HeaderCard, MediaCard } from "components/Cards/index";
 import CommonMeta from "components/CommonMeta";
 import { HeaderCardProps, MediaCardProps } from "~/types";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const STRAPI_API_URL =
   "https://agile-dawn-20856-3c917b85c4f4.herokuapp.com/api";
 
-export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch(`${STRAPI_API_URL}/articles?populate=*`);
-  const articlesData: { data: Article[] } = await res.json();
+export const getStaticProps: GetStaticProps = async (
+  context: GetStaticPropsContext
+) => {
+  // const res = await fetch(`${STRAPI_API_URL}/articles?populate=*`);
+  // const articlesData: { data: Article[] } = await res.json();
 
-  const dynamicArticles: MediaCardProps[] = articlesData.data.map(
-    (article) => ({
-      size: "m",
-      title: article.attributes.Title,
-      image: article.attributes.coverimg?.data
-        ? article.attributes.coverimg.data.attributes.url
-        : "/default-image-path.jpg",
-      tags: [article.attributes.tagOne],
-      date: new Date(article.attributes.eventDate).toLocaleDateString(),
-      description: article.attributes.eventDescription,
-      link: `/events/details/${article.id}`,
-      open: true,
-      canOpen: false,
-    })
-  );
+  // const dynamicArticles: MediaCardProps[] = articlesData.data.map(
+  //   (article) => ({
+  //     size: "m",
+  //     title: article.attributes.Title,
+  //     image: article.attributes.coverimg?.data
+  //       ? article.attributes.coverimg.data.attributes.url
+  //       : "/default-image-path.jpg",
+  //     tags: [article.attributes.tagOne],
+  //     date: new Date(article.attributes.eventDate).toLocaleDateString(),
+  //     description: article.attributes.eventDescription,
+  //     link: `/events/details/${article.id}`,
+  //     open: true,
+  //     canOpen: false,
+  //   })
+  // );
+  const { locale } = context;
 
-  return { props: { dynamicArticles } };
+  return {
+    props: {
+      ...(await serverSideTranslations(locale as string, ["events", "common"])),
+    },
+  };
 };
 
-interface EventsPageProps {
-  dynamicArticles: MediaCardProps[];
-}
-
-const EventsPage: NextPage<EventsPageProps> = ({ dynamicArticles }) => {
+const EventsPage: NextPage = () => {
+  const { t } = useTranslation();
   const card: HeaderCardProps = {
     headTitle: "",
-    title: "Events",
-    content: "Learn, Connect, Innovate: The Essence of GDSC Waseda's Events.",
+    title: t("events:event_title"),
+    content: t("events:event_message"),
   };
 
   const eventsCard_UpComing: MediaCardProps[] = [];
@@ -178,7 +189,7 @@ const EventsPage: NextPage<EventsPageProps> = ({ dynamicArticles }) => {
           ) : searchInput === "" ? (
             <>
               {/* Combine dynamicArticles with eventsCard_Past */}
-              {[...eventsCard_Past, ...dynamicArticles].map(
+              {/* {[...eventsCard_Past, ...dynamicArticles].map(
                 (eventCard, index) => (
                   <Link href={eventCard.link} key={`combined-${index}`}>
                     <a>
@@ -186,7 +197,7 @@ const EventsPage: NextPage<EventsPageProps> = ({ dynamicArticles }) => {
                     </a>
                   </Link>
                 )
-              )}
+              )} */}
             </>
           ) : null}
         </div>
