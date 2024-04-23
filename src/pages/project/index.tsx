@@ -1,17 +1,13 @@
-import {
-  GetStaticPaths,
-  GetStaticProps,
-  NextPage,
-  GetStaticPropsContext,
-} from "next";
+import type { GetStaticProps, GetStaticPropsContext, NextPage } from "next";
 import Link from "next/link";
 import { useState } from "react";
-import { useTranslation } from "next-i18next";
+import { Button } from "react-bootstrap";
 
 import { HeaderCard, MediaCard } from "components/Cards/index";
 import CommonMeta from "components/CommonMeta";
 import { HeaderCardProps, MediaCardProps } from "~/types";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "next-i18next";
 
 export const getStaticProps: GetStaticProps = async (
   context: GetStaticPropsContext
@@ -20,29 +16,26 @@ export const getStaticProps: GetStaticProps = async (
 
   return {
     props: {
-      ...(await serverSideTranslations(locale as string, [
-        "project",
-        "common",
-      ])),
+      ...(await serverSideTranslations(locale as string, ["events", "common"])),
     },
   };
 };
 
 const ProjectPage: NextPage = () => {
   const { t } = useTranslation();
-
   const card: HeaderCardProps = {
     headTitle: "",
     title: t("project:project_title"),
     content: t("project:project_message"),
   };
 
-  const project_Cards: MediaCardProps[] = [
+  const eventsCard_UpComing: MediaCardProps[] = [];
+
+  const project_cards: MediaCardProps[] = [
     {
       size: "m",
-      title: "Waseda Place",
-      image:
-        "https://res.cloudinary.com/df3ab0lxf/image/upload/v1705215902/thumbnail_event_solutionchallenge_3770ac70da.png",
+      title: "Mini Solution Challenge",
+      image: "",
       tags: ["Solution Challenge", "Demo Day"],
       date: "July 14, 2023 @Google Japan",
       description: "2023 Mini-Solution Challenge by GDSC Waseda",
@@ -52,9 +45,8 @@ const ProjectPage: NextPage = () => {
     },
     {
       size: "m",
-      title: "Lab Finder",
-      image:
-        "https://res.cloudinary.com/df3ab0lxf/image/upload/v1705215934/thumbnail_event_bridgehack_065e585923.jpg",
+      title: "The Bridge Hackathon 2023",
+      image: "",
       tags: ["Hackathon", "International", "Demo Day"],
       date: "Feb 11th & 12th, 2023 @FinGATE KAYABA",
       description: "24-hour global hackathon across Japan and Korea",
@@ -64,9 +56,8 @@ const ProjectPage: NextPage = () => {
     },
     {
       size: "m",
-      title: "Waseda Line",
-      image:
-        "https://res.cloudinary.com/df3ab0lxf/image/upload/v1705215902/thumbnail_event_mini_solution_challenge_2022_3302800ad3.png",
+      title: "Mini Solution Challenge",
+      image: "",
       tags: ["Solution Challenge", "Demo Day"],
       date: "July 17, 2022 @Google Japan",
       description: "2022 Mini-Solution Challenge by GDSC Waseda",
@@ -88,7 +79,7 @@ const ProjectPage: NextPage = () => {
   };
 
   const filterPastEvents = (input: string) => {
-    const pastEvents = project_Cards;
+    const pastEvents = project_cards;
 
     return pastEvents.filter(
       (event) =>
@@ -109,25 +100,69 @@ const ProjectPage: NextPage = () => {
       <HeaderCard props={card} />
       <div className="events__body">
         <div className="events__body__upcoming">
-          {project_Cards.length === 0 ? (
+          <div className="events__body__header">
+            <span>Upcoming</span>
+          </div>
+          {eventsCard_UpComing.length === 0 ? (
             <div className="no-events">
               <p>Stay tuned for more exciting events!</p>
             </div>
           ) : (
             <div className="events__body__container">
-              {project_Cards.map((eventCard, index) => (
-                <Link
-                  href={eventCard.link}
-                  key={`upcoming-${index}`}
-                  className="a"
-                >
+              {eventsCard_UpComing.map((eventCard, index) => {
+                return (
+                  <Link href={eventCard.link} key={index} className="a">
+                    <a>
+                      <MediaCard props={eventCard} />
+                    </a>
+                  </Link>
+                );
+              })}
+            </div>
+          )}
+        </div>
+        <div className="events__body__past">
+          <div className="events__body__header">
+            <span>Past</span>
+            <div className="events__search-bar">
+              <img
+                src="/tempImg/events/magnefying-glass.png"
+                alt=""
+                className="events__search-icon"
+                width={20}
+                height={22}
+              />
+              <input
+                className="events__search"
+                type="text"
+                placeholder="search event"
+                value={searchInput}
+                onChange={handleSearchInputChange}
+              />
+            </div>
+          </div>
+          {searchResults.length === 0 && searchInput !== "" && (
+            <p>No results found.</p>
+          )}
+          {searchResults.length > 0 ? (
+            <>
+              {searchResults.map((eventCard, index) => (
+                <Link href={eventCard.link} key={index}>
                   <a>
                     <MediaCard props={eventCard} />
                   </a>
                 </Link>
               ))}
-            </div>
-          )}
+            </>
+          ) : searchInput == "" ? (
+            project_cards.map((eventCard, index) => (
+              <Link href={eventCard.link} key={index}>
+                <a>
+                  <MediaCard props={eventCard} />
+                </a>
+              </Link>
+            ))
+          ) : null}
         </div>
       </div>
     </>

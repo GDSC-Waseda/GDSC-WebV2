@@ -131,11 +131,11 @@ const EventsPage: NextPage = () => {
       <div className="events__body">
         <div className="events__body__upcoming">
           <div className="events__body__header">
-            <span>Upcoming</span>
+            <span>{t("events:event_upcoming")}</span>
           </div>
           {eventsCard_UpComing.length === 0 ? (
             <div className="no-events">
-              <p>Stay tuned for more exciting events!</p>
+              <p>{t("events:upcoming_message")}</p>
             </div>
           ) : (
             <div className="events__body__container">
@@ -155,7 +155,7 @@ const EventsPage: NextPage = () => {
         </div>
         <div className="events__body__past">
           <div className="events__body__header">
-            <span>Past</span>
+            <span>{t("events:event_past")}</span>
             <div className="events__search-bar">
               <img
                 src="/tempImg/events/magnefying-glass.png"
