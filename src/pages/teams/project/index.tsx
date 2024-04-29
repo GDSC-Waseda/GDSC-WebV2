@@ -8,67 +8,61 @@ import {
   TeamHeaderCardProps,
 } from "~/types";
 import TeamHeaderCard from "~/components/Cards/TeamHeaderCard";
+import { GetStaticProps } from "next";
+import { MemberType, memberAtributes } from "../../../types";
+import { client } from "../../../sanity";
 
-export const ProjectTeams: NextPage = () => {
+export const getStaticProps: GetStaticProps = async () => {
+  const query = `*[_type == "member" && team == "frontend"]{
+    name,
+    program,
+    school,
+    grade,
+    "imageUrl": image.asset->url
+  }`;
+
+  const members = await client.fetch(query);
+
+  const dynamicTeamCards: TeamCardProps[] = members.map(
+    (member: {
+      name: any;
+      imageUrl: any;
+      program: any;
+      school: any;
+      grade: any;
+    }) => ({
+      title: member.name || "No Name",
+      image: member.imageUrl || "/default-image-path.jpg",
+      major: member.program || "No Program",
+      school: member.school || "No School",
+      year: member.grade || "No Year",
+    })
+  );
+
+  return { props: { dynamicTeamCards } };
+};
+
+interface FrontendTeamProps {
+  dynamicTeamCards: TeamCardProps[];
+}
+
+export const FrontendTeam: NextPage<FrontendTeamProps> = ({
+  dynamicTeamCards,
+}) => {
   const card: TeamHeaderCardProps = {
     headTitle: "",
-    title: "Project Team",
+    title: "Frontend Team",
     content: "Waseda University's chapter of the Google Developer Student Club",
   };
 
   const imageCardProps: ImageCardProps = {
-    title: "Project Team - Priya Mukkundi",
+    title: "Frontend Team - Haruki Oyama",
     content:
-      "Hi! I’m Priya, a third year student majoring in Economics at Waseda University. Project Team’s main goals are to foster innovation, efficiently deliver projects, and bridge technical and non-technical teams through effective communication and collaboration. No matter your tech background, we're thrilled to collaborate with you on your unique ideas and bring practical projects to life.😄",
+      "Hello there! 👋 My name is Haruki,  a second year student at Waseda University majoring in Computer Science and Communications Engineering. In this team, we craft user-centric interfaces and use code to develop lively websites and applications. I’m thrilled to craft projects in collaborations with other teams, expand my knowledge, and innovate remarkable experiences with all of you!",
     image:
-      "https://res.cloudinary.com/df3ab0lxf/image/upload/v1705310641/project_lead_5bb6261bed.jpg",
+      "https://res.cloudinary.com/df3ab0lxf/image/upload/v1705310639/frontend_lead_2900445902.jpg",
     imagePosition: "left",
   };
-
-  const teamCards: Array<TeamCardProps> = [
-    // {
-    //   title: "Lahiru",
-    //   image: "lead.jpg",
-    //   major: "Computer Science",
-    //   school: "FSE",
-    //   year: "4th year",
-    // },
-    // {
-    //   title: "Tazkya",
-    //   image: "frontend_lead.jpg",
-    //   major: "Physics",
-    //   school: "ASE",
-    //   year: "2nd year",
-    // },
-    // {
-    //   title: "Haru",
-    //   image: "outreach_lead.jpg",
-    //   major: "Politics and Econ",
-    //   school: "PSE",
-    //   year: "3rd year",
-    // },
-    // {
-    //   title: "Gun",
-    //   image: "lead.jpg",
-    //   major: "Civil Eng",
-    //   school: "CSE",
-    //   year: "2nd year",
-    // },
-    // {
-    //   title: "Bea",
-    //   image: "outreach_lead.jpg",
-    //   major: "Politics and Econ",
-    //   school: "PSE",
-    //   year: "3rd year",
-    // },
-    // {
-    //   title: "Leeroy",
-    //   image: "frontend_lead.jpg",
-    //   major: "Politics and Econ",
-    //   school: "PSE",
-    //   year: "3rd year",
-    // },
-  ];
 
   return (
     <div className="team-page">
@@ -83,9 +77,9 @@ export const ProjectTeams: NextPage = () => {
         <TeamHeaderCard props={card} />
       </div>
       <ImageCard props={imageCardProps} />
-      {/* <h1 className="members-title">Meet Our Team</h1> */}
+      <h1 className="members-title">Meet Our Team</h1>
       <div className="team-cards-container">
-        {teamCards.map((teamCard, index) => (
+        {dynamicTeamCards.map((teamCard, index) => (
           <TeamCard key={index} props={teamCard} />
         ))}
       </div>
@@ -93,4 +87,4 @@ export const ProjectTeams: NextPage = () => {
   );
 };
 
-export default ProjectTeams;
+export default FrontendTeam;

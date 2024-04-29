@@ -8,28 +8,36 @@ import {
   TeamHeaderCardProps,
 } from "~/types";
 import TeamHeaderCard from "~/components/Cards/TeamHeaderCard";
-
 import { GetStaticProps } from "next";
 import { MemberType, memberAtributes } from "../../../types";
-
-const STRAPI_API_URL =
-  "https://agile-dawn-20856-3c917b85c4f4.herokuapp.com/api";
+import { client } from "../../../sanity";
 
 export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch(`${STRAPI_API_URL}/members?populate=*`);
-  const memberData: { data: MemberType[] } = await res.json();
+  const query = `*[_type == "member" && team == "Backend"]{
+    name,
+    program,
+    school,
+    grade,
+    "imageUrl": image.asset->url
+  }`;
 
-  const dynamicTeamCards: TeamCardProps[] = memberData.data
-    .filter((member) => member.attributes.team === "Backend") // Filter members who are part of the Agile team
-    .map((member) => ({
-      title: member.attributes.name || "No Name",
-      image:
-        member.attributes.memImage?.data?.attributes.url ||
-        "/default-image-path.jpg",
-      major: member.attributes.major || "No Major",
-      school: member.attributes.school || "No School",
-      year: member.attributes.year || "No Year",
-    }));
+  const members = await client.fetch(query);
+
+  const dynamicTeamCards: TeamCardProps[] = members.map(
+    (member: {
+      name: any;
+      imageUrl: any;
+      program: any;
+      school: any;
+      grade: any;
+    }) => ({
+      title: member.name || "No Name",
+      image: member.imageUrl || "/default-image-path.jpg",
+      major: member.program || "No Program",
+      school: member.school || "No School",
+      year: member.grade || "No Year",
+    })
+  );
 
   return { props: { dynamicTeamCards } };
 };
@@ -53,11 +61,9 @@ export const BackendTeam: NextPage<BackendTeamProps> = ({
   };
 
   const imageCardProps: ImageCardProps = {
-    title: "Backend Team - Gunjan Srivastava",
-    content:
-      "Hello everyone! I’m Gunjan, a third year student at Waseda University studying Computer Science and Communications Engineering. In my team, I hope to drive development through implementation of creative solutions (and a little bit of ChatGPT). Together, let's push boundaries and unlock new possibilities, one step at a time!",
-    image:
-      "https://res.cloudinary.com/df3ab0lxf/image/upload/v1705310640/backend_lead_0c2dd9c14a.jpg",
+    title: "Backend Team - Lead Name",
+    content: "Introduction and overview of the Backend team.",
+    image: "https://example.com/image.jpg",
     imagePosition: "left",
   };
 
