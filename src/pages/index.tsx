@@ -1,9 +1,11 @@
 import type { NextPage } from "next";
 import CommonMeta from "components/CommonMeta";
+import Loading from "components/Loading"; // Make sure to import your Loading component
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import type { GetStaticProps, GetStaticPropsContext } from "next";
 import { useTranslation } from "next-i18next";
 import Image from "next/image";
+import { useEffect, useState } from "react"; // Import useState and useEffect
 
 export const getStaticProps: GetStaticProps = async (
   context: GetStaticPropsContext
@@ -19,6 +21,19 @@ export const getStaticProps: GetStaticProps = async (
 
 const Home: NextPage = () => {
   const { t } = useTranslation();
+  const [loading, setLoading] = useState(true); // Initialize loading state to true
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false); // Set loading to false after a delay
+    }, 3000); // Delay in milliseconds
+
+    return () => clearTimeout(timer); // Cleanup the timer
+  }, []);
+
+  if (loading) {
+    return <Loading />;
+  }
 
   return (
     <>
