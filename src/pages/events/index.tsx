@@ -5,9 +5,9 @@ import {
   GetStaticPropsContext,
 } from "next";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "next-i18next";
-
+import { client } from "../../sanity";
 import { HeaderCard, MediaCard } from "components/Cards/index";
 import CommonMeta from "components/CommonMeta";
 import { HeaderCardProps, MediaCardProps } from "~/types";
@@ -27,13 +27,37 @@ export const getStaticProps: GetStaticProps = async (
 
 const EventsPage: NextPage = () => {
   const { t } = useTranslation();
+  const [blogPosts, setBlogPosts] = useState<MediaCardProps[]>([]);
+
+  useEffect(() => {
+    const fetchBlogPosts = async () => {
+      try {
+        const response = await client.fetch(`*[_type == "blogPost"]`);
+        const posts = response.map((post: any) => ({
+          size: "m",
+          title: post.title,
+          image: post.mainImage,
+          tags: post.tags,
+          date: post.publishedAt,
+          description: post.body[0].children[0].text,
+          link: `/blog/${post.slug.current}`,
+          open: true,
+          canOpen: false,
+        }));
+        setBlogPosts(posts);
+      } catch (error) {
+        console.error("Error fetching blog posts:", error);
+      }
+    };
+
+    fetchBlogPosts();
+  }, []);
+
   const card: HeaderCardProps = {
     headTitle: "",
     title: t("events:event_title"),
     content: t("events:event_message"),
   };
-
-  const eventsCard_UpComing: MediaCardProps[] = [];
 
   const eventsCard_Past: MediaCardProps[] = [
     {
@@ -106,31 +130,14 @@ const EventsPage: NextPage = () => {
       />
       <HeaderCard props={card} />
       <div className="events__body">
-        <div className="events__body__upcoming">
-          <div className="events__body__header">
-            <span>{t("events:event_upcoming")}</span>
-          </div>
-          {eventsCard_UpComing.length === 0 ? (
-            <div className="no-events">
-              <p>{t("events:upcoming_message")}</p>
-            </div>
-          ) : (
-            <div className="events__body__container">
-              {eventsCard_UpComing.map((eventCard, index) => (
-                <Link
-                  href={eventCard.link}
-                  key={`upcoming-${index}`}
-                  className="a"
-                >
-                  <a>
-                    <MediaCard props={eventCard} />
-                  </a>
-                </Link>
-              ))}
-            </div>
-          )}
-        </div>
         <div className="events__body__past">
+          {blogPosts.map((post, index) => (
+            <Link href={post.link} key={index}>
+              <a>
+                <MediaCard props={post} />
+              </a>
+            </Link>
+          ))}
           <div className="events__body__header">
             <span>{t("events:event_past")}</span>
             <div className="events__search-bar">
@@ -150,6 +157,7 @@ const EventsPage: NextPage = () => {
               />
             </div>
           </div>
+
           {searchResults.length === 0 && searchInput !== "" && (
             <p>No results found.</p>
           )}
