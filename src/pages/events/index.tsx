@@ -6,8 +6,6 @@ import {
 } from "next";
 import Link from "next/link";
 import { useState } from "react";
-import { Button } from "react-bootstrap";
-import { Article, ArticlesResponse } from "../../types";
 import { useTranslation } from "next-i18next";
 
 import { HeaderCard, MediaCard } from "components/Cards/index";
