@@ -10,25 +10,34 @@ import {
 import TeamHeaderCard from "~/components/Cards/TeamHeaderCard";
 import { GetStaticProps } from "next";
 import { MemberType, memberAtributes } from "../../../types";
-
-const STRAPI_API_URL =
-  "https://agile-dawn-20856-3c917b85c4f4.herokuapp.com/api";
+import { client } from "../../../sanity";
 
 export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch(`${STRAPI_API_URL}/members?populate=*`);
-  const memberData: { data: MemberType[] } = await res.json();
+  const query = `*[_type == "member" && team == "frontend"]{
+    name,
+    program,
+    school,
+    grade,
+    "imageUrl": image.asset->url
+  }`;
 
-  const dynamicTeamCards: TeamCardProps[] = memberData.data
-    .filter((member) => member.attributes.team === "Frontend") // Filter members who are part of the Agile team
-    .map((member) => ({
-      title: member.attributes.name || "No Name",
-      image:
-        member.attributes.memImage?.data?.attributes.url ||
-        "/default-image-path.jpg",
-      major: member.attributes.major || "No Major",
-      school: member.attributes.school || "No School",
-      year: member.attributes.year || "No Year",
-    }));
+  const members = await client.fetch(query);
+
+  const dynamicTeamCards: TeamCardProps[] = members.map(
+    (member: {
+      name: any;
+      imageUrl: any;
+      program: any;
+      school: any;
+      grade: any;
+    }) => ({
+      title: member.name || "No Name",
+      image: member.imageUrl || "/default-image-path.jpg",
+      major: member.program || "No Program",
+      school: member.school || "No School",
+      year: member.grade || "No Year",
+    })
+  );
 
   return { props: { dynamicTeamCards } };
 };

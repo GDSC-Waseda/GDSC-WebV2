@@ -15,30 +15,9 @@ import CommonMeta from "components/CommonMeta";
 import { HeaderCardProps, MediaCardProps } from "~/types";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
-const STRAPI_API_URL =
-  "https://agile-dawn-20856-3c917b85c4f4.herokuapp.com/api";
-
 export const getStaticProps: GetStaticProps = async (
   context: GetStaticPropsContext
 ) => {
-  // const res = await fetch(`${STRAPI_API_URL}/articles?populate=*`);
-  // const articlesData: { data: Article[] } = await res.json();
-
-  // const dynamicArticles: MediaCardProps[] = articlesData.data.map(
-  //   (article) => ({
-  //     size: "m",
-  //     title: article.attributes.Title,
-  //     image: article.attributes.coverimg?.data
-  //       ? article.attributes.coverimg.data.attributes.url
-  //       : "/default-image-path.jpg",
-  //     tags: [article.attributes.tagOne],
-  //     date: new Date(article.attributes.eventDate).toLocaleDateString(),
-  //     description: article.attributes.eventDescription,
-  //     link: `/events/details/${article.id}`,
-  //     open: true,
-  //     canOpen: false,
-  //   })
-  // );
   const { locale } = context;
 
   return {
