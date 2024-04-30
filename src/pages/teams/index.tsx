@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { HeaderCard, YearBar } from "components/Cards/index";
 import CommonMeta from "components/CommonMeta";
 import { HeaderCardProps } from "~/types";
@@ -148,6 +148,12 @@ export const TeamsPage: NextPage = () => {
     "GDSC 22/23": exteams["GDSC 22/23"],
     "GDSC 21/22": exteams["GDSC 21/22"],
   };
+
+  useEffect(() => {
+    setTeamLeaderImages(
+      teamLeadersByYear[selectedYear]?.map((leader) => leader.image)
+    );
+  }, [selectedYear]);
 
   const handleYearChange = (year: string) => {
     setSelectedYear(year);

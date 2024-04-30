@@ -5,7 +5,6 @@
       "image": "project_lead22.jpg",
       "image2": null,
       "multiple": false,
-      "link": "/project",
       "color": "green"
     },
     {
@@ -13,7 +12,6 @@
       "image": "backend_lead22.jpg",
       "image2": null,
       "multiple": false,
-      "link": "/backend",
       "color": "blue"
     },
     {
@@ -21,7 +19,6 @@
       "image": "frontend_lead22.jpg",
       "image2": null,
       "multiple": false,
-      "link": "/frontend",
       "color": "yellow"
     },
     {
@@ -29,7 +26,6 @@
       "image": "education_lead22.jpg",
       "image2": null,
       "multiple": false,
-      "link": "/education",
       "color": "blue"
     },
     {
@@ -37,7 +33,6 @@
       "image": "operations_lead22.jpg",
       "image2": null,
       "multiple": false,
-      "link": "/operations",
       "color": "green"
     },
     {
@@ -45,7 +40,6 @@
       "image": "marketing_lead22.jpg",
       "image2": null,
       "multiple": false,
-      "link": "/marketing",
       "color": "red"
     },
     {
@@ -53,7 +47,6 @@
       "image": "finance_lead22.jpg",
       "image2": null,
       "multiple": false,
-      "link": "/finance",
       "color": "yellow"
     }
   ],
