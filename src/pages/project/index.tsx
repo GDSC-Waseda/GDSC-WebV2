@@ -1,13 +1,12 @@
 import type { GetStaticProps, GetStaticPropsContext, NextPage } from "next";
-import Link from "next/link";
 import { useState } from "react";
-import { Button } from "react-bootstrap";
-
-import { HeaderCard, MediaCard } from "components/Cards/index";
-import CommonMeta from "components/CommonMeta";
-import { HeaderCardProps, MediaCardProps } from "~/types";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
+
+import CommonMeta from "components/CommonMeta";
+import HeaderCard from "components/Cards/HeaderCard";
+import ProjectCard from "components/Cards/ProjectCard";
+import { HeaderCardProps, ProjectCardProps } from "~/types";
 
 export const getStaticProps: GetStaticProps = async (
   context: GetStaticPropsContext
@@ -16,153 +15,62 @@ export const getStaticProps: GetStaticProps = async (
 
   return {
     props: {
-      ...(await serverSideTranslations(locale as string, ["events", "common"])),
+      ...(await serverSideTranslations(locale as string, [
+        "project",
+        "common",
+      ])),
     },
   };
 };
 
 const ProjectPage: NextPage = () => {
   const { t } = useTranslation();
-  const card: HeaderCardProps = {
-    headTitle: "",
+  const headerCardProps: HeaderCardProps = {
     title: t("project:project_title"),
     content: t("project:project_message"),
   };
 
-  const eventsCard_UpComing: MediaCardProps[] = [];
-
-  const project_cards: MediaCardProps[] = [
+  const sampleProjects: ProjectCardProps[] = [
     {
-      size: "m",
-      title: "Mini Solution Challenge",
-      image: "",
-      tags: ["Solution Challenge", "Demo Day"],
-      date: "July 14, 2023 @Google Japan",
-      description: "2023 Mini-Solution Challenge by GDSC Waseda",
-      link: "/events/details/mini-solution-challenge-2023",
-      open: true,
-      canOpen: false,
-    },
-    {
-      size: "m",
-      title: "The Bridge Hackathon 2023",
-      image: "",
-      tags: ["Hackathon", "International", "Demo Day"],
-      date: "Feb 11th & 12th, 2023 @FinGATE KAYABA",
-      description: "24-hour global hackathon across Japan and Korea",
-      link: "/events/details/bridge-hackathon-2023",
-      open: true,
-      canOpen: false,
-    },
-    {
-      size: "m",
-      title: "Mini Solution Challenge",
-      image: "",
-      tags: ["Solution Challenge", "Demo Day"],
-      date: "July 17, 2022 @Google Japan",
-      description: "2022 Mini-Solution Challenge by GDSC Waseda",
-      link: "/events/details/mini-solution-challenge-2022",
-      open: true,
-      canOpen: false,
+      title: "WasedaLine",
+      description: "A queue tracking project for university",
+      imageUrl: "/wasedaLine.jpg",
+      repoUrl: "https://github.com/s3nmith/WasedaLineWeb",
+      members: [{ name: "Lahiru Udawatta", role: "Developer" }],
     },
   ];
 
-  const [showCard, setShowCard] = useState(3);
-
+  const [projects, setProjects] = useState<ProjectCardProps[]>(sampleProjects);
   const [searchInput, setSearchInput] = useState("");
-  const [searchResults, setSearchResults] = useState<MediaCardProps[]>([]);
+  const [searchResults, setSearchResults] =
+    useState<ProjectCardProps[]>(projects);
 
   const handleSearchInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const input = e.target.value;
+    const input = e.target.value.toLowerCase();
     setSearchInput(input);
-    setSearchResults(filterPastEvents(input));
-  };
-
-  const filterPastEvents = (input: string) => {
-    const pastEvents = project_cards;
-
-    return pastEvents.filter(
-      (event) =>
-        event.title.toLowerCase().includes(input.toLowerCase()) ||
-        event.description.toLowerCase().includes(input.toLowerCase())
+    const filteredProjects = projects.filter(
+      (project) =>
+        project.title.toLowerCase().includes(input) ||
+        project.description.toLowerCase().includes(input)
     );
+    setSearchResults(filteredProjects);
   };
 
   return (
     <>
       <CommonMeta
-        pageTitle={card.title}
-        pageDescription={card.content}
-        pagePath="events"
+        pageTitle={headerCardProps.title}
+        pageDescription={headerCardProps.content}
+        pagePath="projects"
         pageImgWidth={1280}
         pageImgHeight={630}
       />
-      <HeaderCard props={card} />
-      <div className="events__body">
-        <div className="events__body__upcoming">
-          <div className="events__body__header">
-            <span>Upcoming</span>
-          </div>
-          {eventsCard_UpComing.length === 0 ? (
-            <div className="no-events">
-              <p>Stay tuned for more exciting events!</p>
-            </div>
-          ) : (
-            <div className="events__body__container">
-              {eventsCard_UpComing.map((eventCard, index) => {
-                return (
-                  <Link href={eventCard.link} key={index} className="a">
-                    <a>
-                      <MediaCard props={eventCard} />
-                    </a>
-                  </Link>
-                );
-              })}
-            </div>
-          )}
-        </div>
-        <div className="events__body__past">
-          <div className="events__body__header">
-            <span>Past</span>
-            <div className="events__search-bar">
-              <img
-                src="/tempImg/events/magnefying-glass.png"
-                alt=""
-                className="events__search-icon"
-                width={20}
-                height={22}
-              />
-              <input
-                className="events__search"
-                type="text"
-                placeholder="search event"
-                value={searchInput}
-                onChange={handleSearchInputChange}
-              />
-            </div>
-          </div>
-          {searchResults.length === 0 && searchInput !== "" && (
-            <p>No results found.</p>
-          )}
-          {searchResults.length > 0 ? (
-            <>
-              {searchResults.map((eventCard, index) => (
-                <Link href={eventCard.link} key={index}>
-                  <a>
-                    <MediaCard props={eventCard} />
-                  </a>
-                </Link>
-              ))}
-            </>
-          ) : searchInput == "" ? (
-            project_cards.map((eventCard, index) => (
-              <Link href={eventCard.link} key={index}>
-                <a>
-                  <MediaCard props={eventCard} />
-                </a>
-              </Link>
-            ))
-          ) : null}
+      <HeaderCard props={headerCardProps} />
+      <div className="container mx-auto px-4 py-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {projects.map((project, index) => (
+            <ProjectCard key={index} {...project} />
+          ))}
         </div>
       </div>
     </>

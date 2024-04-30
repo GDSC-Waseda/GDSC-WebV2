@@ -5,6 +5,18 @@ export interface MemberType {
   photo_link?: string;
 }
 
+export interface ProjectMember {
+  name: string;
+  role?: string;
+}
+
+export interface ProjectCardProps {
+  title: string;
+  description: string;
+  imageUrl?: string;
+  repoUrl: string;
+  members: ProjectMember[];
+}
 export interface CarouselCardProps {
   image: string;
   subtitle: string;
