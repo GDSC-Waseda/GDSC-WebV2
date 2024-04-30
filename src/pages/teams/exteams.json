@@ -53,23 +53,17 @@
   "GDSC 21/22": [
     {
       "name": "Project Lead",
-      "image": "project_lead.jpg",
-      "image2": null,
-      "multiple": false,
-      "link": "/project",
+      "image": "project_lead21.jpg",
       "color": "green"
     },
     {
       "name": "Backend Lead",
-      "image": "backend_lead.jpg",
-      "image2": null,
-      "multiple": false,
-      "link": "/backend",
+      "image": "backend_lead21.jpg",
       "color": "blue"
     },
     {
       "name": "Frontend Lead",
-      "image": "frontend_lead.jpg",
+      "image": "frontend_lead21.jpg",
       "image2": null,
       "multiple": false,
       "link": "/frontend",
@@ -77,23 +71,13 @@
     },
     {
       "name": "Education Lead",
-      "image": "education_lead1.jpg",
-      "image2": "education_lead2.jpg",
-      "multiple": true,
-      "link": "/education",
+      "image": "education_lead21.jpg",
+      "multiple": false,
       "color": "blue"
     },
     {
-      "name": "Agile Lead",
-      "image": "agile_lead.jpg",
-      "image2": null,
-      "multiple": false,
-      "link": "/agile",
-      "color": "yellow"
-    },
-    {
       "name": "Outreach Lead",
-      "image": "outreach_lead.jpg",
+      "image": "outreach_lead21.jpg",
       "image2": null,
       "multiple": false,
       "link": "/outreach",
@@ -101,7 +85,7 @@
     },
     {
       "name": "Operations Lead",
-      "image": "operations_lead.jpg",
+      "image": "operations_lead21.jpg",
       "image2": null,
       "multiple": false,
       "link": "/operations",
@@ -109,7 +93,7 @@
     },
     {
       "name": "Marketing Lead",
-      "image": "marketing_lead.jpg",
+      "image": "marketing_lead21.jpg",
       "image2": null,
       "multiple": false,
       "link": "/marketing",
@@ -117,7 +101,7 @@
     },
     {
       "name": "Finance Lead",
-      "image": "finance_lead.jpg",
+      "image": "finance_lead21.jpg",
       "image2": null,
       "multiple": false,
       "link": "/finance",
