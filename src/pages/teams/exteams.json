@@ -2,7 +2,7 @@
   "GDSC 22/23": [
     {
       "name": "Project Lead",
-      "image": "project_lead22.jpg",
+      "image": "project_lead22.png",
       "image2": null,
       "multiple": false,
       "color": "green"
@@ -37,7 +37,7 @@
     },
     {
       "name": "Marketing Lead",
-      "image": "marketing_lead22.jpg",
+      "image": "marketing_lead22.png",
       "image2": null,
       "multiple": false,
       "color": "red"
