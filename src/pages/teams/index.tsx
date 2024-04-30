@@ -6,6 +6,7 @@ import { HeaderCardProps } from "~/types";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import type { GetStaticProps, GetStaticPropsContext } from "next";
 import { useTranslation } from "next-i18next";
+import exteams from "./exteams.json";
 
 export const getStaticProps: GetStaticProps = async (
   context: GetStaticPropsContext
@@ -137,15 +138,15 @@ export const TeamsPage: NextPage = () => {
     Array<{
       name: string;
       image: string;
-      image2: string | null;
-      multiple: boolean;
-      link: string;
+      image2?: string | null;
+      multiple?: boolean;
+      link?: string;
       color: string;
     }>
   > = {
     "GDSC 23/24": teamLeaders,
-    "GDSC 22/23": [teamLeaders[0], teamLeaders[1], teamLeaders[5]],
-    "GDSC 21/22": [teamLeaders[6], teamLeaders[3]],
+    "GDSC 22/23": exteams["GDSC 22/23"],
+    "GDSC 21/22": exteams["GDSC 21/22"],
   };
 
   const handleYearChange = (year: string) => {

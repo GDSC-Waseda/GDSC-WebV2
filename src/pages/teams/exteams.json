@@ -1,0 +1,134 @@
+{
+  "GDSC 22/23": [
+    {
+      "name": "Project Lead",
+      "image": "project_lead22.jpg",
+      "image2": null,
+      "multiple": false,
+      "link": "/project",
+      "color": "green"
+    },
+    {
+      "name": "Backend Lead",
+      "image": "backend_lead22.jpg",
+      "image2": null,
+      "multiple": false,
+      "link": "/backend",
+      "color": "blue"
+    },
+    {
+      "name": "Frontend Lead",
+      "image": "frontend_lead22.jpg",
+      "image2": null,
+      "multiple": false,
+      "link": "/frontend",
+      "color": "yellow"
+    },
+    {
+      "name": "Education Lead",
+      "image": "education_lead22.jpg",
+      "image2": null,
+      "multiple": false,
+      "link": "/education",
+      "color": "blue"
+    },
+    {
+      "name": "Operations Lead",
+      "image": "operations_lead22.jpg",
+      "image2": null,
+      "multiple": false,
+      "link": "/operations",
+      "color": "green"
+    },
+    {
+      "name": "Marketing Lead",
+      "image": "marketing_lead22.jpg",
+      "image2": null,
+      "multiple": false,
+      "link": "/marketing",
+      "color": "red"
+    },
+    {
+      "name": "Finance Lead",
+      "image": "finance_lead22.jpg",
+      "image2": null,
+      "multiple": false,
+      "link": "/finance",
+      "color": "yellow"
+    }
+  ],
+  "GDSC 21/22": [
+    {
+      "name": "Project Lead",
+      "image": "project_lead.jpg",
+      "image2": null,
+      "multiple": false,
+      "link": "/project",
+      "color": "green"
+    },
+    {
+      "name": "Backend Lead",
+      "image": "backend_lead.jpg",
+      "image2": null,
+      "multiple": false,
+      "link": "/backend",
+      "color": "blue"
+    },
+    {
+      "name": "Frontend Lead",
+      "image": "frontend_lead.jpg",
+      "image2": null,
+      "multiple": false,
+      "link": "/frontend",
+      "color": "yellow"
+    },
+    {
+      "name": "Education Lead",
+      "image": "education_lead1.jpg",
+      "image2": "education_lead2.jpg",
+      "multiple": true,
+      "link": "/education",
+      "color": "blue"
+    },
+    {
+      "name": "Agile Lead",
+      "image": "agile_lead.jpg",
+      "image2": null,
+      "multiple": false,
+      "link": "/agile",
+      "color": "yellow"
+    },
+    {
+      "name": "Outreach Lead",
+      "image": "outreach_lead.jpg",
+      "image2": null,
+      "multiple": false,
+      "link": "/outreach",
+      "color": "red"
+    },
+    {
+      "name": "Operations Lead",
+      "image": "operations_lead.jpg",
+      "image2": null,
+      "multiple": false,
+      "link": "/operations",
+      "color": "green"
+    },
+    {
+      "name": "Marketing Lead",
+      "image": "marketing_lead.jpg",
+      "image2": null,
+      "multiple": false,
+      "link": "/marketing",
+      "color": "red"
+    },
+    {
+      "name": "Finance Lead",
+      "image": "finance_lead.jpg",
+      "image2": null,
+      "multiple": false,
+      "link": "/finance",
+      "color": "yellow"
+    }
+  ]
+}
