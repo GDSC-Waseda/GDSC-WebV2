@@ -12,11 +12,11 @@ const Carousel: React.FC<CarouselProps> = ({ props }) => {
   const handleCardClick = (direction: string) => {
     if (direction === "left") {
       setCenterIndex((oldCenterIndex) =>
-        oldCenterIndex === 0 ? props.length - 1 : oldCenterIndex - 1
+        oldCenterIndex === 0 ? props.length - 1 : oldCenterIndex - 1,
       );
     } else if (direction === "right") {
       setCenterIndex((oldCenterIndex) =>
-        oldCenterIndex === props.length - 1 ? 0 : oldCenterIndex + 1
+        oldCenterIndex === props.length - 1 ? 0 : oldCenterIndex + 1,
       );
     }
   };

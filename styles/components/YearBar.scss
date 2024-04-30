@@ -12,7 +12,9 @@
     font-weight: bold;
     position: relative;
     color: black;
-    transition: color 0.3s ease, transform 0.3s ease;
+    transition:
+      color 0.3s ease,
+      transform 0.3s ease;
 
     &:hover {
       color: #555;

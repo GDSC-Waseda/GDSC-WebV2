@@ -9,7 +9,7 @@ import { useTranslation } from "next-i18next";
 import exteams from "./exteams.json";
 
 export const getStaticProps: GetStaticProps = async (
-  context: GetStaticPropsContext
+  context: GetStaticPropsContext,
 ) => {
   const { locale } = context;
 
@@ -105,7 +105,7 @@ export const TeamsPage: NextPage = () => {
   ];
 
   const [teamLeaderImages, setTeamLeaderImages] = useState(
-    teamLeaders.map((leader) => leader.image)
+    teamLeaders.map((leader) => leader.image),
   );
 
   const handleSwapClick = (index: number) => {
@@ -144,7 +144,7 @@ export const TeamsPage: NextPage = () => {
 
   useEffect(() => {
     setTeamLeaderImages(
-      teamLeadersByYear[selectedYear]?.map((leader) => leader.image)
+      teamLeadersByYear[selectedYear]?.map((leader) => leader.image),
     );
   }, [selectedYear]);
 

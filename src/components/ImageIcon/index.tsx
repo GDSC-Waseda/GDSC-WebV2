@@ -22,7 +22,7 @@ export const ImageIcon: React.FC<{
 
   const handleSwapClick = () => {
     setCurrentImage((prevImage) =>
-      prevImage === props.image ? props.image2 ?? "" : props.image ?? ""
+      prevImage === props.image ? props.image2 ?? "" : props.image ?? "",
     );
   };
 

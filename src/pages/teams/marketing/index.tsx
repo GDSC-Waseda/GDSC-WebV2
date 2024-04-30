@@ -31,7 +31,7 @@ export const getStaticProps: GetStaticProps = async () => {
       major: member.program || "No Program",
       school: member.school || "No School",
       year: member.grade || "No Year",
-    })
+    }),
   );
 
   return { props: { dynamicTeamCards } };

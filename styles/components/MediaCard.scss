@@ -43,7 +43,9 @@
   &__detail-container {
     margin-top: 4px;
     padding: 5px 10px;
-    transition: width 600ms ease-out, height 600ms ease-out;
+    transition:
+      width 600ms ease-out,
+      height 600ms ease-out;
     overflow: hidden;
   }
 
