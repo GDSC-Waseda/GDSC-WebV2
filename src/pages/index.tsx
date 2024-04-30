@@ -26,7 +26,7 @@ const Home: NextPage = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false); // Set loading to false after a delay
-    }, 3000); // Delay in milliseconds
+    }, 1200); // Delay in milliseconds
 
     return () => clearTimeout(timer); // Cleanup the timer
   }, []);
