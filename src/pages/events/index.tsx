@@ -17,41 +17,54 @@ export const getStaticProps: GetStaticProps = async (
   context: GetStaticPropsContext
 ) => {
   const { locale } = context;
+  const query = `*[_type == "blogPost"]{
+    title,
+    mainImage,
+    tags,
+    publishedAt,
+    body,
+    slug
+  }`;
+  const blogPostsResponse = await client.fetch(query);
+  const blogPosts = blogPostsResponse.map(
+    (post: {
+      title: any;
+      mainImage: any;
+      tags: any;
+      publishedAt: string | number | Date;
+      body?: { children: { text: any }[] }[];
+      slug: any;
+    }) => ({
+      size: "m",
+      title: post.title,
+      image: post.mainImage || "/gdsc-top.jpg",
+      tags: post.tags,
+      date: new Date(post.publishedAt).toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      }),
+      description:
+        post.body && post.body[0] ? post.body[0].children[0].text : undefined,
+      link: `/blog/${post.slug}`,
+      open: false,
+      canOpen: false,
+    })
+  );
 
   return {
     props: {
       ...(await serverSideTranslations(locale as string, ["events", "common"])),
+      blogPosts,
     },
   };
 };
 
-const EventsPage: NextPage = () => {
+const EventsPage: NextPage<{ blogPosts: MediaCardProps[] }> = ({
+  blogPosts,
+}) => {
   const { t } = useTranslation();
-  const [blogPosts, setBlogPosts] = useState<MediaCardProps[]>([]);
-
-  useEffect(() => {
-    const fetchBlogPosts = async () => {
-      try {
-        const response = await client.fetch(`*[_type == "blogPost"]`);
-        const posts = response.map((post: any) => ({
-          size: "m",
-          title: post.title,
-          image: post.mainImage,
-          tags: post.tags,
-          date: post.publishedAt,
-          description: post.body[0].children[0].text,
-          link: `/blog/${post.slug.current}`,
-          open: true,
-          canOpen: false,
-        }));
-        setBlogPosts(posts);
-      } catch (error) {
-        console.error("Error fetching blog posts:", error);
-      }
-    };
-
-    fetchBlogPosts();
-  }, []);
+  const [blogPost, setBlogPosts] = useState<MediaCardProps[]>(blogPosts);
 
   const card: HeaderCardProps = {
     headTitle: "",
@@ -72,33 +85,7 @@ const EventsPage: NextPage = () => {
       open: true,
       canOpen: false,
     },
-    {
-      size: "m",
-      title: "The Bridge Hackathon 2023",
-      image:
-        "https://res.cloudinary.com/df3ab0lxf/image/upload/v1705215934/thumbnail_event_bridgehack_065e585923.jpg",
-      tags: ["Hackathon", "International", "Demo Day"],
-      date: "Feb 11th & 12th, 2023 @FinGATE KAYABA",
-      description: "24-hour global hackathon across Japan and Korea",
-      link: "/events/details/bridge-hackathon-2023",
-      open: true,
-      canOpen: false,
-    },
-    {
-      size: "m",
-      title: "Mini Solution Challenge",
-      image:
-        "https://res.cloudinary.com/df3ab0lxf/image/upload/v1705215902/thumbnail_event_mini_solution_challenge_2022_3302800ad3.png",
-      tags: ["Solution Challenge", "Demo Day"],
-      date: "July 17, 2022 @Google Japan",
-      description: "2022 Mini-Solution Challenge by GDSC Waseda",
-      link: "/events/details/mini-solution-challenge-2022",
-      open: true,
-      canOpen: false,
-    },
   ];
-
-  const [showCard, setShowCard] = useState(3);
 
   const [searchInput, setSearchInput] = useState("");
   const [searchResults, setSearchResults] = useState<MediaCardProps[]>([]);
@@ -131,13 +118,6 @@ const EventsPage: NextPage = () => {
       <HeaderCard props={card} />
       <div className="events__body">
         <div className="events__body__past">
-          {blogPosts.map((post, index) => (
-            <Link href={post.link} key={index}>
-              <a>
-                <MediaCard props={post} />
-              </a>
-            </Link>
-          ))}
           <div className="events__body__header">
             <span>{t("events:event_past")}</span>
             <div className="events__search-bar">
@@ -157,6 +137,11 @@ const EventsPage: NextPage = () => {
               />
             </div>
           </div>
+          {blogPost.map((post, index) => (
+            <Link href={post.link} key={index}>
+              <MediaCard props={post} />
+            </Link>
+          ))}
 
           {searchResults.length === 0 && searchInput !== "" && (
             <p>No results found.</p>

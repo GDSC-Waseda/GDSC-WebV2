@@ -1,15 +1,9 @@
 import type { NextPage } from "next";
-import { HeaderCard, TeamCard, ImageCard } from "components/Cards/index";
+import { TeamCard, ImageCard } from "components/Cards/index";
 import CommonMeta from "components/CommonMeta";
-import {
-  HeaderCardProps,
-  ImageCardProps,
-  TeamCardProps,
-  TeamHeaderCardProps,
-} from "~/types";
+import { ImageCardProps, TeamCardProps, TeamHeaderCardProps } from "~/types";
 import TeamHeaderCard from "~/components/Cards/TeamHeaderCard";
 import { GetStaticProps } from "next";
-import { MemberType, memberAtributes } from "../../../types";
 import { client } from "../../../sanity";
 
 export const getStaticProps: GetStaticProps = async () => {
