@@ -3,25 +3,39 @@
   src: url("/fonts/prodsanB.ttf");
 }
 
+.team-leaders-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 .team-leaders-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  justify-items: center;
-  gap: 15px;
-}
+  justify-content: center;
+  gap: 30px;
 
-.team-leaders-container .team-leader:last-child {
-  grid-column: span 4; //span all 4
-  text-align: center; //center last
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .team-leader {
-  width: 250px;
+  width: 100%;
+  max-width: 250px;
   text-align: center;
   padding-top: 60px;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center children vertically */
+  align-items: center;
 
   &-swap-container {
     height: 220px;

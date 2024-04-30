@@ -85,14 +85,7 @@ export const TeamsPage: NextPage = () => {
       link: "/outreach",
       color: "red",
     },
-    {
-      name: t("teams:operations"),
-      image: "operations_lead.jpg",
-      image2: null,
-      multiple: false,
-      link: "/operations",
-      color: "green",
-    },
+
     {
       name: t("teams:marketing"),
       image: "marketing_lead.jpg",
@@ -184,12 +177,34 @@ export const TeamsPage: NextPage = () => {
         selectedYear={selectedYear}
         onYearChange={handleYearChange}
       />
-
-      <div className="team-leaders-container">
-        {filteredTeamLeaders.map((teamCard, index) => (
-          <div key={index} className="team-leader">
-            {teamCard.multiple == true ? (
-              <div className="team-leader-swap-container">
+      <div className="team-leaders-wrapper">
+        <div className="team-leaders-container">
+          {filteredTeamLeaders.map((teamCard, index) => (
+            <div key={index} className="team-leader">
+              {teamCard.multiple == true ? (
+                <div className="team-leader-swap-container">
+                  <a
+                    className="team-leader-link"
+                    href={`/teams/${teamCard.link}`}
+                  >
+                    <img
+                      className={`team-leader-image ${teamCard.color}`}
+                      src={`/tempImg/leads/${teamLeaderImages[index]}`}
+                      alt="team leader"
+                    />
+                  </a>
+                  <button
+                    className="team-leader-swap-button"
+                    onClick={() => handleSwapClick(index)}
+                  >
+                    <img
+                      className="team-leader-swap"
+                      src={`/tempImg/arrows-${teamCard.color}.png`}
+                      alt="arrows"
+                    />
+                  </button>
+                </div>
+              ) : (
                 <a
                   className="team-leader-link"
                   href={`/teams/${teamCard.link}`}
@@ -200,32 +215,14 @@ export const TeamsPage: NextPage = () => {
                     alt="team leader"
                   />
                 </a>
-                <button
-                  className="team-leader-swap-button"
-                  onClick={() => handleSwapClick(index)}
-                >
-                  <img
-                    className="team-leader-swap"
-                    src={`/tempImg/arrows-${teamCard.color}.png`}
-                    alt="arrows"
-                  />
-                </button>
-              </div>
-            ) : (
+              )}
+              <div className="team-leader-name">{teamCard.name}</div>
               <a className="team-leader-link" href={`/teams/${teamCard.link}`}>
-                <img
-                  className={`team-leader-image ${teamCard.color}`}
-                  src={`/tempImg/leads/${teamLeaderImages[index]}`}
-                  alt="team leader"
-                />
+                {t("teams:learn_more")}
               </a>
-            )}
-            <div className="team-leader-name">{teamCard.name}</div>
-            <a className="team-leader-link" href={`/teams/${teamCard.link}`}>
-              {t("teams:learn_more")}
-            </a>
-          </div>
-        ))}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
