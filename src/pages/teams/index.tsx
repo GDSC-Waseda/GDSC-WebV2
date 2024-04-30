@@ -149,9 +149,28 @@ export const TeamsPage: NextPage = () => {
   }, [selectedYear]);
 
   const handleYearChange = (year: string) => {
-    setSelectedYear(year);
-  };
+    const container = document.querySelector(".team-leaders-container");
+    const width = (container as HTMLElement)?.offsetWidth || 0;
+    const years = Object.keys(teamLeadersByYear);
+    const currentIndex = years.indexOf(selectedYear);
+    const newIndex = years.indexOf(year);
+    const direction = newIndex > currentIndex ? 1 : -1;
 
+    if (container instanceof HTMLElement) {
+      container.style.transform = `translateX(${direction * -width}px)`;
+
+      setTimeout(() => {
+        setSelectedYear(year);
+        container.style.transition = "none";
+        container.style.transform = `translateX(${direction * width}px)`;
+
+        setTimeout(() => {
+          container.style.transition = "transform 0.5s ease-in-out";
+          container.style.transform = "translateX(0)";
+        });
+      }, 500);
+    }
+  };
   const filteredTeamLeaders = teamLeadersByYear[selectedYear] || [];
 
   return (

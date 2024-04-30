@@ -7,6 +7,7 @@
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 20px;
+  overflow: hidden; // Add this line to hide the content outside the container
 }
 
 .team-leaders-container {
@@ -14,6 +15,7 @@
   grid-template-columns: repeat(4, 1fr);
   justify-content: center;
   gap: 30px;
+  transition: transform 0.5s ease-in-out; // Add this line for the animation
 
   @media (max-width: 1200px) {
     grid-template-columns: repeat(3, 1fr);
