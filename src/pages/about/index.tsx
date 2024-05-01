@@ -9,7 +9,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import type { GetStaticProps, GetStaticPropsContext } from "next";
 
 export const getStaticProps: GetStaticProps = async (
-  context: GetStaticPropsContext,
+  context: GetStaticPropsContext
 ) => {
   const { locale } = context;
 
@@ -37,8 +37,6 @@ export const AboutPage: NextPage = () => {
   };
 
   const leadsThoughtsContent = t("about:leadmesg");
-  console.log(t("about:head"));
-  console.log(t("about:discButt"));
 
   return (
     <div className="about-page">
@@ -56,9 +54,8 @@ export const AboutPage: NextPage = () => {
         <h2 className="textCard__section__title">{whatWeDo.title}</h2>
         <p className="textCard__section__content">{whatWeDo.content}</p>
       </div>
-
       {/* Our Lead's Thoughts Section Styled Similarly but Outside TextCard */}
-      <div className="textCard__section leads-thoughts-custom">
+      <div className="leads-thoughts-custom">
         <div className="leads-thoughts-text">
           <h2 className="textCard__section__title">{t("about:leadthought")}</h2>
           <p className="textCard__section__content">{leadsThoughtsContent}</p>

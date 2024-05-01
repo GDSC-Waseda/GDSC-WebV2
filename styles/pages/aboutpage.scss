@@ -1,56 +1,136 @@
 @font-face {
-  font-family: myFont;
+  font-family: "myFont";
   src: url("/fonts/prodsanReg.ttf");
 }
 
 .about-page {
-  .textCard__section {
-    padding: 0 20px;
-    margin: 60px 200px;
-    font-family: "myFont", sans-serif;
+  font-family: "myFont", sans-serif; // Apply custom font to the entire page
 
-    &__title,
-    &__content {
-      text-align: left;
-      color: #000;
+  .headerCard {
+    border: 0;
+    margin: 0 60px;
+    height: 814px;
+    border-radius: 0;
+    min-height: 200px;
+    background-color: #f2f2f2;
+    justify-content: center;
+
+    @media (min-width: 790px) {
+      height: 700px;
+    }
+
+    &__headerTitle {
+      text-align: center;
     }
 
     &__title {
-      font-size: 40px;
+      text-align: center;
+      font-size: max(4vw, 66px);
+      font-weight: 700;
+    }
+
+    &__container {
+      width: 100%;
+      padding: 10px;
+    }
+
+    &__contents {
+      padding-top: 10px;
+      text-align: center;
+      font-size: max(1.5vw, 15px);
+      color: #404040;
+    }
+
+    &__button {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      background: #000000;
+      width: 197px;
+      height: 59px;
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      color: #fff;
+      font-size: 25px;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  .textCard__section {
+    align-items: left;
+    text-align: left;
+    margin: 50px 55px;
+
+    &__title {
+      font-size: 2.5rem;
       font-weight: 500;
       line-height: normal;
       margin-bottom: 20px;
     }
 
     &__content {
-      font-size: 24px;
+      font-size: 1.5rem;
       line-height: 1.6;
     }
   }
 
   .leads-thoughts-custom {
     display: flex;
-    justify-content: space-between;
     align-items: flex-start;
-    margin: 60px 200px; // Keep margin consistent with TextCard
+    justify-content: space-between;
+    margin: 60px 0;
+    padding: 0 75px;
 
     .leads-thoughts-text {
-      // If you need to adjust the width of the text relative to the image
-      max-width: calc(
-        100% - 320px
-      ); // Adjust based on image width + some margin
+      flex: 1;
+      margin-right: 20px;
+      font-size: 1.5rem; // Ensure font size consistency
+      color: #404040; // Ensure font color consistency
     }
 
     .leader-vision-image {
-      flex-shrink: 0; // Prevent the image from shrinking
-      width: 300px; // Set a fixed width for the image
-      margin-left: 50px;
-      padding-top: 70px;
+      flex-shrink: 0;
+      width: 300px;
+      order: 2;
+      border-radius: 8px;
+    }
 
-      img {
-        border-radius: 8px; // Style as needed
-        width: 100%; // Ensure the image fills the container
-        height: auto; // Keep the image's aspect ratio
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .headerCard {
+      margin: 0 20px;
+    }
+
+    .textCard__section,
+    .leads-thoughts-custom {
+      margin: 40px 20px;
+
+      .textCard__section__title,
+      .textCard__section__content {
+        font-size: 2rem;
+      }
+
+      .textCard__section__content {
+        font-size: 1.2rem;
+      }
+
+      .leader-vision-image {
+        width: 200px;
       }
     }
   }
