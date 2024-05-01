@@ -103,9 +103,9 @@ const EventsPage: NextPage<{ blogPosts: MediaCardProps[] }> = ({
       />
       <div className="events__body">
         <div className="events__header">
-          <span className="events__header__title">
+          {/* <span className="events__header__title">
             {t("events:event_past")}
-          </span>
+          </span> */}
           <div className="events__search-bar">
             <img
               src="/tempImg/events/magnefying-glass.png"
