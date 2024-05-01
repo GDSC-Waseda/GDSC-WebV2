@@ -2,7 +2,7 @@ import type { AppProps } from "next/app";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Router from "next/router";
-
+import Head from "next/head";
 import { Footer } from "components/Footer";
 import { NavigationBar } from "components/NavigationBar";
 import Loading from "../components/Loading"; // Import the Loading component
@@ -29,6 +29,9 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
       {loading && <Loading />}{" "}
       {/* Display the loading component when loading */}
       <NavigationBar />
