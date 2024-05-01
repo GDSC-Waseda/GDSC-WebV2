@@ -113,3 +113,16 @@
     font-weight: bold;
   }
 }
+.events__body__past {
+  display: flex;
+  flex-wrap: wrap; // Allows items to wrap to the next line
+  justify-content: center; // Centers items horizontally
+  align-items: stretch; // Stretches items to fill the container height
+
+  a {
+    flex: 1 1 300px; // Each link (card) can flex-grow, flex-shrink and has a base width of 300px
+    margin: 10px; // Margin around each card
+    display: flex; // Makes the anchor tag also a flex container
+    justify-content: center; // Centers the card within the anchor tag
+  }
+}
