@@ -32,9 +32,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      {loading && <Loading />}{" "}
-      {/* Display the loading component when loading */}
-      <NavigationBar />
+      {loading && <Loading />} <NavigationBar />
       <Component {...pageProps} />
       <Footer />
     </>
