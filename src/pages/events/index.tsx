@@ -14,7 +14,7 @@ import { HeaderCardProps, MediaCardProps } from "~/types";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 export const getStaticProps: GetStaticProps = async (
-  context: GetStaticPropsContext,
+  context: GetStaticPropsContext
 ) => {
   const { locale } = context;
   const query = `*[_type == "blogPost"]{
@@ -51,7 +51,7 @@ export const getStaticProps: GetStaticProps = async (
       link: "/events/details/mini-solution-challenge-2023/",
       open: true,
       canOpen: false,
-    }),
+    })
   );
 
   return {
@@ -68,12 +68,6 @@ const EventsPage: NextPage<{ blogPosts: MediaCardProps[] }> = ({
   const { t } = useTranslation();
   const [blogPost, setBlogPosts] = useState<MediaCardProps[]>(blogPosts);
 
-  const card: HeaderCardProps = {
-    headTitle: "",
-    title: t("events:event_title"),
-    content: t("events:event_message"),
-  };
-
   const [searchInput, setSearchInput] = useState("");
   const [searchResults, setSearchResults] = useState<MediaCardProps[]>([]);
 
@@ -84,46 +78,52 @@ const EventsPage: NextPage<{ blogPosts: MediaCardProps[] }> = ({
   };
 
   const filterPastEvents = (input: string) => {
-    const pastEvents = blogPost;
-
-    return pastEvents.filter(
+    return blogPost.filter(
       (event) =>
         event.title.toLowerCase().includes(input.toLowerCase()) ||
-        event.description.toLowerCase().includes(input.toLowerCase()),
+        event.description.toLowerCase().includes(input.toLowerCase())
     );
   };
 
   return (
     <>
       <CommonMeta
-        pageTitle={card.title}
-        pageDescription={card.content}
+        pageTitle={t("events:event_title")}
+        pageDescription={t("events:event_message")}
         pagePath="events"
         pageImgWidth={1280}
         pageImgHeight={630}
       />
-      <HeaderCard props={card} />
+      <HeaderCard
+        props={{
+          headTitle: "",
+          title: t("events:event_title"),
+          content: t("events:event_message"),
+        }}
+      />
       <div className="events__body">
-        <div className="events__body__past">
-          <div className="events__body__header">
-            <span>{t("events:event_past")}</span>
-            <div className="events__search-bar">
-              <img
-                src="/tempImg/events/magnefying-glass.png"
-                alt=""
-                className="events__search-icon"
-                width={20}
-                height={22}
-              />
-              <input
-                className="events__search"
-                type="text"
-                placeholder="search event"
-                value={searchInput}
-                onChange={handleSearchInputChange}
-              />
-            </div>
+        <div className="events__header">
+          <span className="events__header__title">
+            {t("events:event_past")}
+          </span>
+          <div className="events__search-bar">
+            <img
+              src="/tempImg/events/magnefying-glass.png"
+              alt=""
+              className="events__search-icon"
+              width={20}
+              height={22}
+            />
+            <input
+              className="events__search"
+              type="text"
+              placeholder="search event"
+              value={searchInput}
+              onChange={handleSearchInputChange}
+            />
           </div>
+        </div>
+        <div className="events__body__past">
           {blogPost.map((post, index) => (
             <a href={post.link} key={index}>
               <MediaCard props={post} />
@@ -133,7 +133,7 @@ const EventsPage: NextPage<{ blogPosts: MediaCardProps[] }> = ({
           {searchResults.length === 0 && searchInput !== "" && (
             <p>No results found.</p>
           )}
-          {searchResults.length > 0 ? (
+          {searchResults.length > 0 && (
             <>
               {searchResults.map((eventCard, index) => (
                 <Link href={eventCard.link} key={index}>
@@ -143,20 +143,7 @@ const EventsPage: NextPage<{ blogPosts: MediaCardProps[] }> = ({
                 </Link>
               ))}
             </>
-          ) : searchInput === "" ? (
-            <>
-              {/* Combine dynamicArticles with eventsCard_Past */}
-              {/* {[...eventsCard_Past, ...dynamicArticles].map(
-                (eventCard, index) => (
-                  <Link href={eventCard.link} key={`combined-${index}`}>
-                    <a>
-                      <MediaCard props={eventCard} />
-                    </a>
-                  </Link>
-                )
-              )} */}
-            </>
-          ) : null}
+          )}
         </div>
       </div>
     </>
