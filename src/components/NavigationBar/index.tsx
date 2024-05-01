@@ -13,10 +13,16 @@ export const NavigationBar = (): JSX.Element => {
   const { t } = useTranslation("common");
 
   const [isClient, setIsClient] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const router = useRouter();
+
   useEffect(() => {
     setIsClient(true);
   }, []);
+
+  const handleMenuToggle = () => {
+    setMenuOpen(!menuOpen);
+  };
 
   return (
     <div className="header">
@@ -36,11 +42,20 @@ export const NavigationBar = (): JSX.Element => {
               <Link href="/">GDSC Waseda</Link>
             </div>
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav" className="navbarCollaps">
+          <Navbar.Toggle
+            onClick={handleMenuToggle}
+            aria-controls="basic-navbar-nav"
+            className={menuOpen ? "open" : ""}
+          >
+            <span
+              className={`navbar-toggler-icon ${menuOpen ? "open" : ""}`}
+            ></span>
+          </Navbar.Toggle>
+          <Navbar.Collapse
+            id="basic-navbar-nav"
+            className={`navbarCollaps ${menuOpen ? "show" : ""}`}
+          >
             <Nav className="ms-auto gradient-container">
-              {/*  */}
-
               <Nav.Item className="navItem">
                 <Link href="/about">{t("about")}</Link>
               </Nav.Item>
@@ -54,9 +69,6 @@ export const NavigationBar = (): JSX.Element => {
                 <Link href="/project">{t("project")}</Link>
               </Nav.Item>
               <Nav.Item className="navItem">
-                {/* <Link href={router.pathname} locale={router.locale == "en" ? "ja" : "en"}>
-                  Toggle
-                </Link> */}
                 <LanguageToggle />
               </Nav.Item>
               <Nav.Item className="navItem">
@@ -75,6 +87,7 @@ export const NavigationBar = (): JSX.Element => {
 };
 
 export default NavigationBar;
+
 const LanguageToggle = () => {
   const router = useRouter();
   return (

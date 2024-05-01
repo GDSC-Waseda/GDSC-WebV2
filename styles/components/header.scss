@@ -6,22 +6,87 @@
 
 .header {
   margin-bottom: 95px;
+
   &__container {
     position: fixed;
     top: 0;
     z-index: 1;
     width: 100%;
     backdrop-filter: blur(3px);
+
+    .navbar-toggler {
+      border: none;
+      background: transparent;
+      padding: 0;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      box-shadow: none;
+
+      .navbar-toggler-icon {
+        display: block;
+        width: 20px;
+        height: 2px;
+        background-color: #333;
+        transition: transform 0.3s ease;
+        position: relative;
+        box-shadow: none;
+
+        &.open {
+          background: transparent;
+
+          &:before,
+          &:after {
+            top: 0;
+          }
+
+          &:before {
+            transform: rotate(45deg);
+          }
+
+          &:after {
+            transform: rotate(-45deg);
+          }
+        }
+
+        &:before,
+        &:after {
+          content: "";
+          display: block;
+          width: 20px;
+          height: 2px;
+          background-color: #333;
+          position: absolute;
+          transition: all 0.3s ease;
+        }
+
+        &:before {
+          top: -6px;
+        }
+
+        &:after {
+          top: 6px;
+        }
+      }
+    }
+
+    .navbar-collapse {
+      transition: all 0.3s ease;
+    }
   }
 
   @media (max-width: 790px) {
     .navbarCollapse {
-      background-color: rgb(250, 250, 250, 0.65);
+      background-color: rgba(250, 250, 250, 0.65);
+    }
+
+    .navItem {
+      margin-bottom: 5px;
     }
   }
 
   .logo {
-    // padding-top: 5px;
     min-width: 30px;
     max-width: 50px;
 
@@ -65,10 +130,6 @@
       color: white;
     }
   }
-
-  // a {
-  //   cursor: pointer;
-  // }
 }
 
 .nav-text-title {
@@ -86,6 +147,7 @@
   background-size: 300%;
   animation: animatedText 5s infinite linear;
 }
+
 .select {
   background: transparent;
   border: none;
