@@ -14,7 +14,7 @@ import { HeaderCardProps, MediaCardProps } from "~/types";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 export const getStaticProps: GetStaticProps = async (
-  context: GetStaticPropsContext
+  context: GetStaticPropsContext,
 ) => {
   const { locale } = context;
   const query = `*[_type == "blogPost"]{
@@ -51,7 +51,7 @@ export const getStaticProps: GetStaticProps = async (
       link: "/events/details/mini-solution-challenge-2023/",
       open: true,
       canOpen: false,
-    })
+    }),
   );
 
   return {
@@ -81,7 +81,7 @@ const EventsPage: NextPage<{ blogPosts: MediaCardProps[] }> = ({
     return blogPost.filter(
       (event) =>
         event.title.toLowerCase().includes(input.toLowerCase()) ||
-        event.description.toLowerCase().includes(input.toLowerCase())
+        event.description.toLowerCase().includes(input.toLowerCase()),
     );
   };
 
