@@ -67,6 +67,7 @@ const Home: NextPage = () => {
               width={100}
               height={100}
               className="animated-image"
+              layout="intrinsic"
             />
             <Image
               src="/google.jpg"
@@ -74,6 +75,7 @@ const Home: NextPage = () => {
               width={100}
               height={100}
               className="animated-image"
+              layout="intrinsic"
             />
             <Image
               src="/fingate.jpg"
@@ -81,6 +83,7 @@ const Home: NextPage = () => {
               width={100}
               height={100}
               className="animated-image"
+              layout="intrinsic"
             />
             <Image
               src="/fincatch.jpg"
@@ -88,6 +91,7 @@ const Home: NextPage = () => {
               width={100}
               height={100}
               className="animated-image"
+              layout="intrinsic"
             />
           </div>
         </div>
