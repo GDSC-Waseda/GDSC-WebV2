@@ -9,7 +9,7 @@ import ProjectCard from "components/Cards/ProjectCard";
 import { HeaderCardProps, ProjectCardProps } from "~/types";
 
 export const getStaticProps: GetStaticProps = async (
-  context: GetStaticPropsContext,
+  context: GetStaticPropsContext
 ) => {
   const { locale } = context;
 
@@ -51,7 +51,7 @@ const ProjectPage: NextPage = () => {
     const filteredProjects = projects.filter(
       (project) =>
         project.title.toLowerCase().includes(input) ||
-        project.description.toLowerCase().includes(input),
+        project.description.toLowerCase().includes(input)
     );
     setSearchResults(filteredProjects);
   };

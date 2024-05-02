@@ -12,7 +12,7 @@ import { googleTagManagerId } from "~/api/gtm";
 
 export default class CustomDocument extends Document {
   static async getInitialProps(
-    ctx: DocumentContext,
+    ctx: DocumentContext
   ): Promise<DocumentInitialProps> {
     const initialProps = await Document.getInitialProps(ctx);
 

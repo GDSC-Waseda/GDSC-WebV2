@@ -8,7 +8,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export const getStaticProps: GetStaticProps = async (
-  context: GetStaticPropsContext,
+  context: GetStaticPropsContext
 ) => {
   const { locale } = context;
 

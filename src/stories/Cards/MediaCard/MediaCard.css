@@ -26,12 +26,8 @@
 .media-card__detail-container {
   margin-top: 4px;
   padding: 5px 10px;
-  -webkit-transition:
-    width 600ms ease-out,
-    height 600ms ease-out;
-  transition:
-    width 600ms ease-out,
-    height 600ms ease-out;
+  -webkit-transition: width 600ms ease-out, height 600ms ease-out;
+  transition: width 600ms ease-out, height 600ms ease-out;
 }
 
 .media-card__title {
