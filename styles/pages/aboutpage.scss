@@ -57,7 +57,6 @@
       align-items: center;
       text-decoration: none;
       color: #fff;
-      font-size: 25px;
 
       &:hover {
         color: #fff;
@@ -93,15 +92,19 @@
     .leads-thoughts-text {
       flex: 1;
       margin-right: 20px;
-      font-size: 1.5rem; // Ensure font size consistency
-      color: #404040; // Ensure font color consistency
+      font-size: 1.5rem;
+      color: #404040;
     }
 
     .leader-vision-image {
       flex-shrink: 0;
-      width: 300px;
+      width: 300px; // Default width
       order: 2;
       border-radius: 8px;
+
+      @media (max-width: 768px) {
+        width: 200px; // Smaller screen width
+      }
     }
 
     img {
@@ -127,10 +130,6 @@
 
       .textCard__section__content {
         font-size: 1.2rem;
-      }
-
-      .leader-vision-image {
-        width: 200px;
       }
     }
   }

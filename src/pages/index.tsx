@@ -1,14 +1,14 @@
 import type { NextPage } from "next";
 import CommonMeta from "components/CommonMeta";
-import Loading from "components/Loading"; // Make sure to import your Loading component
+import Loading from "components/Loading";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import type { GetStaticProps, GetStaticPropsContext } from "next";
 import { useTranslation } from "next-i18next";
 import Image from "next/image";
-import { useEffect, useState } from "react"; // Import useState and useEffect
+import { useEffect, useState } from "react";
 
 export const getStaticProps: GetStaticProps = async (
-  context: GetStaticPropsContext,
+  context: GetStaticPropsContext
 ) => {
   const { locale } = context;
 
@@ -21,14 +21,14 @@ export const getStaticProps: GetStaticProps = async (
 
 const Home: NextPage = () => {
   const { t } = useTranslation();
-  const [loading, setLoading] = useState(true); // Initialize loading state to true
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setLoading(false); // Set loading to false after a delay
-    }, 1200); // Delay in milliseconds
+      setLoading(false);
+    }, 1200);
 
-    return () => clearTimeout(timer); // Cleanup the timer
+    return () => clearTimeout(timer);
   }, []);
 
   if (loading) {
@@ -48,25 +48,46 @@ const Home: NextPage = () => {
                 </div>
               </div>
               <div className="image-section">
-                <img src="/gdsc-top.jpg" alt="GDSC TOP" />
+                <Image
+                  src="/gdsc-top.jpg"
+                  alt="women-tech"
+                  width={650}
+                  height={400}
+                  layout="intrinsic"
+                  className="animated-image"
+                />
               </div>
             </div>
           </div>
-          <p>{t("home:trusted_by")}</p>
+          <p className="trusted-message">{t("home:trusted_by")}</p>
           <div className="trusted-companies">
             <Image
               src="/women_tech.jpg"
               alt="women-tech"
               width={100}
               height={100}
+              className="animated-image"
             />
-            <Image src="/google.jpg" alt="google" width={100} height={100} />
-            <Image src="/fingate.jpg" alt="fingate" width={100} height={100} />
+            <Image
+              src="/google.jpg"
+              alt="google"
+              width={100}
+              height={100}
+              className="animated-image"
+            />
+            <Image
+              src="/fingate.jpg"
+              alt="fingate"
+              width={100}
+              height={100}
+              className="animated-image"
+            />
             <Image
               src="/fincatch.jpg"
               alt="fincatch"
               width={100}
               height={100}
+              className="animated-image"
             />
           </div>
         </div>
