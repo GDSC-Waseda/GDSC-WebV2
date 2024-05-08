@@ -13,7 +13,7 @@ import { MemberType, memberAtributes } from "../../../types";
 import { client } from "../../../sanity";
 
 export const getStaticProps: GetStaticProps = async () => {
-  const query = `*[_type == "member" && team == "Education"]{
+  const query = `*[_type == "member" && team == "education"]{
     name,
     program,
     school,
@@ -63,7 +63,7 @@ export const EducationTeam: NextPage<EducationTeamProps> = ({
   const imageCardProps: ImageCardProps = {
     title: "Education Team - Lead Name",
     content: "Introduction and overview of the Education team.",
-    image: "https://example.com/image.jpg",
+    image: "education_lead1.jpg",
     imagePosition: "left",
   };
 

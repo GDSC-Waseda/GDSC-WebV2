@@ -61,9 +61,9 @@ export const BackendTeam: NextPage<BackendTeamProps> = ({
   };
 
   const imageCardProps: ImageCardProps = {
-    title: "Backend Team - Lead Name",
+    title: "Backend Team - Gunjan",
     content: "Introduction and overview of the Backend team.",
-    image: "https://example.com/image.jpg",
+    image: "backend_lead.jpg",
     imagePosition: "left",
   };
 

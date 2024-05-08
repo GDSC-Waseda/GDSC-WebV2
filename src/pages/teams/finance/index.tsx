@@ -53,7 +53,7 @@ export const FinanceTeam: NextPage<FinanceTeamProps> = ({
   const imageCardProps: ImageCardProps = {
     title: "Finance Team - Lead Name",
     content: "Introduction and overview of the Finance team.",
-    image: "https://example.com/image.jpg",
+    image: "finance_lead.jpg",
     imagePosition: "left",
   };
 
