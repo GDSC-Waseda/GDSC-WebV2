@@ -13,7 +13,7 @@ import { MemberType, memberAtributes } from "../../../types";
 import { client } from "../../../sanity";
 
 export const getStaticProps: GetStaticProps = async () => {
-  const query = `*[_type == "member" && team == "Backend"]{
+  const query = `*[_type == "member" && team == "backend"]{
     name,
     program,
     school,
