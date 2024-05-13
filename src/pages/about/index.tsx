@@ -27,37 +27,42 @@ interface LeadInfo {
   graduationDate: string;
   major: string;
   school: string;
+  period: string;
 }
 
-const currentLead: LeadInfo = {
-  name: "Takumi Otsuka",
-  image: "/tempImg/leads/lead.jpg",
-  linkedin: "https://www.linkedin.com/in/johndoe",
-  github: "https://github.com/johndoe",
-  graduationDate: "September 2024",
-  major: "Mathematical Science",
-  school: "Fundamental Science and Engineering",
-};
-const previousLeads: LeadInfo[] = [
-  {
-    name: "Advaith Sriram",
-    image: "/tempImg/leads/advaith.jpg",
-    linkedin: "https://www.linkedin.com/in/advaith-sriram/",
-    graduationDate: "September 2023",
-    major: "Mechanical Engineering",
-    school: "Creative Science and Engineering",
-  },
-  {
-    name: "Rose Niousha",
-    image: "/tempImg/leads/rose.jpg",
-    linkedin: "https://www.linkedin.com/in/rose-niousha/",
-    graduationDate: "April 2023",
-    major: "Mechanical Engineering",
-    school: "University of Example",
-  },
-];
 export const AboutPage: NextPage = () => {
   const { t } = useTranslation();
+
+  const currentLead: LeadInfo = {
+    name: t("about:takumi"),
+    image: "/tempImg/leads/lead.jpg",
+    linkedin: "https://www.linkedin.com/in/takumi-otsuka/",
+    github: "https://github.com/ronin207",
+    graduationDate: t("about:september24"),
+    major: t("about:mathematicalScience"),
+    school: t("about:FSE"),
+    period: "2023~ ",
+  };
+  const previousLeads: LeadInfo[] = [
+    {
+      name: "Advaith Sriram",
+      image: "/tempImg/leads/advaith.jpg",
+      linkedin: "https://www.linkedin.com/in/advaith-sriram/",
+      graduationDate: t("about:september23"),
+      major: t("about:mechanicalEngineering"),
+      school: t("about:CSE"),
+      period: "2022-2023",
+    },
+    {
+      name: "Rose Niousha",
+      image: "/tempImg/leads/rose.jpg",
+      linkedin: "https://www.linkedin.com/in/rose-niousha/",
+      graduationDate: t("about:april23"),
+      major: t("about:computerScience"),
+      school: t("about:FSE"),
+      period: "2021-2022",
+    },
+  ];
 
   const card: HeaderCardProps = {
     headTitle: "",
