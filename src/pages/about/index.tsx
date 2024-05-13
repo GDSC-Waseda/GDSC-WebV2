@@ -41,7 +41,7 @@ const currentLead: LeadInfo = {
 const previousLeads: LeadInfo[] = [
   {
     name: "Advaith Siram",
-    image: "/tempImg/leads/previous-lead-1.jpg",
+    image: "/tempImg/leads/advaith.jpg",
     linkedin: "https://www.linkedin.com/in/janesmith",
     github: "https://github.com/janesmith",
     graduationDate: "September 2023",
