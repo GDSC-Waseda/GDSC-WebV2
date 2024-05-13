@@ -5,107 +5,117 @@
       "image": "project_lead22.png",
       "image2": null,
       "multiple": false,
-      "color": "green"
+      "color": "green",
+      "linkedInUrl": "https://www.linkedin.com/in/takumi/"
     },
     {
       "name": "Backend - Alfred",
       "image": "backend_lead22.jpg",
       "image2": null,
       "multiple": false,
-      "color": "blue"
+      "color": "blue",
+      "linkedInUrl": "https://www.linkedin.com/in/alfred/"
     },
     {
       "name": "Frontend - Addo",
       "image": "frontend_lead22.jpg",
       "image2": null,
       "multiple": false,
-      "color": "yellow"
+      "color": "yellow",
+      "linkedInUrl": "https://www.linkedin.com/in/addo/"
     },
     {
       "name": "Education - Jeremy",
       "image": "education_lead22.jpg",
       "image2": null,
       "multiple": false,
-      "color": "blue"
+      "color": "blue",
+      "linkedInUrl": "https://www.linkedin.com/in/jeremy/"
     },
     {
       "name": "Operations - Cedric",
       "image": "operations_lead22.jpg",
       "image2": null,
       "multiple": false,
-      "color": "green"
+      "color": "green",
+      "linkedInUrl": "https://www.linkedin.com/in/cedric/"
     },
     {
       "name": "Marketing - Tina",
       "image": "marketing_lead22.png",
       "image2": null,
       "multiple": false,
-      "color": "red"
+      "color": "red",
+      "linkedInUrl": "https://www.linkedin.com/in/tina/"
     },
     {
       "name": "Finance - Mona",
       "image": "finance_lead22.jpg",
       "image2": null,
       "multiple": false,
-      "color": "yellow"
+      "color": "yellow",
+      "linkedInUrl": "https://www.linkedin.com/in/mona/"
     }
   ],
   "GDSC 21/22": [
     {
       "name": "Project - Xinze",
       "image": "project_lead21.jpg",
-      "color": "green"
+      "color": "green",
+      "linkedInUrl": "https://www.linkedin.com/in/xinze/"
     },
     {
       "name": "Backend - Jake",
       "image": "backend_lead21.jpg",
-      "color": "blue"
+      "color": "blue",
+      "linkedInUrl": "https://www.linkedin.com/in/jake/"
     },
     {
       "name": "Frontend - Kaede",
       "image": "frontend_lead21.jpg",
       "image2": null,
       "multiple": false,
-      "link": "/frontend",
-      "color": "yellow"
+      "color": "yellow",
+      "linkedInUrl": "https://www.linkedin.com/in/kaede/"
     },
     {
       "name": "Education - Advaith",
       "image": "education_lead21.jpg",
       "multiple": false,
-      "color": "blue"
+      "color": "blue",
+      "linkedInUrl": "https://www.linkedin.com/in/advaith/"
     },
     {
       "name": "Outreach - Touko",
       "image": "outreach_lead21.jpg",
       "image2": null,
       "multiple": false,
-      "link": "/outreach",
-      "color": "red"
+      "color": "red",
+      "linkedInUrl": "https://www.linkedin.com/in/touko/"
     },
     {
       "name": "Outreach - Gen",
       "image": "operations_lead21.jpg",
       "image2": null,
       "multiple": false,
-      "link": "/operations",
-      "color": "green"
+      "color": "green",
+      "linkedInUrl": "https://www.linkedin.com/in/gen/"
     },
     {
-      "name": "Marketing ",
+      "name": "Marketing",
       "image": "marketing_lead21.jpg",
       "image2": null,
       "multiple": false,
-      "link": "/marketing",
-      "color": "red"
+      "color": "red",
+      "linkedInUrl": "https://www.linkedin.com/in/marketing/"
     },
     {
       "name": "Finance - Emi",
       "image": "finance_lead21.jpg",
       "image2": null,
       "multiple": false,
-      "link": "/finance",
-      "color": "yellow"
+      "color": "yellow",
+      "linkedInUrl": "https://www.linkedin.com/in/emi/"
     }
   ]
 }

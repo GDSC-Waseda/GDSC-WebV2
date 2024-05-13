@@ -7,6 +7,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import type { GetStaticProps, GetStaticPropsContext } from "next";
 import { useTranslation } from "next-i18next";
 import exteams from "./exteams.json";
+import { FaLinkedin } from "react-icons/fa";
 
 export const getStaticProps: GetStaticProps = async (
   context: GetStaticPropsContext
@@ -34,8 +35,10 @@ export const TeamsPage: NextPage = () => {
     image: string;
     image2: string | null;
     multiple: boolean;
-    link: string;
+    link?: string;
     color: string;
+    showLearnMore?: boolean;
+    linkedInUrl?: string;
   }> = [
     {
       name: t("teams:project"),
@@ -44,6 +47,7 @@ export const TeamsPage: NextPage = () => {
       multiple: false,
       link: "/project",
       color: "green",
+      showLearnMore: true,
     },
     {
       name: t("teams:backend"),
@@ -52,6 +56,7 @@ export const TeamsPage: NextPage = () => {
       multiple: false,
       link: "/backend",
       color: "blue",
+      showLearnMore: true,
     },
     {
       name: t("teams:frontend"),
@@ -60,6 +65,7 @@ export const TeamsPage: NextPage = () => {
       multiple: false,
       link: "/frontend",
       color: "yellow",
+      showLearnMore: true,
     },
     {
       name: t("teams:education"),
@@ -68,6 +74,7 @@ export const TeamsPage: NextPage = () => {
       multiple: true,
       link: "/education",
       color: "blue",
+      showLearnMore: true,
     },
     {
       name: t("teams:agile"),
@@ -76,6 +83,7 @@ export const TeamsPage: NextPage = () => {
       multiple: false,
       link: "/agile",
       color: "yellow",
+      showLearnMore: true,
     },
     {
       name: t("teams:outreach"),
@@ -84,8 +92,8 @@ export const TeamsPage: NextPage = () => {
       multiple: false,
       link: "/outreach",
       color: "red",
+      showLearnMore: true,
     },
-
     {
       name: t("teams:marketing"),
       image: "marketing_lead.jpg",
@@ -93,6 +101,7 @@ export const TeamsPage: NextPage = () => {
       multiple: false,
       link: "/marketing",
       color: "red",
+      showLearnMore: true,
     },
     {
       name: t("teams:finance"),
@@ -101,6 +110,7 @@ export const TeamsPage: NextPage = () => {
       multiple: false,
       link: "/finance",
       color: "yellow",
+      showLearnMore: true,
     },
   ];
 
@@ -135,6 +145,8 @@ export const TeamsPage: NextPage = () => {
       multiple?: boolean;
       link?: string;
       color: string;
+      showLearnMore?: boolean;
+      linkedInUrl?: string;
     }>
   > = {
     "GDSC 23/24": teamLeaders,
@@ -200,7 +212,7 @@ export const TeamsPage: NextPage = () => {
         <div className="team-leaders-container">
           {filteredTeamLeaders.map((teamCard, index) => (
             <div key={index} className="team-leader">
-              {teamCard.multiple == true ? (
+              {teamCard.multiple === true ? (
                 <div className="team-leader-swap-container">
                   <a
                     className="team-leader-link"
@@ -236,9 +248,23 @@ export const TeamsPage: NextPage = () => {
                 </a>
               )}
               <div className="team-leader-name">{teamCard.name}</div>
-              <a className="team-leader-link" href={`/teams/${teamCard.link}`}>
-                {t("teams:learn_more")}
-              </a>
+              {teamCard.showLearnMore === true ? (
+                <a
+                  className="team-leader-link"
+                  href={`/teams/${teamCard.link}`}
+                >
+                  {t("teams:learn_more")}
+                </a>
+              ) : teamCard.linkedInUrl ? (
+                <a
+                  className="team-leader-linkedin"
+                  href={teamCard.linkedInUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaLinkedin />
+                </a>
+              ) : null}
             </div>
           ))}
         </div>
