@@ -23,7 +23,7 @@ interface LeadInfo {
   name: string;
   image: string;
   linkedin: string;
-  github: string;
+  github?: string;
   graduationDate: string;
   major: string;
   school: string;
@@ -40,20 +40,18 @@ const currentLead: LeadInfo = {
 };
 const previousLeads: LeadInfo[] = [
   {
-    name: "Advaith Siram",
+    name: "Advaith Sriram",
     image: "/tempImg/leads/advaith.jpg",
-    linkedin: "https://www.linkedin.com/in/janesmith",
-    github: "https://github.com/janesmith",
+    linkedin: "https://www.linkedin.com/in/advaith-sriram/",
     graduationDate: "September 2023",
     major: "Mechanical Engineering",
     school: "Creative Science and Engineering",
   },
   {
-    name: "Mike Johnson",
-    image: "/tempImg/leads/previous-lead-2.jpg",
-    linkedin: "https://www.linkedin.com/in/mikejohnson",
-    github: "https://github.com/mikejohnson",
-    graduationDate: "May 2022",
+    name: "Rose Niousha",
+    image: "/tempImg/leads/rose.jpg",
+    linkedin: "https://www.linkedin.com/in/rose-niousha/",
+    graduationDate: "April 2023",
     major: "Mechanical Engineering",
     school: "University of Example",
   },
