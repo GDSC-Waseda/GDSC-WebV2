@@ -56,7 +56,7 @@ export const FrontendTeam: NextPage<FrontendTeamProps> = ({
   };
 
   const imageCardProps: ImageCardProps = {
-    title: "Project Team - Priya Oyama",
+    title: "Project Team - Priya",
     content:
       "Hello there! 👋 My name is Haruki,  a second year student at Waseda University majoring in Computer Science and Communications Engineering. In this team, we craft user-centric interfaces and use code to develop lively websites and applications. I’m thrilled to craft projects in collaborations with other teams, expand my knowledge, and innovate remarkable experiences with all of you!",
     image:

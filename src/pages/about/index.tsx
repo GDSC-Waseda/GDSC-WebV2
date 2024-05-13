@@ -3,7 +3,6 @@ import Image from "next/image";
 import { HeaderCard } from "components/Cards/index";
 import CommonMeta from "components/CommonMeta";
 import { HeaderCardProps, TextCardProps } from "~/types";
-
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import type { GetStaticProps, GetStaticPropsContext } from "next";
@@ -12,7 +11,6 @@ export const getStaticProps: GetStaticProps = async (
   context: GetStaticPropsContext
 ) => {
   const { locale } = context;
-
   return {
     props: {
       ...(await serverSideTranslations(locale as string, ["about", "common"])),
@@ -54,6 +52,7 @@ export const AboutPage: NextPage = () => {
         <h2 className="textCard__section__title">{whatWeDo.title}</h2>
         <p className="textCard__section__content">{whatWeDo.content}</p>
       </div>
+
       {/* Our Lead's Thoughts Section Styled Similarly but Outside TextCard */}
       <div className="leads-thoughts-custom">
         <div className="leads-thoughts-text">
@@ -64,9 +63,8 @@ export const AboutPage: NextPage = () => {
           <Image
             src="/tempImg/leads/lead.jpg"
             alt="Our Leader"
-            width={250}
-            height={250}
-            layout="intrinsic"
+            width={400}
+            height={400}
           />
         </div>
       </div>
