@@ -82,53 +82,154 @@
     }
   }
 
-  .leads-thoughts-custom {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  .current-lead-section {
     margin: 60px 0;
     padding: 0 75px;
 
-    .leads-thoughts-text {
-      margin-bottom: 20px;
-      font-size: 1.2rem;
-      color: #404040;
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 500;
+      margin-bottom: 30px;
     }
 
-    .leader-vision-image {
-      width: 100%;
-      max-width: 400px;
-      border-radius: 8px;
-      margin-top: 20px;
+    .lead-card {
+      display: flex;
+      align-items: center;
+      background-color: #f8f8f8;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
-      @media (max-width: 768px) {
-        max-width: 200px;
+      .lead-image {
+        flex-shrink: 0;
+        margin-right: 30px;
+
+        img {
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+
+      .lead-info {
+        .lead-name {
+          font-size: 2rem;
+          font-weight: 500;
+          margin-bottom: 10px;
+        }
+
+        .lead-graduation,
+        .lead-major,
+        .lead-school {
+          font-size: 1.2rem;
+          margin-bottom: 5px;
+        }
+
+        .lead-links {
+          margin-top: 15px;
+
+          a {
+            margin-right: 10px;
+            font-size: 1.5rem;
+            color: #333;
+            transition: color 0.3s;
+
+            &:hover {
+              color: #0077b5;
+            }
+          }
+        }
       }
     }
+  }
 
-    img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
+  .previous-leads-section {
+    margin: 60px 0;
+    padding: 0 75px;
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 500;
+      margin-bottom: 30px;
+    }
+
+    .previous-leads-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-gap: 30px;
+    }
+
+    .previous-lead-card {
+      background-color: #f8f8f8;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      .previous-lead-image {
+        text-align: center;
+        margin-bottom: 20px;
+
+        img {
+          width: 150px;
+          height: 150px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+
+      .previous-lead-info {
+        .previous-lead-name {
+          font-size: 1.5rem;
+          font-weight: 500;
+          margin-bottom: 10px;
+        }
+
+        .previous-lead-graduation,
+        .previous-lead-major,
+        .previous-lead-school {
+          font-size: 1rem;
+          margin-bottom: 5px;
+        }
+
+        .previous-lead-links {
+          margin-top: 15px;
+          text-align: center;
+
+          a {
+            font-size: 1.2rem;
+            color: #333;
+            transition: color 0.3s;
+
+            &:hover {
+              color: #0077b5;
+            }
+          }
+        }
+      }
     }
   }
 
   @media (max-width: 768px) {
-    .headerCard {
-      margin: 0 20px;
+    .current-lead-section,
+    .previous-leads-section {
+      padding: 0 20px;
     }
 
-    .textCard__section,
-    .leads-thoughts-custom {
-      margin: 40px 20px;
+    .current-lead-section {
+      .lead-card {
+        flex-direction: column;
+        align-items: flex-start;
 
-      .textCard__section__title,
-      .textCard__section__content {
-        font-size: 2rem;
-      }
-
-      .textCard__section__content {
-        font-size: 1.2rem;
+        .lead-image {
+          margin-right: 0;
+          margin-bottom: 20px;
+        }
       }
     }
   }
