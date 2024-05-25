@@ -61,9 +61,9 @@ export const EducationTeam: NextPage<EducationTeamProps> = ({
   };
 
   const imageCardProps: ImageCardProps = {
-    title: "Education Team - Lead Name",
-    content: "Introduction and overview of the Education team.",
-    image: "education_lead1.jpg",
+    title: "Beatrix Sylvani",
+    content: "Hi! My name is Beatrix, but you can call me Bea(🐝)! I am one of the co-leaders for the Education team for GDSC Waseda. Our team is focused on hosting coding classes with the public and building a wide range of connections. For this semester, we are planning to host Figma and Powerpoint 101 classes. Our team is welcoming for anyone who wants to learn and test the waters for different kind of programming classes :>",
+    image: "/tempImg/leads/education_lead1.jpg",
     imagePosition: "left",
   };
 
@@ -80,7 +80,7 @@ export const EducationTeam: NextPage<EducationTeamProps> = ({
         <TeamHeaderCard props={card} />
       </div>
       <ImageCard props={imageCardProps} />
-      <h1 className="members-title">Meet Our Team</h1>
+      {/* <h1 className="members-title">Meet Our Team</h1> */}
       <div className="team-cards-container">
         {dynamicTeamCards.map((teamCard, index) => (
           <TeamCard key={index} props={teamCard} />

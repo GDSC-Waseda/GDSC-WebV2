@@ -12,7 +12,7 @@ module.exports = {
     ignoreDuringBuilds: true,
   },
   images: {
-    domains: ["res.cloudinary.com", "cdn.sanity.io"],
+    domains: ["cdn.sanity.io"],
   },
   i18n,
 };

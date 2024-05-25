@@ -51,9 +51,9 @@ export const FinanceTeam: NextPage<FinanceTeamProps> = ({
   };
 
   const imageCardProps: ImageCardProps = {
-    title: "Finance Team - Lead Name",
-    content: "Introduction and overview of the Finance team.",
-    image: "finance_lead.jpg",
+    title: "Hyonjoon PARK",
+    content: "Hey there! 😊 I'm Hyonjoon, a junior at Waseda University's School of International Liberal Studies (SILS). I'm thrilled to serve as the team lead for GDSC Waseda's Finance Team this year. Our team plays a vital role in managing and optimizing project finances, ensuring the success of our tech initiatives. I'm looking forward to a fantastic year ahead and can't wait to collaborate with you and our GDSC community to achieve great things together!",
+    image: "/tempImg/leads/finance_lead.jpg",
     imagePosition: "left",
   };
 
@@ -70,7 +70,7 @@ export const FinanceTeam: NextPage<FinanceTeamProps> = ({
         <TeamHeaderCard props={card} />
       </div>
       <ImageCard props={imageCardProps} />
-      <h1 className="members-title">Meet Our Team</h1>
+      {/* <h1 className="members-title">Meet Our Team</h1> */}
       <div className="team-cards-container">
         {dynamicTeamCards.map((teamCard, index) => (
           <TeamCard key={index} props={teamCard} />

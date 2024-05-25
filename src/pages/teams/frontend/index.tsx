@@ -50,11 +50,11 @@ export const FrontendTeam: NextPage<FrontendTeamProps> = ({
   };
 
   const imageCardProps: ImageCardProps = {
-    title: "Frontend Team - Haruki Oyama",
+    title: "Haruki Oyama",
     content:
       "Hello there! 👋 My name is Haruki,  a second year student at Waseda University majoring in Computer Science and Communications Engineering. In this team, we craft user-centric interfaces and use code to develop lively websites and applications. I’m thrilled to craft projects in collaborations with other teams, expand my knowledge, and innovate remarkable experiences with all of you!",
     image:
-      "https://res.cloudinary.com/df3ab0lxf/image/upload/v1705310639/frontend_lead_2900445902.jpg",
+      "/tempImg/leads/frontend_lead.jpg",
     imagePosition: "left",
   };
 

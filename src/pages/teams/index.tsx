@@ -73,7 +73,7 @@ export const TeamsPage: NextPage = () => {
       image2: "education_lead2.jpg",
       multiple: true,
       link: "/education",
-      color: "blue",
+      color: "red",
       showLearnMore: true,
     },
     {
@@ -82,7 +82,7 @@ export const TeamsPage: NextPage = () => {
       image2: null,
       multiple: false,
       link: "/agile",
-      color: "yellow",
+      color: "blue",
       showLearnMore: true,
     },
     {
@@ -100,7 +100,7 @@ export const TeamsPage: NextPage = () => {
       image2: null,
       multiple: false,
       link: "/marketing",
-      color: "red",
+      color: "green",
       showLearnMore: true,
     },
     {
