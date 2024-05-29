@@ -32,14 +32,7 @@
     font-weight: 700;
   }
 
-  &__container {
-    width: 100%;
-    padding: 10px;
-
-    @media (max-width: 790px) {
-      background-color: #ffffff;
-    }
-  }
+ 
 
   &__logoRight,
   &__logoLeft {

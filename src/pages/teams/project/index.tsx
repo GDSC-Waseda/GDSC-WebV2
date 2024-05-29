@@ -56,11 +56,10 @@ export const FrontendTeam: NextPage<FrontendTeamProps> = ({
   };
 
   const imageCardProps: ImageCardProps = {
-    title: "Project Team - Priya",
+    title: "Priya Mukkundi",
     content:
-      "Hello there! 👋 My name is Haruki,  a second year student at Waseda University majoring in Computer Science and Communications Engineering. In this team, we craft user-centric interfaces and use code to develop lively websites and applications. I’m thrilled to craft projects in collaborations with other teams, expand my knowledge, and innovate remarkable experiences with all of you!",
-    image:
-      "https://res.cloudinary.com/df3ab0lxf/image/upload/v1705310639/frontend_lead_2900445902.jpg",
+    "Hi! I’m Priya, a third year student majoring in Economics at Waseda University. Project Team’s main goals are to foster innovation, efficiently deliver projects, and bridge technical and non-technical teams through effective communication and collaboration. No matter your tech background, we're thrilled to collaborate with you on your unique ideas and bring practical projects to life.😄",    
+    image: "/tempImg/leads/project_lead.jpg",
     imagePosition: "left",
   };
 

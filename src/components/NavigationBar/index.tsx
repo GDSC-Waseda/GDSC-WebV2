@@ -72,11 +72,11 @@ export const NavigationBar = (): JSX.Element => {
                 <LanguageToggle />
               </Nav.Item>
               <Nav.Item className="navItem">
-                <a href="https://forms.gle/uewfWU2QZjpHmSqc9" target="_blank">
+                <Link href="https://forms.gle/uewfWU2QZjpHmSqc9" target="_blank">
                   <Button variant="outline-dark" className="butto">
                     <small>{t("more")}</small>
                   </Button>
-                </a>
+                </Link>
               </Nav.Item>
             </Nav>
           </Navbar.Collapse>
