@@ -131,7 +131,7 @@ const EventsPage: NextPage<{ blogPosts: MediaCardProps[] }> = ({
           ))}
 
           {searchResults.length === 0 && searchInput !== "" && (
-            <p>No results found.</p>
+            <p>No results.</p>
           )}
           {searchResults.length > 0 && (
             <>
